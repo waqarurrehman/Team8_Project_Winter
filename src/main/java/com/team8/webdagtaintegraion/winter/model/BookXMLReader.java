@@ -1,5 +1,6 @@
 package com.team8.webdagtaintegraion.winter.model;
 
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.time.format.DateTimeFormatterBuilder;
@@ -74,25 +75,36 @@ FusibleFactory<Book, Attribute> {
 	      }
 	    
 	    }catch(Exception e) {
+	    	System.out.println("Record ID"+ id);
 	    	e.printStackTrace();
 	    }
 
 		// convert the date string into a DateTime object
+	    String date = getValueFromChildElement(node, "release_date");
 		try {
-			String date = getValueFromChildElement(node, "release_date");
+			
 			if (date != null && !date.isEmpty()) {
-				DateTimeFormatter formatter = new DateTimeFormatterBuilder()
-				        .appendPattern("MM/dd/yyyy['T'HH:mm:ss.SSS]")
-				        .parseDefaulting(ChronoField.CLOCK_HOUR_OF_DAY, 0)
-				        .parseDefaulting(ChronoField.MINUTE_OF_HOUR, 0)
-						.parseDefaulting(ChronoField.SECOND_OF_MINUTE, 0)
-						.optionalStart().appendOffset("+HH:MM", "+00:00").optionalEnd()
-				        .toFormatter(Locale.ENGLISH);
-				LocalDateTime dt = LocalDateTime.parse(date, formatter);
+			
+				DateTimeFormatter formatter = DateTimeFormatter.ofPattern("M/d/u");
+				LocalDateTime dt = LocalDate.parse(date, formatter).atStartOfDay();
 				book.setRelease_date(dt);
 			}
-		} catch (Exception e) {
-			e.printStackTrace();
+		} catch (java.time.format.DateTimeParseException e) {
+			//catching for the case of d/M/yyyy pattern
+			try {
+				
+				if (date != null && !date.isEmpty()) {
+				    DateTimeFormatter formatter = DateTimeFormatter.ofPattern("d/M/u");
+					LocalDateTime dt = LocalDate.parse(date, formatter).atStartOfDay();
+					book.setRelease_date(dt);
+				}
+				
+			}catch(Exception ex) {
+				ex.printStackTrace();
+				
+			}
+			
+			
 		}
 
 		// load the list of actors

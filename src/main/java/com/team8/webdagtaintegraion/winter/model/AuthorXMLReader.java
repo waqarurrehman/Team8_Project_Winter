@@ -23,9 +23,9 @@ public class AuthorXMLReader extends XMLMatchableReader<Author, Attribute> {
 		// TODO Auto-generated method stub
 		super.initialiseDataset(dataset);
 		
-		dataset.addAttribute(Author.PSEUDONYM);
+		/*dataset.addAttribute(Author.PSEUDONYM);
 		dataset.addAttribute(Author.BIRTHNAME);
-		dataset.addAttribute(Author.BIRTHDATE);
+		dataset.addAttribute(Author.BIRTHDATE);*/
 		dataset.addAttribute(Author.AUTHORNAME);
 		
 	}
@@ -35,7 +35,10 @@ public class AuthorXMLReader extends XMLMatchableReader<Author, Attribute> {
 	public Author createModelFromElement(Node node, String provenanceInfo) {
 		// TODO Auto-generated method stub
 		Author author= new Author();
-		author.setAuthor_name(getValueFromChildElement(node, "author"));
+		author.setAuthor_name(getNodeValue(node, "author"));
+		
+		/***
+		 * depricated as schema has changed now
 		author.setPseudonym(getValueFromChildElement(node, "pseudonym"));
 		author.setBirth_name(getValueFromChildElement(node, "birth_name"));
 	
@@ -55,8 +58,29 @@ public class AuthorXMLReader extends XMLMatchableReader<Author, Attribute> {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
+		*/
 		
 		return author;
+	}
+	
+	
+	private String getNodeValue(Node node, String nodeName) {
+		
+		if(node != null && nodeName != null && !nodeName.isEmpty()) {
+		   if(node.getNodeName().equals(nodeName)) {
+			   
+			   
+			   return node.getTextContent().trim(); 
+		   }else {
+			   return null;
+		   }
+			
+		}else {
+		
+			return null;
+		}
+		
+		
 	}
 
 	
