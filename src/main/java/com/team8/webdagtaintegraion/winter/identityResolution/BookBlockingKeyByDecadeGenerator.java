@@ -26,8 +26,12 @@ private static final long serialVersionUID = 1L;
 	public void generateBlockingKeys(Book record, Processable<Correspondence<Attribute, Matchable>> correspondences,
 		DataIterator<Pair<String, Book>> resultCollector) {
 		
-	    resultCollector.next(new Pair<>(Integer.toString(
-	    		record.getRelease_date().getYear() / 10), record)
+	    resultCollector.next(new Pair<>(
+	    		
+	    		(record.getRelease_date() != null ? Integer.toString((record.getRelease_date().getYear() / 10)) 
+	    		: "null"
+	    		)
+	    		, record)
 	    		  
 	    		);
 	    		
