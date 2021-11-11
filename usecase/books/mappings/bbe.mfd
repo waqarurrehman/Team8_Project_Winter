@@ -1,0 +1,395 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Edited with Altova MapForce 2022 -->
+<mapping xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="22">
+	<resources/>
+	<component name="defaultmap" uid="1" editable="1" blackbox="0">
+		<properties ShowSchemaTypes="1" ShowLibraryNameInHeader="1" ShowAnnotations="0" SelectedLanguage="java"/>
+		<structure>
+			<children>
+				<component name="concat" library="core" uid="70" kind="5" growable="1" growablebasename="value">
+					<sources>
+						<datapoint pos="0" key="60"/>
+						<datapoint pos="1" key="61"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="62"/>
+					</targets>
+					<view ltx="1407" lty="-221" rbx="1492" rby="-167"/>
+				</component>
+				<component name="auto-number" library="core" uid="5" kind="5">
+					<sources>
+						<datapoint/>
+						<datapoint/>
+						<datapoint/>
+						<datapoint/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="21"/>
+					</targets>
+					<view ltx="1217" lty="-170" rbx="1345" rby="-85"/>
+				</component>
+				<component name="constant" library="core" uid="60" kind="2">
+					<targets>
+						<datapoint pos="0" key="63"/>
+					</targets>
+					<view ltx="1246" lty="-221" rbx="1379" rby="-205"/>
+					<data>
+						<constant value="bbe_" datatype="string"/>
+					</data>
+				</component>
+				<component name="pagesFunction" library="user" uid="51" kind="19" visible="0" blackbox="0">
+					<view ltx="1271" lty="385" rbx="1429" rby="402"/>
+					<data>
+						<root>
+							<header>
+								<namespaces>
+									<namespace/>
+								</namespaces>
+							</header>
+							<entry name="input" inpkey="70" componentid="48"/>
+						</root>
+						<root>
+							<header>
+								<namespaces>
+									<namespace/>
+								</namespaces>
+							</header>
+							<entry name="result" outkey="71" componentid="44"/>
+						</root>
+					</data>
+				</component>
+				<component name="isbnFunction" library="user" uid="59" kind="19" visible="0" blackbox="0">
+					<view ltx="775" lty="-94" rbx="936" rby="-77"/>
+					<data>
+						<root>
+							<header>
+								<namespaces>
+									<namespace/>
+								</namespaces>
+							</header>
+							<entry name="input" inpkey="64" componentid="57"/>
+						</root>
+						<root>
+							<header>
+								<namespaces>
+									<namespace/>
+								</namespaces>
+							</header>
+							<entry name="result" outkey="65" componentid="53"/>
+						</root>
+					</data>
+				</component>
+				<component name="genresFunction" library="user" uid="80" kind="19" visible="0" blackbox="0">
+					<view ltx="869" lty="111" rbx="1030" rby="128"/>
+					<data>
+						<root>
+							<header>
+								<namespaces>
+									<namespace/>
+								</namespaces>
+							</header>
+							<entry name="input" inpkey="66" componentid="78"/>
+						</root>
+						<root>
+							<header>
+								<namespaces>
+									<namespace/>
+								</namespaces>
+							</header>
+							<entry name="result" outkey="67" componentid="72"/>
+						</root>
+					</data>
+				</component>
+				<component name="authorFunction" library="user" uid="68" kind="19" visible="0" blackbox="0">
+					<view ltx="869" lty="188" rbx="1030" rby="205"/>
+					<data>
+						<root>
+							<header>
+								<namespaces>
+									<namespace/>
+								</namespaces>
+							</header>
+							<entry name="input" inpkey="68" componentid="66"/>
+						</root>
+						<root>
+							<header>
+								<namespaces>
+									<namespace/>
+								</namespaces>
+							</header>
+							<entry name="result" outkey="69" componentid="62"/>
+						</root>
+					</data>
+				</component>
+				<component name="target" library="xml" uid="10" kind="14">
+					<properties XSLTTargetEncoding="UTF-8" XSLTDefaultOutput="1" AddSchemaLocation="0"/>
+					<view ltx="1595" lty="-43" rbx="2190" rby="469"/>
+					<data>
+						<root>
+							<header>
+								<namespaces>
+									<namespace/>
+									<namespace uid="http://www.altova.com/mapforce"/>
+								</namespaces>
+							</header>
+							<entry name="FileInstance" ns="1" expanded="1">
+								<entry name="document" ns="1" expanded="1" casttotargettypemode="cast-in-subtree">
+									<entry name="books" expanded="1">
+										<entry name="book" inpkey="72" expanded="1">
+											<entry name="id" type="attribute" inpkey="73"/>
+											<entry name="isbn" inpkey="74"/>
+											<entry name="title" inpkey="75"/>
+											<entry name="release_date" inpkey="76"/>
+											<entry name="language" inpkey="77"/>
+											<entry name="pages" inpkey="78"/>
+											<entry name="genre" inpkey="79"/>
+											<entry name="price" inpkey="80"/>
+											<entry name="formats" inpkey="81"/>
+											<entry name="authors" expanded="1">
+												<entry name="author" inpkey="83" expanded="1"/>
+											</entry>
+										</entry>
+									</entry>
+								</entry>
+							</entry>
+						</root>
+						<document schema="target.xsd" instanceroot="{}books" inputinstance="target.xml" outputinstance="target.xml"/>
+					</data>
+				</component>
+				<component name="dateFunction" library="user" uid="38" kind="19" visible="0" blackbox="0">
+					<view ltx="727" lty="436" rbx="888" rby="453"/>
+					<data>
+						<root>
+							<header>
+								<namespaces>
+									<namespace/>
+								</namespaces>
+							</header>
+							<entry name="input" inpkey="58" componentid="36"/>
+						</root>
+						<root>
+							<header>
+								<namespaces>
+									<namespace/>
+								</namespaces>
+							</header>
+							<entry name="result" outkey="59" componentid="35"/>
+						</root>
+					</data>
+				</component>
+				<component name="Best_Books_Ever" library="text" uid="2" kind="16">
+					<properties/>
+					<view ltx="45" lty="-46" rbx="476" rby="538"/>
+					<data>
+						<root>
+							<header>
+								<namespaces>
+									<namespace/>
+									<namespace uid="http://www.altova.com/mapforce"/>
+								</namespaces>
+							</header>
+							<entry name="FileInstance" ns="1" expanded="1">
+								<entry name="document" ns="1" expanded="1">
+									<entry name="Rows" outkey="48" expanded="1">
+										<entry name="title" outkey="49"/>
+										<entry name="author" outkey="50"/>
+										<entry name="language" outkey="51"/>
+										<entry name="isbn" outkey="52"/>
+										<entry name="genres" outkey="53"/>
+										<entry name="bookFormat" outkey="54"/>
+										<entry name="pages" outkey="55"/>
+										<entry name="publishDate" outkey="56"/>
+										<entry name="price" outkey="57"/>
+									</entry>
+								</entry>
+							</entry>
+						</root>
+						<text type="csv" encoding="1000" byteorder="1" byteordermark="0" inputinstance="bestBooksEver.csv">
+							<settings separator="," quote="&quot;" firstrownames="true" removeempty="true">
+								<names root="bestBooksEver" block="Rows">
+									<field0 name="bookId" type="string"/>
+									<field1 name="title" type="string"/>
+									<field2 name="series" type="string"/>
+									<field3 name="author" type="string"/>
+									<field4 name="rating" type="string"/>
+									<field5 name="description" type="string"/>
+									<field6 name="language" type="string"/>
+									<field7 name="isbn" type="string"/>
+									<field8 name="genres" type="string"/>
+									<field9 name="characters" type="string"/>
+									<field10 name="bookFormat" type="string"/>
+									<field11 name="edition" type="string"/>
+									<field12 name="pages" type="string"/>
+									<field13 name="publisher" type="string"/>
+									<field14 name="publishDate" type="string"/>
+									<field15 name="firstPublishDate" type="string"/>
+									<field16 name="awards" type="string"/>
+									<field17 name="numRatings" type="string"/>
+									<field18 name="ratingsByStars" type="string"/>
+									<field19 name="likedPercent" type="string"/>
+									<field20 name="setting" type="string"/>
+									<field21 name="coverImg" type="string"/>
+									<field22 name="bbeScore" type="string"/>
+									<field23 name="bbeVotes" type="string"/>
+									<field24 name="price" type="string"/>
+								</names>
+							</settings>
+						</text>
+					</data>
+				</component>
+			</children>
+			<graph directed="1">
+				<edges/>
+				<vertices>
+					<vertex vertexkey="56">
+						<edges>
+							<edge vertexkey="58"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="63">
+						<edges>
+							<edge vertexkey="60"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="21">
+						<edges>
+							<edge vertexkey="61"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="52">
+						<edges>
+							<edge vertexkey="64"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="53">
+						<edges>
+							<edge vertexkey="66"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="50">
+						<edges>
+							<edge vertexkey="68"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="55">
+						<edges>
+							<edge vertexkey="70"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="48">
+						<edges>
+							<edge vertexkey="72"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="62">
+						<edges>
+							<edge vertexkey="73"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="65">
+						<edges>
+							<edge vertexkey="74"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="49">
+						<edges>
+							<edge vertexkey="75"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="59">
+						<edges>
+							<edge vertexkey="76"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="51">
+						<edges>
+							<edge vertexkey="77"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="71">
+						<edges>
+							<edge vertexkey="78"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="67">
+						<edges>
+							<edge vertexkey="79"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="57">
+						<edges>
+							<edge vertexkey="80"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="54">
+						<edges>
+							<edge vertexkey="81"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="69">
+						<edges>
+							<edge vertexkey="83"/>
+						</edges>
+					</vertex>
+				</vertices>
+			</graph>
+		</structure>
+	</component>
+	<component name="dateFunction" library="user" uid="34" inline="1" editable="1" blackbox="0">
+		<structure>
+			<children>
+				<component name="constant" library="core" uid="90" kind="2">
+					<targets>
+						<datapoint pos="0" key="20"/>
+					</targets>
+					<view ltx="194" lty="213" rbx="340" rby="229"/>
+					<data>
+						<constant value="[0-9]{4}" datatype="string"/>
+					</data>
+				</component>
+				<component name="concat" library="core" uid="92" kind="5" growable="1" growablebasename="value">
+					<sources>
+						<datapoint pos="0" key="73"/>
+						<datapoint pos="1" key="74"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="75"/>
+					</targets>
+					<view ltx="787" lty="174" rbx="872" rby="228"/>
+				</component>
+				<component name="match-pattern" library="lang" uid="89" kind="5">
+					<sources>
+						<datapoint pos="0" key="19"/>
+						<datapoint pos="1" key="18"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="17"/>
+					</targets>
+					<view ltx="435" lty="177" rbx="556" rby="230"/>
+				</component>
+				<component name="match-pattern" library="lang" uid="95" kind="5">
+					<sources>
+						<datapoint pos="0" key="25"/>
+						<datapoint pos="1" key="24"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="26"/>
+					</targets>
+					<view ltx="434" lty="269" rbx="555" rby="322"/>
+				</component>
+				<component name="result" library="core" uid="35" kind="7">
+					<sources>
+						<datapoint pos="0" key="10"/>
+					</sources>
+					<view ltx="1498" lty="123" rbx="1580" rby="160"/>
+					<data>
+						<output datatype="string"/>
+						<parameter usageKind="output" name="result"/>
+					</data>
+				</component>
+				<component name="match-pattern" library="lang" uid="143" kind="5">
+					<sources>
+						<datapoint pos="0" key="46"/>
+						<datapoint pos="1" key="47"/>
+					</sources>
+					<targ
