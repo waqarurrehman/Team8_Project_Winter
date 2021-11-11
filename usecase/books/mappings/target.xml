@@ -1,0 +1,18 @@
+<books>
+<book id="1">
+<isbn>ssdfd</isbn>
+<title>fdsdsf</title>
+<release_date>fdf</release_date>
+<language>fdsf</language>
+<pages>3223</pages>
+<publisher>aaa</publisher>
+<genre>fssf</genre>
+<price>321</price>
+<formats>dads</formats>
+<authors>
+<author>
+abc
+</author>
+</authors>
+</book>
+</books>
