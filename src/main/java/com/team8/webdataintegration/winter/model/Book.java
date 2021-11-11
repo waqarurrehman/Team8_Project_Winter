@@ -1,4 +1,4 @@
-package com.team8.webdagtaintegraion.winter.model;
+package com.team8.webdataintegration.winter.model;
 
 import java.io.Serializable;
 import java.time.LocalDateTime;

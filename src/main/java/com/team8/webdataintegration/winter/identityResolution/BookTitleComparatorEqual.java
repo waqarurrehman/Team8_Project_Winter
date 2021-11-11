@@ -1,4 +1,4 @@
-package com.team8.webdagtaintegraion.winter.identityResolution;
+package com.team8.webdataintegration.winter.identityResolution;
 
 import de.uni_mannheim.informatik.dws.winter.matching.rules.comparators.Comparator;
 import de.uni_mannheim.informatik.dws.winter.matching.rules.comparators.ComparatorLogger;
@@ -6,8 +6,7 @@ import de.uni_mannheim.informatik.dws.winter.model.Correspondence;
 import de.uni_mannheim.informatik.dws.winter.model.Matchable;
 import de.uni_mannheim.informatik.dws.winter.model.defaultmodel.Attribute;
 import de.uni_mannheim.informatik.dws.winter.similarity.EqualsSimilarity;
-import de.uni_mannheim.informatik.dws.winter.similarity.string.LevenshteinSimilarity;
-import com.team8.webdagtaintegraion.winter.model.Book;
+import com.team8.webdataintegration.winter.model.Book;
 
 public class BookTitleComparatorEqual implements Comparator<Book, Attribute> {
 

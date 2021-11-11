@@ -1,6 +1,5 @@
-package com.team8.webdagtaintegraion.winter.identityResolution;
+package com.team8.webdataintegration.winter.identityResolution;
 
-import de.uni_mannheim.informatik.dws.winter.matching.blockers.generators.BlockingKeyGenerator;
 import de.uni_mannheim.informatik.dws.winter.matching.blockers.generators.RecordBlockingKeyGenerator;
 import de.uni_mannheim.informatik.dws.winter.model.Correspondence;
 import de.uni_mannheim.informatik.dws.winter.model.Matchable;
@@ -8,10 +7,7 @@ import de.uni_mannheim.informatik.dws.winter.model.Pair;
 import de.uni_mannheim.informatik.dws.winter.model.defaultmodel.Attribute;
 import de.uni_mannheim.informatik.dws.winter.processing.DataIterator;
 import de.uni_mannheim.informatik.dws.winter.processing.Processable;
-import com.team8.webdagtaintegraion.winter.model.Book;
-
-import java.time.format.DateTimeFormatter;  
-import java.time.LocalDateTime;  
+import com.team8.webdataintegration.winter.model.Book;
 
 public class BookBlockingKeyByDecadeGenerator extends
 RecordBlockingKeyGenerator<Book, Attribute> {

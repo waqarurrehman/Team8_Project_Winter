@@ -1,12 +1,12 @@
-package com.team8.webdagtaintegraion.winter.identityResolution;
+package com.team8.webdataintegration.winter.identityResolution;
 
-import com.team8.webdagtaintegraion.winter.model.Book;
+import com.team8.webdataintegration.winter.model.Book;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Collections;
 
-import com.team8.webdagtaintegraion.winter.model.Author;
+import com.team8.webdataintegration.winter.model.Author;
 
 import de.uni_mannheim.informatik.dws.winter.matching.rules.comparators.Comparator;
 import de.uni_mannheim.informatik.dws.winter.matching.rules.comparators.ComparatorLogger;

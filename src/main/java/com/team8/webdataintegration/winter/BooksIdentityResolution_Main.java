@@ -1,4 +1,4 @@
-package com.team8.webdagtaintegraion.winter;
+package com.team8.webdataintegration.winter;
 
 import java.io.File;
 import java.io.IOException;
@@ -18,11 +18,11 @@ import de.uni_mannheim.informatik.dws.winter.model.defaultmodel.Attribute;
 import de.uni_mannheim.informatik.dws.winter.model.io.CSVCorrespondenceFormatter;
 import de.uni_mannheim.informatik.dws.winter.processing.Processable;
 import de.uni_mannheim.informatik.dws.winter.utils.WinterLogManager;
-import com.team8.webdagtaintegraion.winter.model.Book;
-import com.team8.webdagtaintegraion.winter.model.BookXMLReader;
-import com.team8.webdagtaintegraion.winter.identityResolution.BookAuthorComparatorEqual;
-import com.team8.webdagtaintegraion.winter.identityResolution.BookBlockingKeyByDecadeGenerator;
-import com.team8.webdagtaintegraion.winter.identityResolution.BookTitleComparatorEqual;
+import com.team8.webdataintegration.winter.model.Book;
+import com.team8.webdataintegration.winter.model.BookXMLReader;
+import com.team8.webdataintegration.winter.identityResolution.BookAuthorComparatorEqual;
+import com.team8.webdataintegration.winter.identityResolution.BookBlockingKeyByDecadeGenerator;
+import com.team8.webdataintegration.winter.identityResolution.BookTitleComparatorEqual;
 
 public class BooksIdentityResolution_Main {
 	
