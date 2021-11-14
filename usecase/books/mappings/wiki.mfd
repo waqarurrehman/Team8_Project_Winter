@@ -24,38 +24,6 @@
 						</root>
 					</data>
 				</component>
-				<component name="target" library="xml" uid="2" kind="14">
-					<properties XSLTTargetEncoding="UTF-8" XSLTDefaultOutput="1" AddSchemaLocation="0"/>
-					<view ltx="1172" lty="117" rbx="1407" rby="468"/>
-					<data>
-						<root>
-							<header>
-								<namespaces>
-									<namespace/>
-									<namespace uid="http://www.altova.com/mapforce"/>
-								</namespaces>
-							</header>
-							<entry name="FileInstance" ns="1" expanded="1">
-								<entry name="document" ns="1" expanded="1" casttotargettypemode="cast-in-subtree">
-									<entry name="books" expanded="1">
-										<entry name="book" inpkey="8" expanded="1">
-											<entry name="id" type="attribute" inpkey="7"/>
-											<entry name="title" inpkey="9"/>
-											<entry name="release_date" inpkey="10"/>
-											<entry name="language" inpkey="11"/>
-											<entry name="genre" inpkey="12"/>
-											<entry name="publisher" inpkey="13"/>
-											<entry name="authors" expanded="1">
-												<entry name="author" inpkey="14"/>
-											</entry>
-										</entry>
-									</entry>
-								</entry>
-							</entry>
-						</root>
-						<document schema="target.xsd" instanceroot="{}books" inputinstance="target.xml" outputinstance="books\target_wiki.xml"/>
-					</data>
-				</component>
 				<component name="date_function" library="user" uid="34" kind="19" visible="0" blackbox="0">
 					<view ltx="393" lty="430" rbx="527" rby="447"/>
 					<data>
@@ -75,6 +43,39 @@
 							</header>
 							<entry name="release_date" outkey="43" componentid="33"/>
 						</root>
+					</data>
+				</component>
+				<component name="target" library="xml" uid="2" kind="14">
+					<properties XSLTTargetEncoding="UTF-8" XSLTDefaultOutput="1" AddSchemaLocation="0"/>
+					<view ltx="1172" lty="117" rbx="1407" rby="468"/>
+					<data>
+						<root>
+							<header>
+								<namespaces>
+									<namespace/>
+									<namespace uid="http://www.altova.com/mapforce"/>
+								</namespaces>
+							</header>
+							<entry name="FileInstance" ns="1" expanded="1">
+								<entry name="document" ns="1" expanded="1" casttotargettypemode="cast-in-subtree">
+									<entry name="books" expanded="1">
+										<entry name="book" inpkey="8" expanded="1">
+											<entry name="id" type="attribute" inpkey="7"/>
+											<entry name="title" inpkey="9"/>
+											<entry name="release_date" inpkey="10"/>
+											<entry name="part_of_a_series" inpkey="108"/>
+											<entry name="genre" inpkey="12"/>
+											<entry name="publisher" inpkey="13"/>
+											<entry name="authors" expanded="1">
+												<entry name="author" inpkey="14"/>
+											</entry>
+											<entry name="language" inpkey="11"/>
+										</entry>
+									</entry>
+								</entry>
+							</entry>
+						</root>
+						<document schema="target.xsd" instanceroot="{}books" inputinstance="target.xml" outputinstance="books\target_wiki.xml"/>
 					</data>
 				</component>
 				<component name="WikiData" library="text" uid="3" kind="16">
@@ -97,6 +98,7 @@
 										<entry name="langLabel" outkey="105"/>
 										<entry name="publisherLabel" outkey="106"/>
 										<entry name="genres" outkey="107"/>
+										<entry name="part_of_a_series" outkey="109"/>
 									</entry>
 								</entry>
 							</entry>
@@ -110,6 +112,7 @@
 									<field3 name="langLabel" type="string"/>
 									<field4 name="publisherLabel" type="string"/>
 									<field5 name="genres" type="string"/>
+									<field6 name="part_of_a_series" type="string"/>
 								</names>
 							</settings>
 						</text>
@@ -162,6 +165,11 @@
 					<vertex vertexkey="104">
 						<edges>
 							<edge vertexkey="42"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="109">
+						<edges>
+							<edge vertexkey="108"/>
 						</edges>
 					</vertex>
 				</vertices>

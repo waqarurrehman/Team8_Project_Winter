@@ -6,6 +6,7 @@ SELECT DISTINCT
   ?publisherLabel 
   (group_concat(DISTINCT ?genreLabel; separator=", ") as ?genres) 
   #(group_concat(DISTINCT ?characterLabel; separator=", ") as ?characters)
+  ?part_of_a_series
 WHERE {
   ?item wdt:P31 wd:Q7725634 .
   ?item wdt:P50 ?author .
@@ -15,6 +16,7 @@ WHERE {
   ?item wdt:P577 ?date .
   ?item wdt:P407 ?lang .
   OPTIONAL { ?item wdt:P123 ?publisher . }
+  BIND( IF( EXISTS{?item wdt:P179 []}, "Y", "N") AS ?part_of_a_series) #check if part of a series
 SERVICE wikibase:label { 
   bd:serviceParam wikibase:language "en". 
   ?genre rdfs:label ?genreLabel .
@@ -25,4 +27,4 @@ SERVICE wikibase:label {
 }
 FILTER (?lang = wd:Q1860) .
 }
-GROUP BY ?item ?titel ?authorLabel ?date ?langLabel ?publisherLabel
+GROUP BY ?item ?titel ?authorLabel ?date ?langLabel ?publisherLabel ?part_of_a_series
