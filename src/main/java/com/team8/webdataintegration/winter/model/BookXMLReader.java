@@ -32,6 +32,7 @@ FusibleFactory<Book, Attribute> {
 		dataset.addAttribute(Book.AUTHORS);
 		dataset.addAttribute(Book.LANGUAGE);
 		dataset.addAttribute(Book.PAGES);
+		dataset.addAttribute(Book.PRICE);
 		dataset.addAttribute(Book.GENRE);
 		dataset.addAttribute(Book.FORMATS);
 	}
@@ -64,8 +65,8 @@ FusibleFactory<Book, Attribute> {
 	    try {
 	      String sPrice = getValueFromChildElement(node, "price");
 	      if(sPrice != null) {
-	    	  double price = Double.parseDouble(sPrice);
-	    	  book.setPrice(price);
+	    	  //double price = Double.parseDouble(sPrice);
+	    	  book.setPrice(sPrice);
 	      }
 	    
 	    }catch(Exception e) {
@@ -79,7 +80,7 @@ FusibleFactory<Book, Attribute> {
 			
 			if (date != null && !date.isEmpty()) {
 			
-				DateTimeFormatter formatter = DateTimeFormatter.ofPattern("M/d/u");
+				DateTimeFormatter formatter = DateTimeFormatter.ofPattern("d/M/u");
 				LocalDateTime dt = LocalDate.parse(date, formatter).atStartOfDay();
 				book.setRelease_date(dt);
 			}
@@ -88,7 +89,7 @@ FusibleFactory<Book, Attribute> {
 			try {
 				
 				if (date != null && !date.isEmpty()) {
-				    DateTimeFormatter formatter = DateTimeFormatter.ofPattern("d/M/u");
+				    DateTimeFormatter formatter = DateTimeFormatter.ofPattern("M/d/u");
 					LocalDateTime dt = LocalDate.parse(date, formatter).atStartOfDay();
 					book.setRelease_date(dt);
 				}

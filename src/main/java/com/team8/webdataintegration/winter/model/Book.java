@@ -29,7 +29,7 @@ public class Book extends AbstractRecord<Attribute> implements Serializable {
 	private String language;
 	private String pages;
 	private String genre;
-	private double price;
+	private String price;
 	private String formats;
 	private String publisher;
 	private List<Author> authors;
@@ -74,6 +74,7 @@ public class Book extends AbstractRecord<Attribute> implements Serializable {
 	public static final Attribute PAGES = new Attribute("Pages");
 	public static final Attribute GENRE = new Attribute("Genre");
 	public static final Attribute FORMATS = new Attribute("Formats");
+	public static final Attribute PRICE = new Attribute("Price");
 	public static final Attribute PUBLISHER = new Attribute("Publisher");
 	public static final Attribute AUTHORS = new Attribute("Authors");
 	
@@ -93,6 +94,8 @@ public class Book extends AbstractRecord<Attribute> implements Serializable {
 			return getPages() != null && !getPages().isEmpty();
 		else if(attribute==GENRE)
 			return getGenre() != null && !getGenre().isEmpty();
+		else if(attribute==PRICE)
+			return getPrice() != null && !getPrice().isEmpty();
 		else if(attribute==FORMATS)
 			return getFormats() != null && !getFormats().isEmpty();
 		else if(attribute==PUBLISHER)
@@ -170,11 +173,11 @@ public class Book extends AbstractRecord<Attribute> implements Serializable {
 		this.genre = genre;
 	}
 
-	public double getPrice() {
+	public String getPrice() {
 		return price;
 	}
 
-	public void setPrice(double price) {
+	public void setPrice(String price) {
 		this.price = price;
 	}
 

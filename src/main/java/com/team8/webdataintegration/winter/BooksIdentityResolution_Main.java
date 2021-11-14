@@ -22,6 +22,7 @@ import com.team8.webdataintegration.winter.model.Book;
 import com.team8.webdataintegration.winter.model.BookXMLReader;
 import com.team8.webdataintegration.winter.identityResolution.BookAuthorComparatorEqual;
 import com.team8.webdataintegration.winter.identityResolution.BookBlockingKeyByDecadeGenerator;
+import com.team8.webdataintegration.winter.identityResolution.BookReleaseDateComparatorWeightedDateSimilarity;
 import com.team8.webdataintegration.winter.identityResolution.BookTitleComparatorEqual;
 
 public class BooksIdentityResolution_Main {
@@ -71,7 +72,8 @@ public class BooksIdentityResolution_Main {
 		try {
 			logger.info("Adding Title and Author Comparator");
 			matchingRule.addComparator(new BookTitleComparatorEqual(), 0.8);
-			matchingRule.addComparator(new BookAuthorComparatorEqual(), 0.2);
+			matchingRule.addComparator(new BookAuthorComparatorEqual(), 0.1);
+			matchingRule.addComparator(new BookReleaseDateComparatorWeightedDateSimilarity(), 0.1);
 		} catch (Exception e1) {
 			// TODO Auto-generated catch block
 			e1.printStackTrace();
