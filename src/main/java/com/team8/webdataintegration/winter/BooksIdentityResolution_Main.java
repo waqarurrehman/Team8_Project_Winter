@@ -72,7 +72,9 @@ public class BooksIdentityResolution_Main {
 		try {
 			logger.info("Adding Title and Author Comparator");
 			matchingRule.addComparator(new BookTitleComparatorEqual(), 0.8);
+			logger.info("Adding Authro and Author Comparator");
 			matchingRule.addComparator(new BookAuthorComparatorEqual(), 0.1);
+			logger.info("Adding Authro and Release Date Comparator");
 			matchingRule.addComparator(new BookReleaseDateComparatorWeightedDateSimilarity(), 0.1);
 		} catch (Exception e1) {
 			// TODO Auto-generated catch block
