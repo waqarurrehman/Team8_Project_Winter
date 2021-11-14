@@ -7,7 +7,7 @@
 		<structure>
 			<children>
 				<component name="id_function" library="user" uid="13" kind="19" visible="0" blackbox="0">
-					<view ltx="711" lty="-5" rbx="759" rby="12"/>
+					<view ltx="711" lty="-5" rbx="758" rby="12"/>
 					<data>
 						<root>
 							<header>
@@ -56,6 +56,27 @@
 						<document schema="target.xsd" instanceroot="{}books" inputinstance="target.xml" outputinstance="books\target_wiki.xml"/>
 					</data>
 				</component>
+				<component name="date_function" library="user" uid="34" kind="19" visible="0" blackbox="0">
+					<view ltx="393" lty="430" rbx="527" rby="447"/>
+					<data>
+						<root>
+							<header>
+								<namespaces>
+									<namespace/>
+								</namespaces>
+							</header>
+							<entry name="value" inpkey="42" componentid="32"/>
+						</root>
+						<root>
+							<header>
+								<namespaces>
+									<namespace/>
+								</namespaces>
+							</header>
+							<entry name="release_date" outkey="43" componentid="33"/>
+						</root>
+					</data>
+				</component>
 				<component name="WikiData" library="text" uid="3" kind="16">
 					<properties/>
 					<view ltx="-193" lty="61" rbx="-19" rby="372"/>
@@ -80,7 +101,7 @@
 								</entry>
 							</entry>
 						</root>
-						<text type="csv" encoding="1000" byteorder="1" byteordermark="0" inputinstance="E:\HWS2021\Web Data Integration\books\wikidata.csv">
+						<text type="csv" encoding="1000" byteorder="1" byteordermark="0" inputinstance="D:\HWS2021\Web Data Integration\books\wikidata.csv">
 							<settings separator="," quote="&quot;" firstrownames="true" removeempty="true">
 								<names root="wikidata" block="Rows">
 									<field0 name="titel" type="string"/>
@@ -92,27 +113,6 @@
 								</names>
 							</settings>
 						</text>
-					</data>
-				</component>
-				<component name="date_function" library="user" uid="34" kind="19" visible="0" blackbox="0">
-					<view ltx="393" lty="430" rbx="529" rby="447"/>
-					<data>
-						<root>
-							<header>
-								<namespaces>
-									<namespace/>
-								</namespaces>
-							</header>
-							<entry name="value" inpkey="42" componentid="32"/>
-						</root>
-						<root>
-							<header>
-								<namespaces>
-									<namespace/>
-								</namespaces>
-							</header>
-							<entry name="release_date" outkey="43" componentid="33"/>
-						</root>
 					</data>
 				</component>
 			</children>
@@ -242,18 +242,9 @@
 					<targets>
 						<datapoint pos="0" key="11"/>
 					</targets>
-					<view ltx="395" lty="177" rbx="536" rby="194"/>
+					<view ltx="395" lty="177" rbx="531" rby="193"/>
 					<data>
 						<constant value="[Y]-[M]-[D]T[H]:[m]:[s]Z" datatype="string"/>
-					</data>
-				</component>
-				<component name="constant" library="core" uid="27" kind="2">
-					<targets>
-						<datapoint pos="0" key="3"/>
-					</targets>
-					<view ltx="504" lty="254" rbx="595" rby="271"/>
-					<data>
-						<constant value="[M]/[D]/[Y]" datatype="string"/>
 					</data>
 				</component>
 				<component name="parse-date" library="core" uid="29" kind="5">
@@ -264,7 +255,7 @@
 					<targets>
 						<datapoint pos="0" key="9"/>
 					</targets>
-					<view ltx="651" lty="141" rbx="734" rby="195"/>
+					<view ltx="651" lty="141" rbx="727" rby="194"/>
 				</component>
 				<component name="format-date" library="core" uid="30" kind="5">
 					<sources>
@@ -275,7 +266,7 @@
 					<targets>
 						<datapoint pos="0" key="7"/>
 					</targets>
-					<view ltx="815" lty="177" rbx="913" rby="247"/>
+					<view ltx="815" lty="177" rbx="902" rby="246"/>
 				</component>
 				<component name="if-else" library="core" uid="31" kind="4">
 					<sources>
@@ -286,7 +277,7 @@
 					<targets>
 						<datapoint pos="0" key="13"/>
 					</targets>
-					<view ltx="935" lty="54" rbx="1039" rby="127"/>
+					<view ltx="935" lty="54" rbx="1029" rby="125"/>
 				</component>
 				<component name="value" library="core" uid="32" kind="6">
 					<sources>
@@ -295,7 +286,7 @@
 					<targets>
 						<datapoint pos="0" key="16"/>
 					</targets>
-					<view rbx="84" rby="38"/>
+					<view rbx="75" rby="37"/>
 					<data>
 						<input datatype="string"/>
 						<parameter usageKind="input" name="value"/>
@@ -305,7 +296,7 @@
 					<sources>
 						<datapoint pos="0" key="17"/>
 					</sources>
-					<view ltx="1127" rbx="1219" rby="38"/>
+					<view ltx="1127" rbx="1211" rby="37"/>
 					<data>
 						<output datatype="anyType"/>
 						<parameter usageKind="output" name="release_date"/>
@@ -319,15 +310,24 @@
 					<targets>
 						<datapoint pos="0" key="1"/>
 					</targets>
-					<view ltx="636" rbx="736" rby="54"/>
+					<view ltx="636" rbx="728" rby="53"/>
 				</component>
 				<component name="constant" library="core" uid="25" kind="2">
 					<targets>
 						<datapoint pos="0" key="5"/>
 					</targets>
-					<view ltx="300" lty="95" rbx="445" rby="112"/>
+					<view ltx="300" lty="95" rbx="438" rby="111"/>
 					<data>
 						<constant value="\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}Z" datatype="string"/>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="27" kind="2">
+					<targets>
+						<datapoint pos="0" key="3"/>
+					</targets>
+					<view ltx="504" lty="254" rbx="595" rby="270"/>
+					<data>
+						<constant value="[D]/[M]/[Y]" datatype="string"/>
 					</data>
 				</component>
 			</children>

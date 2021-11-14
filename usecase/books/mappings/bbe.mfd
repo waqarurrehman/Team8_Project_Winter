@@ -14,7 +14,7 @@
 					<targets>
 						<datapoint pos="0" key="62"/>
 					</targets>
-					<view ltx="1407" lty="-221" rbx="1494" rby="-168"/>
+					<view ltx="1407" lty="-221" rbx="1492" rby="-167"/>
 				</component>
 				<component name="auto-number" library="core" uid="5" kind="5">
 					<sources>
@@ -26,19 +26,19 @@
 					<targets>
 						<datapoint pos="0" key="21"/>
 					</targets>
-					<view ltx="1217" lty="-170" rbx="1352" rby="-89"/>
+					<view ltx="1217" lty="-170" rbx="1345" rby="-85"/>
 				</component>
 				<component name="constant" library="core" uid="60" kind="2">
 					<targets>
 						<datapoint pos="0" key="63"/>
 					</targets>
-					<view ltx="1246" lty="-221" rbx="1384" rby="-205"/>
+					<view ltx="1246" lty="-221" rbx="1379" rby="-205"/>
 					<data>
 						<constant value="bbe_" datatype="string"/>
 					</data>
 				</component>
 				<component name="pagesFunction" library="user" uid="51" kind="19" visible="0" blackbox="0">
-					<view ltx="1271" lty="385" rbx="1431" rby="401"/>
+					<view ltx="1271" lty="385" rbx="1429" rby="402"/>
 					<data>
 						<root>
 							<header>
@@ -59,7 +59,7 @@
 					</data>
 				</component>
 				<component name="isbnFunction" library="user" uid="59" kind="19" visible="0" blackbox="0">
-					<view ltx="775" lty="-94" rbx="937" rby="-78"/>
+					<view ltx="775" lty="-94" rbx="936" rby="-77"/>
 					<data>
 						<root>
 							<header>
@@ -80,7 +80,7 @@
 					</data>
 				</component>
 				<component name="genresFunction" library="user" uid="80" kind="19" visible="0" blackbox="0">
-					<view ltx="869" lty="111" rbx="1031" rby="127"/>
+					<view ltx="869" lty="111" rbx="1030" rby="128"/>
 					<data>
 						<root>
 							<header>
@@ -101,7 +101,7 @@
 					</data>
 				</component>
 				<component name="dateFunction" library="user" uid="38" kind="19" visible="0" blackbox="0">
-					<view ltx="947" lty="412" rbx="1109" rby="428"/>
+					<view ltx="947" lty="412" rbx="1108" rby="429"/>
 					<data>
 						<root>
 							<header>
@@ -130,7 +130,7 @@
 					<targets>
 						<datapoint pos="0" key="89"/>
 					</targets>
-					<view ltx="735" lty="379" rbx="834" rby="448"/>
+					<view ltx="735" lty="379" rbx="829" rby="450"/>
 				</component>
 				<component name="is-null" library="db" uid="164" kind="5">
 					<sources>
@@ -139,28 +139,7 @@
 					<targets>
 						<datapoint pos="0" key="91"/>
 					</targets>
-					<view ltx="583" lty="422" rbx="661" rby="458"/>
-				</component>
-				<component name="authorFunction" library="user" uid="68" kind="19" visible="0" blackbox="0">
-					<view ltx="869" lty="188" rbx="1031" rby="204"/>
-					<data>
-						<root>
-							<header>
-								<namespaces>
-									<namespace/>
-								</namespaces>
-							</header>
-							<entry name="input" inpkey="68" componentid="66"/>
-						</root>
-						<root>
-							<header>
-								<namespaces>
-									<namespace/>
-								</namespaces>
-							</header>
-							<entry name="result" outkey="69" componentid="62"/>
-						</root>
-					</data>
+					<view ltx="583" lty="422" rbx="659" rby="459"/>
 				</component>
 				<component name="target" library="xml" uid="10" kind="14">
 					<properties XSLTTargetEncoding="UTF-8" XSLTDefaultOutput="1" AddSchemaLocation="0"/>
@@ -178,24 +157,47 @@
 									<entry name="books" expanded="1">
 										<entry name="book" inpkey="72" expanded="1">
 											<entry name="id" type="attribute" inpkey="73"/>
-											<entry name="isbn" inpkey="74"/>
 											<entry name="title" inpkey="75"/>
 											<entry name="release_date" inpkey="76"/>
-											<entry name="language" inpkey="77"/>
-											<entry name="pages" inpkey="78"/>
+											<entry name="rating" inpkey="95"/>
+											<entry name="part_of_a_series" inpkey="96"/>
 											<entry name="genre" inpkey="79"/>
-											<entry name="price" inpkey="80"/>
 											<entry name="publisher" inpkey="84"/>
-											<entry name="formats" inpkey="81"/>
 											<entry name="authors" expanded="1">
 												<entry name="author" inpkey="83" expanded="1"/>
 											</entry>
+											<entry name="price" inpkey="80"/>
+											<entry name="isbn" inpkey="74"/>
+											<entry name="language" inpkey="77"/>
+											<entry name="pages" inpkey="78"/>
+											<entry name="formats" inpkey="81"/>
 										</entry>
 									</entry>
 								</entry>
 							</entry>
 						</root>
 						<document schema="target.xsd" instanceroot="{}books" inputinstance="target.xml" outputinstance="target.xml"/>
+					</data>
+				</component>
+				<component name="titleFunction" library="user" uid="192" kind="19" visible="0" blackbox="0">
+					<view ltx="868" lty="26" rbx="1029" rby="43"/>
+					<data>
+						<root>
+							<header>
+								<namespaces>
+									<namespace/>
+								</namespaces>
+							</header>
+							<entry name="input" inpkey="93" componentid="181"/>
+						</root>
+						<root>
+							<header>
+								<namespaces>
+									<namespace/>
+								</namespaces>
+							</header>
+							<entry name="result" outkey="94" componentid="180"/>
+						</root>
 					</data>
 				</component>
 				<component name="Best_Books_Ever" library="text" uid="2" kind="16">
@@ -213,7 +215,9 @@
 								<entry name="document" ns="1" expanded="1">
 									<entry name="Rows" outkey="48" expanded="1">
 										<entry name="title" outkey="49"/>
+										<entry name="series" outkey="97"/>
 										<entry name="author" outkey="50"/>
+										<entry name="rating" outkey="98"/>
 										<entry name="language" outkey="51"/>
 										<entry name="isbn" outkey="52"/>
 										<entry name="genres" outkey="53"/>
@@ -260,8 +264,8 @@
 						</text>
 					</data>
 				</component>
-				<component name="titleFunction" library="user" uid="192" kind="19" visible="0" blackbox="0">
-					<view ltx="868" lty="26" rbx="1030" rby="42"/>
+				<component name="seriesFunction" library="user" uid="203" kind="19" visible="0" blackbox="0">
+					<view ltx="868" lty="250" rbx="1029" rby="267"/>
 					<data>
 						<root>
 							<header>
@@ -269,7 +273,7 @@
 									<namespace/>
 								</namespaces>
 							</header>
-							<entry name="input" inpkey="93" componentid="181"/>
+							<entry name="input" inpkey="99" componentid="196"/>
 						</root>
 						<root>
 							<header>
@@ -277,7 +281,28 @@
 									<namespace/>
 								</namespaces>
 							</header>
-							<entry name="result" outkey="94" componentid="180"/>
+							<entry name="result" outkey="100" componentid="195"/>
+						</root>
+					</data>
+				</component>
+				<component name="authorFunction" library="user" uid="68" kind="19" visible="0" blackbox="0">
+					<view ltx="869" lty="188" rbx="1030" rby="205"/>
+					<data>
+						<root>
+							<header>
+								<namespaces>
+									<namespace/>
+								</namespaces>
+							</header>
+							<entry name="input" inpkey="68" componentid="66"/>
+						</root>
+						<root>
+							<header>
+								<namespaces>
+									<namespace/>
+								</namespaces>
+							</header>
+							<entry name="result" outkey="69" componentid="62"/>
 						</root>
 					</data>
 				</component>
@@ -399,6 +424,21 @@
 					<vertex vertexkey="49">
 						<edges>
 							<edge vertexkey="93"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="98">
+						<edges>
+							<edge vertexkey="95"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="100">
+						<edges>
+							<edge vertexkey="96"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="97">
+						<edges>
+							<edge vertexkey="99"/>
 						</edges>
 					</vertex>
 				</vertices>
@@ -1376,7 +1416,6 @@
 		</structure>
 	</component>
 	<component name="titleFunction" library="user" uid="179" inline="1" editable="1" blackbox="0">
-		<description/>
 		<structure>
 			<children>
 				<component name="result" library="core" uid="180" kind="7">
@@ -1499,6 +1538,104 @@
 					<vertex vertexkey="12">
 						<edges>
 							<edge vertexkey="14"/>
+						</edges>
+					</vertex>
+				</vertices>
+			</graph>
+		</structure>
+	</component>
+	<component name="seriesFunction" library="user" uid="194" inline="1" editable="1" blackbox="0">
+		<description/>
+		<structure>
+			<children>
+				<component name="result" library="core" uid="195" kind="7">
+					<sources>
+						<datapoint pos="0" key="1"/>
+					</sources>
+					<view ltx="929" rbx="1011" rby="37"/>
+					<data>
+						<output datatype="string"/>
+						<parameter usageKind="output" name="result"/>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="200" kind="2">
+					<targets>
+						<datapoint pos="0" key="5"/>
+					</targets>
+					<view ltx="360" lty="128" rbx="477" rby="144"/>
+					<data>
+						<constant value="Y" datatype="string"/>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="201" kind="2">
+					<targets>
+						<datapoint pos="0" key="6"/>
+					</targets>
+					<view ltx="360" lty="162" rbx="479" rby="178"/>
+					<data>
+						<constant value="N" datatype="string"/>
+					</data>
+				</component>
+				<component name="if-else" library="core" uid="199" kind="4">
+					<sources>
+						<datapoint pos="0" key="7"/>
+						<datapoint pos="1" key="8"/>
+						<datapoint pos="2" key="9"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="10"/>
+					</targets>
+					<view ltx="575" lty="39" rbx="669" rby="110"/>
+				</component>
+				<component name="input" library="core" uid="196" kind="6">
+					<sources>
+						<datapoint/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="2"/>
+					</targets>
+					<view ltx="246" lty="50" rbx="325" rby="87"/>
+					<data>
+						<input datatype="string"/>
+						<parameter usageKind="input" name="input"/>
+					</data>
+				</component>
+				<component name="exists" library="core" uid="207" kind="5">
+					<sources>
+						<datapoint pos="0" key="11"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="12"/>
+					</targets>
+					<view ltx="384" lty="57" rbx="464" rby="94"/>
+				</component>
+			</children>
+			<graph directed="1">
+				<edges/>
+				<vertices>
+					<vertex vertexkey="10">
+						<edges>
+							<edge vertexkey="1"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="12">
+						<edges>
+							<edge vertexkey="7"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="5">
+						<edges>
+							<edge vertexkey="8"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="6">
+						<edges>
+							<edge vertexkey="9"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="2">
+						<edges>
+							<edge vertexkey="11"/>
 						</edges>
 					</vertex>
 				</vertices>
