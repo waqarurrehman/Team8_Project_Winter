@@ -14,7 +14,7 @@
 					<targets>
 						<datapoint pos="0" key="62"/>
 					</targets>
-					<view ltx="1407" lty="-221" rbx="1492" rby="-167"/>
+					<view ltx="1407" lty="-221" rbx="1489" rby="-167"/>
 				</component>
 				<component name="auto-number" library="core" uid="5" kind="5">
 					<sources>
@@ -26,19 +26,19 @@
 					<targets>
 						<datapoint pos="0" key="21"/>
 					</targets>
-					<view ltx="1217" lty="-170" rbx="1345" rby="-85"/>
+					<view ltx="1217" lty="-170" rbx="1341" rby="-85"/>
 				</component>
 				<component name="constant" library="core" uid="60" kind="2">
 					<targets>
 						<datapoint pos="0" key="63"/>
 					</targets>
-					<view ltx="1246" lty="-221" rbx="1379" rby="-205"/>
+					<view ltx="1246" lty="-221" rbx="1374" rby="-204"/>
 					<data>
 						<constant value="bbe_" datatype="string"/>
 					</data>
 				</component>
 				<component name="pagesFunction" library="user" uid="51" kind="19" visible="0" blackbox="0">
-					<view ltx="1271" lty="385" rbx="1429" rby="402"/>
+					<view ltx="1271" lty="385" rbx="1423" rby="401"/>
 					<data>
 						<root>
 							<header>
@@ -59,7 +59,7 @@
 					</data>
 				</component>
 				<component name="isbnFunction" library="user" uid="59" kind="19" visible="0" blackbox="0">
-					<view ltx="775" lty="-94" rbx="936" rby="-77"/>
+					<view ltx="775" lty="-94" rbx="929" rby="-78"/>
 					<data>
 						<root>
 							<header>
@@ -80,7 +80,7 @@
 					</data>
 				</component>
 				<component name="genresFunction" library="user" uid="80" kind="19" visible="0" blackbox="0">
-					<view ltx="869" lty="111" rbx="1030" rby="128"/>
+					<view ltx="869" lty="111" rbx="1023" rby="127"/>
 					<data>
 						<root>
 							<header>
@@ -100,27 +100,6 @@
 						</root>
 					</data>
 				</component>
-				<component name="dateFunction" library="user" uid="38" kind="19" visible="0" blackbox="0">
-					<view ltx="947" lty="412" rbx="1108" rby="429"/>
-					<data>
-						<root>
-							<header>
-								<namespaces>
-									<namespace/>
-								</namespaces>
-							</header>
-							<entry name="input" inpkey="58" componentid="36"/>
-						</root>
-						<root>
-							<header>
-								<namespaces>
-									<namespace/>
-								</namespaces>
-							</header>
-							<entry name="result" outkey="59" componentid="35"/>
-						</root>
-					</data>
-				</component>
 				<component name="if-else" library="core" uid="162" kind="4">
 					<sources>
 						<datapoint pos="0" key="86"/>
@@ -130,7 +109,7 @@
 					<targets>
 						<datapoint pos="0" key="89"/>
 					</targets>
-					<view ltx="735" lty="379" rbx="829" rby="450"/>
+					<view ltx="735" lty="379" rbx="824" rby="450"/>
 				</component>
 				<component name="is-null" library="db" uid="164" kind="5">
 					<sources>
@@ -139,7 +118,7 @@
 					<targets>
 						<datapoint pos="0" key="91"/>
 					</targets>
-					<view ltx="583" lty="422" rbx="659" rby="459"/>
+					<view ltx="583" lty="422" rbx="655" rby="458"/>
 				</component>
 				<component name="target" library="xml" uid="10" kind="14">
 					<properties XSLTTargetEncoding="UTF-8" XSLTDefaultOutput="1" AddSchemaLocation="0"/>
@@ -180,7 +159,7 @@
 					</data>
 				</component>
 				<component name="titleFunction" library="user" uid="192" kind="19" visible="0" blackbox="0">
-					<view ltx="868" lty="26" rbx="1029" rby="43"/>
+					<view ltx="868" lty="26" rbx="1022" rby="42"/>
 					<data>
 						<root>
 							<header>
@@ -197,6 +176,69 @@
 								</namespaces>
 							</header>
 							<entry name="result" outkey="94" componentid="180"/>
+						</root>
+					</data>
+				</component>
+				<component name="seriesFunction" library="user" uid="203" kind="19" visible="0" blackbox="0">
+					<view ltx="868" lty="250" rbx="1022" rby="266"/>
+					<data>
+						<root>
+							<header>
+								<namespaces>
+									<namespace/>
+								</namespaces>
+							</header>
+							<entry name="input" inpkey="99" componentid="196"/>
+						</root>
+						<root>
+							<header>
+								<namespaces>
+									<namespace/>
+								</namespaces>
+							</header>
+							<entry name="result" outkey="100" componentid="195"/>
+						</root>
+					</data>
+				</component>
+				<component name="authorFunction" library="user" uid="68" kind="19" visible="0" blackbox="0">
+					<view ltx="869" lty="188" rbx="1023" rby="204"/>
+					<data>
+						<root>
+							<header>
+								<namespaces>
+									<namespace/>
+								</namespaces>
+							</header>
+							<entry name="input" inpkey="68" componentid="66"/>
+						</root>
+						<root>
+							<header>
+								<namespaces>
+									<namespace/>
+								</namespaces>
+							</header>
+							<entry name="result" outkey="69" componentid="62"/>
+						</root>
+					</data>
+				</component>
+				<component name="dateFunction" library="user" uid="38" kind="19" visible="0" blackbox="0">
+					<view ltx="947" lty="412" rbx="1101" rby="428"/>
+					<data>
+						<root>
+							<header>
+								<namespaces>
+									<namespace/>
+								</namespaces>
+							</header>
+							<entry name="input" inpkey="58" componentid="36"/>
+						</root>
+						<root>
+							<header>
+								<namespaces>
+									<namespace/>
+								</namespaces>
+							</header>
+							<entry name="result" outkey="59" componentid="35"/>
 						</root>
 					</data>
 				</component>
@@ -262,48 +304,6 @@
 								</names>
 							</settings>
 						</text>
-					</data>
-				</component>
-				<component name="seriesFunction" library="user" uid="203" kind="19" visible="0" blackbox="0">
-					<view ltx="868" lty="250" rbx="1029" rby="267"/>
-					<data>
-						<root>
-							<header>
-								<namespaces>
-									<namespace/>
-								</namespaces>
-							</header>
-							<entry name="input" inpkey="99" componentid="196"/>
-						</root>
-						<root>
-							<header>
-								<namespaces>
-									<namespace/>
-								</namespaces>
-							</header>
-							<entry name="result" outkey="100" componentid="195"/>
-						</root>
-					</data>
-				</component>
-				<component name="authorFunction" library="user" uid="68" kind="19" visible="0" blackbox="0">
-					<view ltx="869" lty="188" rbx="1030" rby="205"/>
-					<data>
-						<root>
-							<header>
-								<namespaces>
-									<namespace/>
-								</namespaces>
-							</header>
-							<entry name="input" inpkey="68" componentid="66"/>
-						</root>
-						<root>
-							<header>
-								<namespaces>
-									<namespace/>
-								</namespaces>
-							</header>
-							<entry name="result" outkey="69" componentid="62"/>
-						</root>
 					</data>
 				</component>
 			</children>
@@ -452,7 +452,7 @@
 					<targets>
 						<datapoint pos="0" key="20"/>
 					</targets>
-					<view ltx="194" lty="213" rbx="340" rby="229"/>
+					<view ltx="194" lty="213" rbx="334" rby="230"/>
 					<data>
 						<constant value="[0-9]{4}" datatype="string"/>
 					</data>
@@ -465,7 +465,7 @@
 					<targets>
 						<datapoint pos="0" key="75"/>
 					</targets>
-					<view ltx="787" lty="174" rbx="872" rby="228"/>
+					<view ltx="787" lty="174" rbx="869" rby="228"/>
 				</component>
 				<component name="match-pattern" library="lang" uid="89" kind="5">
 					<sources>
@@ -475,7 +475,7 @@
 					<targets>
 						<datapoint pos="0" key="17"/>
 					</targets>
-					<view ltx="435" lty="177" rbx="556" rby="230"/>
+					<view ltx="435" lty="177" rbx="553" rby="229"/>
 				</component>
 				<component name="match-pattern" library="lang" uid="95" kind="5">
 					<sources>
@@ -485,17 +485,7 @@
 					<targets>
 						<datapoint pos="0" key="26"/>
 					</targets>
-					<view ltx="434" lty="269" rbx="555" rby="322"/>
-				</component>
-				<component name="result" library="core" uid="35" kind="7">
-					<sources>
-						<datapoint pos="0" key="10"/>
-					</sources>
-					<view ltx="1498" lty="123" rbx="1580" rby="160"/>
-					<data>
-						<output datatype="string"/>
-						<parameter usageKind="output" name="result"/>
-					</data>
+					<view ltx="434" lty="269" rbx="552" rby="321"/>
 				</component>
 				<component name="match-pattern" library="lang" uid="143" kind="5">
 					<sources>
@@ -505,7 +495,7 @@
 					<targets>
 						<datapoint pos="0" key="48"/>
 					</targets>
-					<view ltx="319" lty="384" rbx="440" rby="437"/>
+					<view ltx="319" lty="384" rbx="437" rby="436"/>
 				</component>
 				<component name="match-pattern" library="lang" uid="146" kind="5">
 					<sources>
@@ -515,13 +505,13 @@
 					<targets>
 						<datapoint pos="0" key="52"/>
 					</targets>
-					<view ltx="320" lty="489" rbx="441" rby="542"/>
+					<view ltx="320" lty="489" rbx="438" rby="541"/>
 				</component>
 				<component name="constant" library="core" uid="147" kind="2">
 					<targets>
 						<datapoint pos="0" key="56"/>
 					</targets>
-					<view ltx="261" lty="560" rbx="444" rby="576"/>
+					<view ltx="261" lty="560" rbx="437" rby="577"/>
 					<data>
 						<constant value="[MNn] [D]rd [Y]" datatype="string"/>
 					</data>
@@ -530,7 +520,7 @@
 					<targets>
 						<datapoint pos="0" key="59"/>
 					</targets>
-					<view ltx="260" lty="666" rbx="441" rby="682"/>
+					<view ltx="260" lty="666" rbx="434" rby="683"/>
 					<data>
 						<constant value="[MNn] [D]st [Y]" datatype="string"/>
 					</data>
@@ -550,7 +540,7 @@
 					<targets>
 						<datapoint pos="0" key="81"/>
 					</targets>
-					<view ltx="541" lty="471" rbx="639" rby="642"/>
+					<view ltx="541" lty="471" rbx="635" rby="644"/>
 				</component>
 				<component name="match-pattern" library="lang" uid="149" kind="5">
 					<sources>
@@ -560,7 +550,7 @@
 					<targets>
 						<datapoint pos="0" key="62"/>
 					</targets>
-					<view ltx="319" lty="595" rbx="440" rby="648"/>
+					<view ltx="319" lty="595" rbx="437" rby="647"/>
 				</component>
 				<component name="match-pattern" library="lang" uid="155" kind="5">
 					<sources>
@@ -570,13 +560,13 @@
 					<targets>
 						<datapoint pos="0" key="72"/>
 					</targets>
-					<view ltx="318" lty="713" rbx="439" rby="766"/>
+					<view ltx="318" lty="713" rbx="436" rby="765"/>
 				</component>
 				<component name="constant" library="core" uid="156" kind="2">
 					<targets>
 						<datapoint pos="0" key="69"/>
 					</targets>
-					<view ltx="259" lty="784" rbx="444" rby="800"/>
+					<view ltx="259" lty="784" rbx="437" rby="801"/>
 					<data>
 						<constant value="[MNn] [D]nd [Y]" datatype="string"/>
 					</data>
@@ -585,7 +575,7 @@
 					<targets>
 						<datapoint pos="0" key="53"/>
 					</targets>
-					<view ltx="62" lty="524" rbx="250" rby="540"/>
+					<view ltx="62" lty="524" rbx="244" rby="541"/>
 					<data>
 						<constant value=".*[0-9]rd [0-9]{4}" datatype="string"/>
 					</data>
@@ -594,7 +584,7 @@
 					<targets>
 						<datapoint pos="0" key="60"/>
 					</targets>
-					<view ltx="61" lty="630" rbx="247" rby="646"/>
+					<view ltx="61" lty="630" rbx="241" rby="647"/>
 					<data>
 						<constant value=".*[0-9]st [0-9]{4}" datatype="string"/>
 					</data>
@@ -603,7 +593,7 @@
 					<targets>
 						<datapoint pos="0" key="70"/>
 					</targets>
-					<view ltx="60" lty="748" rbx="250" rby="764"/>
+					<view ltx="60" lty="748" rbx="244" rby="765"/>
 					<data>
 						<constant value=".*[0-9]nd [0-9]{4}" datatype="string"/>
 					</data>
@@ -612,7 +602,7 @@
 					<targets>
 						<datapoint pos="0" key="45"/>
 					</targets>
-					<view ltx="61" lty="419" rbx="249" rby="435"/>
+					<view ltx="61" lty="419" rbx="243" rby="436"/>
 					<data>
 						<constant value=".*[0-9]th [0-9]{4}" datatype="string"/>
 					</data>
@@ -621,7 +611,7 @@
 					<targets>
 						<datapoint pos="0" key="49"/>
 					</targets>
-					<view ltx="260" lty="455" rbx="442" rby="471"/>
+					<view ltx="260" lty="455" rbx="436" rby="472"/>
 					<data>
 						<constant value="[MNn] [D]th [Y]" datatype="string"/>
 					</data>
@@ -630,7 +620,7 @@
 					<targets>
 						<datapoint pos="0" key="23"/>
 					</targets>
-					<view ltx="193" lty="305" rbx="411" rby="321"/>
+					<view ltx="193" lty="305" rbx="403" rby="322"/>
 					<data>
 						<constant value="(January|February|March|April|May|June|July|August|September|October|November|December) [1-3]?[0-9](th|rd|st|nd) [0-9]{4}" datatype="string"/>
 					</data>
@@ -639,7 +629,7 @@
 					<targets>
 						<datapoint pos="0" key="21"/>
 					</targets>
-					<view ltx="605" lty="195" rbx="736" rby="211"/>
+					<view ltx="605" lty="195" rbx="730" rby="212"/>
 					<data>
 						<constant value="1/1/" datatype="string"/>
 					</data>
@@ -652,13 +642,13 @@
 					<targets>
 						<datapoint pos="0" key="78"/>
 					</targets>
-					<view ltx="705" lty="324" rbx="809" rby="377"/>
+					<view ltx="705" lty="324" rbx="806" rby="376"/>
 				</component>
 				<component name="constant" library="core" uid="138" kind="2">
 					<targets>
 						<datapoint pos="0" key="88"/>
 					</targets>
-					<view ltx="760" lty="398" rbx="922" rby="414"/>
+					<view ltx="760" lty="398" rbx="914" rby="415"/>
 					<data>
 						<constant value="[D]/[M]/[Y]" datatype="string"/>
 					</data>
@@ -672,7 +662,118 @@
 					<targets>
 						<datapoint pos="0" key="91"/>
 					</targets>
-					<view ltx="998" lty="323" rbx="1108" rby="392"/>
+					<view ltx="998" lty="323" rbx="1105" rby="391"/>
+				</component>
+				<component name="match-pattern" library="lang" uid="40" kind="5">
+					<sources>
+						<datapoint pos="0" key="4"/>
+						<datapoint pos="1" key="5"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="6"/>
+					</targets>
+					<view ltx="434" lty="86" rbx="552" rby="138"/>
+				</component>
+				<component name="input" library="core" uid="36" kind="6">
+					<sources>
+						<datapoint/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="7"/>
+					</targets>
+					<view ltx="103" lty="34" rbx="179" rby="70"/>
+					<data>
+						<input datatype="string"/>
+						<parameter usageKind="input" name="input"/>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="41" kind="2">
+					<targets>
+						<datapoint pos="0" key="9"/>
+					</targets>
+					<view ltx="193" lty="123" rbx="395" rby="140"/>
+					<data>
+						<constant value="[0-9][0-9]/[0-9][0-9]/[0-9][0-9]" datatype="string"/>
+					</data>
+				</component>
+				<component name="parse-date" library="core" uid="157" kind="5">
+					<sources>
+						<datapoint pos="0" key="92"/>
+						<datapoint pos="1" key="93"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="94"/>
+					</targets>
+					<view ltx="747" lty="6" rbx="848" rby="58"/>
+				</component>
+				<component name="format-date" library="core" uid="161" kind="5">
+					<sources>
+						<datapoint pos="0" key="98"/>
+						<datapoint pos="1" key="100"/>
+						<datapoint/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="97"/>
+					</targets>
+					<view ltx="1041" lty="1" rbx="1148" rby="69"/>
+				</component>
+				<component name="constant" library="core" uid="160" kind="2">
+					<targets>
+						<datapoint pos="0" key="99"/>
+					</targets>
+					<view ltx="820" lty="76" rbx="974" rby="93"/>
+					<data>
+						<constant value="[D]/[M]/[Y]" datatype="string"/>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="159" kind="2">
+					<targets>
+						<datapoint pos="0" key="96"/>
+					</targets>
+					<view ltx="477" lty="55" rbx="680" rby="72"/>
+					<data>
+						<constant value="[M,2-2]/[D,2-2]/[Y,2-2]" datatype="string"/>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="210" kind="2">
+					<targets>
+						<datapoint pos="0" key="101"/>
+					</targets>
+					<view ltx="1377" lty="256" rbx="1578" rby="273"/>
+					<data>
+						<constant value="[0-9][0-9]?/[0-9][0-9]?/20[3-9][0-9]" datatype="string"/>
+					</data>
+				</component>
+				<component name="match-pattern" library="lang" uid="209" kind="5">
+					<sources>
+						<datapoint pos="0" key="102"/>
+						<datapoint pos="1" key="103"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="104"/>
+					</targets>
+					<view ltx="1567" lty="113" rbx="1685" rby="165"/>
+				</component>
+				<component name="result" library="core" uid="35" kind="7">
+					<sources>
+						<datapoint pos="0" key="10"/>
+					</sources>
+					<view ltx="1879" lty="130" rbx="1957" rby="166"/>
+					<data>
+						<output datatype="string"/>
+						<parameter usageKind="output" name="result"/>
+					</data>
+				</component>
+				<component name="if-else" library="core" uid="211" kind="4">
+					<sources>
+						<datapoint pos="0" key="105"/>
+						<datapoint pos="1" key="106"/>
+						<datapoint pos="2" key="107"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="108"/>
+					</targets>
+					<view ltx="1735" lty="113" rbx="1824" rby="184"/>
 				</component>
 				<component name="if-else" library="core" uid="87" kind="4">
 					<sources>
@@ -687,78 +788,36 @@
 					<targets>
 						<datapoint pos="0" key="87"/>
 					</targets>
-					<view ltx="1326" lty="76" rbx="1424" rby="214"/>
+					<view ltx="1326" lty="76" rbx="1420" rby="215"/>
 				</component>
-				<component name="match-pattern" library="lang" uid="40" kind="5">
-					<sources>
-						<datapoint pos="0" key="4"/>
-						<datapoint pos="1" key="5"/>
-					</sources>
+				<component name="constant" library="core" uid="216" kind="2">
 					<targets>
-						<datapoint pos="0" key="6"/>
+						<datapoint pos="0" key="109"/>
 					</targets>
-					<view ltx="434" lty="86" rbx="555" rby="139"/>
-				</component>
-				<component name="input" library="core" uid="36" kind="6">
-					<sources>
-						<datapoint/>
-					</sources>
-					<targets>
-						<datapoint pos="0" key="7"/>
-					</targets>
-					<view ltx="103" lty="34" rbx="182" rby="71"/>
+					<view ltx="1344" lty="2" rbx="1466" rby="19"/>
 					<data>
-						<input datatype="string"/>
-						<parameter usageKind="input" name="input"/>
+						<constant value="/20" datatype="string"/>
 					</data>
 				</component>
-				<component name="constant" library="core" uid="41" kind="2">
+				<component name="constant" library="core" uid="217" kind="2">
 					<targets>
-						<datapoint pos="0" key="9"/>
+						<datapoint pos="0" key="110"/>
 					</targets>
-					<view ltx="193" lty="123" rbx="401" rby="139"/>
+					<view ltx="1327" lty="28" rbx="1449" rby="45"/>
 					<data>
-						<constant value="[0-9][0-9]/[0-9][0-9]/[0-9][0-9]" datatype="string"/>
+						<constant value="/19" datatype="string"/>
 					</data>
 				</component>
-				<component name="parse-date" library="core" uid="157" kind="5">
+				<component name="replace" library="lang" uid="215" kind="5">
 					<sources>
-						<datapoint pos="0" key="92"/>
-						<datapoint pos="1" key="93"/>
+						<datapoint pos="0" key="111"/>
+						<datapoint pos="1" key="112"/>
+						<datapoint pos="2" key="113"/>
 					</sources>
 					<targets>
-						<datapoint pos="0" key="94"/>
+						<datapoint pos="0" key="114"/>
 					</targets>
-					<view ltx="747" lty="6" rbx="851" rby="59"/>
-				</component>
-				<component name="format-date" library="core" uid="161" kind="5">
-					<sources>
-						<datapoint pos="0" key="98"/>
-						<datapoint pos="1" key="100"/>
-						<datapoint/>
-					</sources>
-					<targets>
-						<datapoint pos="0" key="97"/>
-					</targets>
-					<view ltx="1041" lty="1" rbx="1151" rby="70"/>
-				</component>
-				<component name="constant" library="core" uid="160" kind="2">
-					<targets>
-						<datapoint pos="0" key="99"/>
-					</targets>
-					<view ltx="820" lty="76" rbx="982" rby="92"/>
-					<data>
-						<constant value="[D]/[M]/[Y]" datatype="string"/>
-					</data>
-				</component>
-				<component name="constant" library="core" uid="159" kind="2">
-					<targets>
-						<datapoint pos="0" key="96"/>
-					</targets>
-					<view ltx="477" lty="55" rbx="685" rby="71"/>
-					<data>
-						<constant value="[M,2-2]/[D,2-2]/[Y,2-2]" datatype="string"/>
-					</data>
+					<view ltx="1522" lty="5" rbx="1607" rby="73"/>
 				</component>
 			</children>
 			<graph directed="1">
@@ -783,7 +842,7 @@
 							<edge vertexkey="5"/>
 						</edges>
 					</vertex>
-					<vertex vertexkey="87">
+					<vertex vertexkey="108">
 						<edges>
 							<edge vertexkey="10"/>
 						</edges>
@@ -921,6 +980,38 @@
 					<vertex vertexkey="99">
 						<edges>
 							<edge vertexkey="100"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="87">
+						<edges>
+							<edge vertexkey="102"/>
+							<edge vertexkey="107"/>
+							<edge vertexkey="111"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="101">
+						<edges>
+							<edge vertexkey="103"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="104">
+						<edges>
+							<edge vertexkey="105"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="114">
+						<edges>
+							<edge vertexkey="106"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="109">
+						<edges>
+							<edge vertexkey="112"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="110">
+						<edges>
+							<edge vertexkey="113"/>
 						</edges>
 					</vertex>
 				</vertices>
@@ -1545,7 +1636,6 @@
 		</structure>
 	</component>
 	<component name="seriesFunction" library="user" uid="194" inline="1" editable="1" blackbox="0">
-		<description/>
 		<structure>
 			<children>
 				<component name="result" library="core" uid="195" kind="7">
