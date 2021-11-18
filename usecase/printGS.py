@@ -5,7 +5,7 @@ name2 = "bbe"
 switch = True #True for wiki
 
 set1 = ET.parse('books/input/target_{}.xml'.format(name1 if switch else name2)).getroot()
-set2 = ET.parse('books/input/target_{}.xml'.format(name2 if switch else name2)).getroot()
+set2 = ET.parse('books/input/target_{}.xml'.format(name2 if switch else name1)).getroot()
 
 i = 1
 with(open("books/goldstandard/gs_{}_2_{}.csv".format(name1, name2))) as res:
