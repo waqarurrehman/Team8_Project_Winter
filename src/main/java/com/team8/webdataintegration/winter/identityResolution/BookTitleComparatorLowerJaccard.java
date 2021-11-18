@@ -28,7 +28,7 @@ public class BookTitleComparatorLowerJaccard implements Comparator<Book, Attribu
 		String s2 = record2.getTitle();
 		
 		if(this.comparisonLog != null){
-			this.comparisonLog.setComparatorName(getClass().getName());
+			this.comparisonLog.setComparatorName(this.getClass().getName());
 			this.comparisonLog.setRecord1Value(s1);
 			this.comparisonLog.setRecord2Value(s2);
 		}

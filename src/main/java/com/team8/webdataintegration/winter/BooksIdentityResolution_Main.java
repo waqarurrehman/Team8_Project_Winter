@@ -24,129 +24,51 @@ import com.team8.webdataintegration.winter.identityResolution.BookAuthorComparat
 import com.team8.webdataintegration.winter.identityResolution.BookBlockingKeyByDecadeGenerator;
 import com.team8.webdataintegration.winter.identityResolution.BookReleaseDateComparatorWeightedDateSimilarity;
 import com.team8.webdataintegration.winter.identityResolution.BookTitleComparatorEqual;
+import com.team8.webdataintegration.winter.BookUseCase;
 
 public class BooksIdentityResolution_Main {
 	
 	private static final Logger logger = WinterLogManager.activateLogger("default");
-
+	
+	private static final String sDS1_Path = "usecase/books/input/target_wiki.xml";
+	private static final String sDS2_Path = "usecase/books/input/target_bbe.xml";
+	private static final String sDS3_Path = "usecase/books/input/target_fdb.xml";
+	private static final String sIdentityResolution_GoldStandard_DS1_2_DS2 = "usecase/books/goldstandard/gs_wiki_2_bbe.csv";
+	private static final String sIdentityResolution_GoldStandard_DS2_2_DS3 = "usecase/books/goldstandard/goldstandard.csv";
+	private static final String sCorrespondance_DS1_2_DS2_Path = "usecase/books/output/Wiki_2_BBE_correspondences.csv";
+	private static final String sCorrespondance_DS2_2_DS3_Path = "usecase/books/output/BBE_2_FDB_correspondences.csv";
+	
 	public static void main(String[] args) {
-		HashedDataSet<Book, Attribute> wikidata = new HashedDataSet<>();
-		HashedDataSet<Book, Attribute> BBE = new HashedDataSet<>();
-		HashedDataSet<Book, Attribute> WDC = new HashedDataSet<>();
-		try {
-			new BookXMLReader().loadFromXML(new File("usecase/books/input/target_wiki.xml"), "/books/book", wikidata);
-			new BookXMLReader().loadFromXML(new File("usecase/books/input/target_bbe.xml"), "/books/book", BBE);
-			new BookXMLReader().loadFromXML(new File("usecase/books/input/target_wdc.xml"), "/books/book", WDC);
-		} catch (XPathExpressionException e) {
-			e.printStackTrace();
-		} catch (ParserConfigurationException e) {
-			e.printStackTrace();
-		} catch (SAXException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		logger.info("loaded all the datasets now loading Gold Standards");
-		// load the gold standard (target_wiki 2 target_bbe)
-		MatchingGoldStandard gsTest_wiki_bbe = new MatchingGoldStandard();
-		// load the gold standard (target_wiki 2 target_wdc)
-		MatchingGoldStandard gsTest_wiki_WDC = new MatchingGoldStandard();
-		try {
-			gsTest_wiki_bbe.loadFromCSVFile(new File(
-					"usecase/books/goldstandard/Wiki_2_BBE_test.csv"));
-			gsTest_wiki_WDC.loadFromCSVFile(new File(
-					"usecase/books/goldstandard/Wiki_2_WDC_test.csv"));
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
 		
-		logger.info("loaded Gold Standards");
-		// create a matching rule
-		LinearCombinationMatchingRule<Book, Attribute> matchingRule = new LinearCombinationMatchingRule<>(
-				0.7);
-		matchingRule.activateDebugReport("usecase/books/output/debugResultsMatchingRule_wiki_2_bbe.csv", 1000, gsTest_wiki_bbe);
+		logger.info("Started  Execution Method Execution");
+		
+		BookUseCase _usecase = new BookUseCase( 
+				sDS1_Path,
+				sDS2_Path, 
+				sDS3_Path ,
+				sIdentityResolution_GoldStandard_DS1_2_DS2,
+				sIdentityResolution_GoldStandard_DS2_2_DS3,
+				sCorrespondance_DS1_2_DS2_Path,
+				sCorrespondance_DS2_2_DS3_Path,
+				logger
+				);
 		
 		try {
-			logger.info("Adding Title and Author Comparator");
-			matchingRule.addComparator(new BookTitleComparatorEqual(), 0.8);
-			logger.info("Adding Authro and Author Comparator");
-			matchingRule.addComparator(new BookAuthorComparatorEqual(), 0.1);
-			logger.info("Adding Authro and Release Date Comparator");
-			matchingRule.addComparator(new BookReleaseDateComparatorWeightedDateSimilarity(), 0.1);
-		} catch (Exception e1) {
-			// TODO Auto-generated catch block
-			e1.printStackTrace();
+			
+			_usecase.RunIdentityResolution();
+		}catch( Exception ex) {
+			logger.info("Excepiton in Identity Resolution["+ex.toString()+"]");
+			ex.printStackTrace();
 		}
 		
-		logger.info("Adding Standard Record Blocker");
-		// create a blocker (blocking strategy)
-		StandardRecordBlocker<Book, Attribute> blocker = new StandardRecordBlocker<Book, Attribute>(new BookBlockingKeyByDecadeGenerator());
-		//Write debug results to file:
-		blocker.collectBlockSizeData("usecase/books/output/debugResultsBlocking.csv", 100);
-
-		logger.info("Initilizaing the matching engine");
-		// Initialize Matching Engine
-		MatchingEngine<Book, Attribute> engine = new MatchingEngine<>();
 		
-		logger.info("Getting correspondence for wiki data and bbe dataset");
-		// Execute the matching for wiki and bbe dataset
-		Processable<Correspondence<Book, Attribute>> correspondences_wiki_bbe = engine.runIdentityResolution(
-				wikidata, BBE, null, matchingRule,
-				blocker);
-		logger.info("Getting correspondence for wiki data and bbe dataset operation completed");
-		//updating the gold standard for wiki and wdc dataset
-		matchingRule.activateDebugReport("usecase/books/output/debugResultsMatchingRule_wiki_2_wdc.csv", 1000, gsTest_wiki_WDC);
-		
-		// Execute the matching for wiki and bbe dataset
-		logger.info("Getting correspondence for wiki data and bbe WDC");
-		Processable<Correspondence<Book, Attribute>> correspondences_wiki_WDC = engine.runIdentityResolution(
-				wikidata, WDC, null, matchingRule,
-				blocker);
-		logger.info("Getting correspondence for wiki data and wdc dataset operation completed");
-		// write the correspondences to the output file
 		try {
-			logger.info("Writing the Correspondence files");
-			new CSVCorrespondenceFormatter().writeCSV(new File("usecase/book/output/Wiki_2_BBE_correspondences.csv"), correspondences_wiki_bbe);
-			new CSVCorrespondenceFormatter().writeCSV(new File("usecase/book/output/Wiki_2_WDC_correspondences.csv"), correspondences_wiki_WDC);
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+			_usecase.RunDataFusion();
+		}catch(Exception ex) {
+			logger.info("Excepiton in Identity Resolution["+ex.toString()+"]");
+			ex.printStackTrace();
 		}
 		
-		// export Training Datasets
-		try {
-			matchingRule.exportTrainingData(wikidata, BBE,
-					gsTest_wiki_bbe, new File("usecase/book/output/optimisation/Wiki_2_BBE_features.csv"));
-			matchingRule.exportTrainingData(wikidata, BBE,
-					gsTest_wiki_WDC, new File("usecase/book/output/optimisation/Wiki_2_WDC_features.csv"));
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		
-		// evaluate your result 
-		MatchingEvaluator<Book, Attribute> evaluator_wiki_bbe = new MatchingEvaluator<Book, Attribute>();
-		Performance perfTest_wiki_bbe = evaluator_wiki_bbe.evaluateMatching(correspondences_wiki_bbe.get(),
-				gsTest_wiki_bbe);
-
-		// print the evaluation result
-		logger.info("WikiData <-> BestBookEver");
-		logger.info(String.format("Precision: %.4f", perfTest_wiki_bbe.getPrecision()));
-		logger.info(String.format("Recall: %.4f", perfTest_wiki_bbe.getRecall()));
-		logger.info(String.format("F1: %.4f", perfTest_wiki_bbe.getF1()));
-		
-		MatchingEvaluator<Book, Attribute> evaluator_wiki_WDC = new MatchingEvaluator<Book, Attribute>();
-		Performance perfTest_wiki_WDC = evaluator_wiki_WDC.evaluateMatching(correspondences_wiki_WDC.get(),
-				gsTest_wiki_bbe);
-
-		// print the evaluation result
-		logger.info("WikiData <-> WDC");
-		logger.info(String.format("Precision: %.4f", perfTest_wiki_WDC.getPrecision()));
-		logger.info(String.format("Recall: %.4f", perfTest_wiki_WDC.getRecall()));
-		logger.info(String.format("F1: %.4f", perfTest_wiki_WDC.getF1()));
 
 	}
 
