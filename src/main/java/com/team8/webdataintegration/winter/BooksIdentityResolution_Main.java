@@ -37,7 +37,8 @@ public class BooksIdentityResolution_Main {
 	private static final String sIdentityResolution_GoldStandard_DS2_2_DS3 = "usecase/books/goldstandard/gs_fdb_2_bbe.csv";
 	private static final String sCorrespondance_DS1_2_DS2_Path = "usecase/books/output/Wiki_2_BBE_correspondences.csv";
 	private static final String sCorrespondance_DS2_2_DS3_Path = "usecase/books/output/BBE_2_FDB_correspondences.csv";
-	
+	private static final String sXPath_Book = "/books/book";
+	private static final String sFusedXMLPath = "usecase/books/output/target_Fused.xml";
 	public static void main(String[] args) {
 		
 		logger.info("Started  Execution Method Execution");
@@ -50,6 +51,8 @@ public class BooksIdentityResolution_Main {
 				sIdentityResolution_GoldStandard_DS2_2_DS3,
 				sCorrespondance_DS1_2_DS2_Path,
 				sCorrespondance_DS2_2_DS3_Path,
+				sXPath_Book,
+				sFusedXMLPath,
 				logger
 				);
 		
@@ -63,7 +66,7 @@ public class BooksIdentityResolution_Main {
 		
 		
 		try {
-			_usecase.RunDataFusion();
+			//_usecase.RunDataFusion();
 		}catch(Exception ex) {
 			logger.info("Excepiton in Identity Resolution["+ex.toString()+"]");
 			ex.printStackTrace();

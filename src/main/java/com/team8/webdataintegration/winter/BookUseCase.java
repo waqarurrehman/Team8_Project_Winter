@@ -1,9 +1,22 @@
 package com.team8.webdataintegration.winter;
 
 import java.io.File;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+import java.time.format.DateTimeFormatterBuilder;
+import java.time.temporal.ChronoField;
+import java.util.Locale;
 
 import org.slf4j.Logger;
 
+import com.team8.webdataintegration.winter.datafusion.evaluation.BookAuthorsEvaluationRule;
+import com.team8.webdataintegration.winter.datafusion.evaluation.BookPublisherEvaluationRule;
+import com.team8.webdataintegration.winter.datafusion.evaluation.BookReleaseDateEvaluationRule;
+import com.team8.webdataintegration.winter.datafusion.evaluation.BookTitleEvaluationRule;
+import com.team8.webdataintegration.winter.datafusion.fusers.BookAuthorsFuserUnion;
+import com.team8.webdataintegration.winter.datafusion.fusers.BookPubihserFuserLongsetString;
+import com.team8.webdataintegration.winter.datafusion.fusers.BookReleaseDateFuserVoting;
+import com.team8.webdataintegration.winter.datafusion.fusers.BookTileFuserShortestString;
 import com.team8.webdataintegration.winter.identityResolution.BookAuthorComparatorEqual;
 import com.team8.webdataintegration.winter.identityResolution.BookAuthorComparatorLowerJaccard;
 import com.team8.webdataintegration.winter.identityResolution.BookBlockingKeyByDecadeGenerator;
@@ -12,13 +25,19 @@ import com.team8.webdataintegration.winter.identityResolution.BookReleaseDateCom
 import com.team8.webdataintegration.winter.identityResolution.BookTitleComparatorEqual;
 import com.team8.webdataintegration.winter.identityResolution.BookTitleComparatorLowerJaccard;
 import com.team8.webdataintegration.winter.model.Book;
+import com.team8.webdataintegration.winter.model.BookXMLFormatter;
 import com.team8.webdataintegration.winter.model.BookXMLReader;
 
+import de.uni_mannheim.informatik.dws.winter.datafusion.CorrespondenceSet;
+import de.uni_mannheim.informatik.dws.winter.datafusion.DataFusionEngine;
+import de.uni_mannheim.informatik.dws.winter.datafusion.DataFusionStrategy;
 import de.uni_mannheim.informatik.dws.winter.matching.MatchingEngine;
 import de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator;
 import de.uni_mannheim.informatik.dws.winter.matching.blockers.StandardRecordBlocker;
 import de.uni_mannheim.informatik.dws.winter.matching.rules.LinearCombinationMatchingRule;
 import de.uni_mannheim.informatik.dws.winter.model.Correspondence;
+import de.uni_mannheim.informatik.dws.winter.model.FusibleDataSet;
+import de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet;
 import de.uni_mannheim.informatik.dws.winter.model.HashedDataSet;
 import de.uni_mannheim.informatik.dws.winter.model.MatchingGoldStandard;
 import de.uni_mannheim.informatik.dws.winter.model.Performance;
@@ -36,13 +55,17 @@ public class BookUseCase {
 	private String sIdentityResolution_GoldStandard_DS2_2_DS3;
 	private String sCorrespondance_DS1_2_DS2_Path;
 	private String sCorrespondance_DS2_2_DS3_Path;
+	private String sXPath_Book;
+	private String sFusedXMLPath;
 	
 	
 	private static Logger logger = null;
 	
 	public BookUseCase(String dS1_Path, String dS2_Path,String dS3_Path,
 			String gs_DS1_DS2 , String gs_DS2_DS3 ,
-			String correspndanceDS1_DS2, String correspondanceDS2_DS3 ,
+			String correspndanceDS1_DS2, String correspondanceDS2_DS3,
+			String XPath_Book,
+			String fusedXMLPath,
 			Logger logger
 			) {
 		
@@ -53,6 +76,8 @@ public class BookUseCase {
 		this.sIdentityResolution_GoldStandard_DS2_2_DS3 = gs_DS2_DS3;
 		this.sCorrespondance_DS1_2_DS2_Path = correspndanceDS1_DS2;
 		this.sCorrespondance_DS2_2_DS3_Path = correspondanceDS2_DS3;
+		this.sXPath_Book = XPath_Book;
+		this.sFusedXMLPath = fusedXMLPath;
 		this.logger = logger;
 		
 		
@@ -64,11 +89,11 @@ public class BookUseCase {
 		HashedDataSet<Book, Attribute> DS2 = new HashedDataSet<>();
 		HashedDataSet<Book, Attribute> DS3 = new HashedDataSet<>();
 		logger.info("Loading Data Set 1 ["+this.sDS1_Path+"]");
-		new BookXMLReader().loadFromXML(new File(this.sDS1_Path), "/books/book", DS1);
+		new BookXMLReader().loadFromXML(new File(this.sDS1_Path), this.sXPath_Book, DS1);
 		logger.info("Loading Data Set 2 ["+this.sDS2_Path+"]");
-		new BookXMLReader().loadFromXML(new File(this.sDS2_Path), "/books/book", DS2);
+		new BookXMLReader().loadFromXML(new File(this.sDS2_Path),this.sXPath_Book, DS2);
 		logger.info("Loading Data Set 3 ["+this.sDS1_Path+"]");
-		new BookXMLReader().loadFromXML(new File(this.sDS3_Path), "/books/book", DS3);
+		new BookXMLReader().loadFromXML(new File(this.sDS3_Path), this.sXPath_Book, DS3);
 		
 		logger.info("Loading Gold Standard DS 1 to DS 2 ["+sIdentityResolution_GoldStandard_DS1_2_DS2+"]");
 		// load the gold standard (target_wiki 2 target_bbe)
@@ -154,6 +179,64 @@ public class BookUseCase {
 	}
 	
 	public void RunDataFusion() throws Exception {
+
+		FusibleDataSet<Book, Attribute> ds1 = new FusibleHashedDataSet<>();
+		new BookXMLReader().loadFromXML(new File(this.sDS1_Path), this.sXPath_Book, ds1);
+		ds1.printDataSetDensityReport();
+
+		FusibleDataSet<Book, Attribute> ds2 = new FusibleHashedDataSet<>();
+		new BookXMLReader().loadFromXML(new File(this.sDS2_Path), this.sXPath_Book, ds2);
+		ds2.printDataSetDensityReport();
+
+		FusibleDataSet<Book, Attribute> ds3 = new FusibleHashedDataSet<>();
+		new BookXMLReader().loadFromXML(new File(this.sDS3_Path), this.sXPath_Book , ds3);
+		ds3.printDataSetDensityReport();
+		
+		ds1.setScore(3.0);
+		ds2.setScore(1.0);
+		ds3.setScore(2.0);
+		
+		// Date (e.g. last update)
+		DateTimeFormatter formatter = new DateTimeFormatterBuilder()
+				        .appendPattern("yyyy-MM-dd")
+				        .parseDefaulting(ChronoField.CLOCK_HOUR_OF_DAY, 0)
+				        .parseDefaulting(ChronoField.MINUTE_OF_HOUR, 0)
+				        .parseDefaulting(ChronoField.SECOND_OF_MINUTE, 0)
+				        .toFormatter(Locale.ENGLISH);
+				
+		ds1.setDate(LocalDateTime.parse("2012-01-01", formatter));
+		ds2.setDate(LocalDateTime.parse("2010-01-01", formatter));
+		ds3.setDate(LocalDateTime.parse("2008-01-01", formatter));
+		
+		
+		// load correspondences
+		CorrespondenceSet<Book, Attribute> correspondences = new CorrespondenceSet<>();
+		correspondences.loadCorrespondences(new File(this.sCorrespondance_DS1_2_DS2_Path),ds1, ds2);
+		correspondences.loadCorrespondences(new File(this.sCorrespondance_DS2_2_DS3_Path),ds2, ds3);
+
+		// write group size distribution
+		correspondences.printGroupSizeDistribution();
+		
+		// define the fusion strategy
+		DataFusionStrategy<Book, Attribute> strategy = new DataFusionStrategy<>(new BookXMLReader());
+				
+		// add attribute fusers
+		strategy.addAttributeFuser(Book.TITLE, new BookTileFuserShortestString(),new BookTitleEvaluationRule());
+		strategy.addAttributeFuser(Book.PUBLISHER,new BookPubihserFuserLongsetString(), new BookPublisherEvaluationRule());
+		strategy.addAttributeFuser(Book.RELEASE_DATE, new BookReleaseDateFuserVoting(),new BookReleaseDateEvaluationRule());
+		strategy.addAttributeFuser(Book.AUTHORS,new BookAuthorsFuserUnion(),new BookAuthorsEvaluationRule());
+				
+				// create the fusion engine
+		DataFusionEngine<Book, Attribute> engine = new DataFusionEngine<>(strategy);
+
+		engine.printClusterConsistencyReport(correspondences, null);
+				
+		// run the fusion
+		FusibleDataSet<Book, Attribute> fusedDataSet = engine.run(correspondences, null);
+		fusedDataSet.printDataSetDensityReport();
+
+		// write the result
+		new BookXMLFormatter().writeXML(new File(this.sFusedXMLPath), fusedDataSet);		
 		
 	}
 	
