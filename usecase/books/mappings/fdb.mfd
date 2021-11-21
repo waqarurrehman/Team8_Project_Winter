@@ -16,7 +16,7 @@
 					<targets>
 						<datapoint pos="0" key="1"/>
 					</targets>
-					<view ltx="574" lty="-90" rbx="704" rby="-3"/>
+					<view ltx="574" lty="-90" rbx="695" rby="-13"/>
 				</component>
 				<component name="concat" library="core" uid="31" kind="5" growable="1" growablebasename="value">
 					<sources>
@@ -26,19 +26,19 @@
 					<targets>
 						<datapoint pos="0" key="3"/>
 					</targets>
-					<view ltx="764" lty="-141" rbx="838" rby="-86"/>
+					<view ltx="764" lty="-141" rbx="832" rby="-93"/>
 				</component>
 				<component name="constant" library="core" uid="49" kind="2">
 					<targets>
 						<datapoint pos="0" key="6"/>
 					</targets>
-					<view ltx="390" lty="158" rbx="437" rby="175"/>
+					<view ltx="390" lty="158" rbx="435" rby="173"/>
 					<data>
 						<constant value=" /" datatype="string"/>
 					</data>
 				</component>
 				<component name="dateFunction" library="user" uid="64" kind="19" visible="0" blackbox="0">
-					<view ltx="487" lty="192" rbx="586" rby="208"/>
+					<view ltx="487" lty="192" rbx="580" rby="208"/>
 					<data>
 						<root>
 							<header>
@@ -66,13 +66,13 @@
 					<targets>
 						<datapoint pos="0" key="11"/>
 					</targets>
-					<view ltx="492" lty="104" rbx="599" rby="158"/>
+					<view ltx="492" lty="104" rbx="589" rby="152"/>
 				</component>
 				<component name="constant" library="core" uid="33" kind="2">
 					<targets>
 						<datapoint pos="0" key="4"/>
 					</targets>
-					<view ltx="603" lty="-141" rbx="663" rby="-124"/>
+					<view ltx="603" lty="-141" rbx="660" rby="-126"/>
 					<data>
 						<constant value="fdb_" datatype="string"/>
 					</data>
@@ -81,7 +81,7 @@
 					<targets>
 						<datapoint pos="0" key="12"/>
 					</targets>
-					<view ltx="384" lty="327" rbx="429" rby="344"/>
+					<view ltx="384" lty="327" rbx="428" rby="342"/>
 					<data>
 						<constant value="0" datatype="string"/>
 					</data>
@@ -130,10 +130,10 @@
 					<targets>
 						<datapoint pos="0" key="21"/>
 					</targets>
-					<view ltx="500" lty="264" rbx="597" rby="318"/>
+					<view ltx="500" lty="264" rbx="590" rby="312"/>
 				</component>
 				<component name="titleFunction" library="user" uid="75" kind="19" visible="0" blackbox="0">
-					<view ltx="360" lty="-49" rbx="459" rby="-33"/>
+					<view ltx="360" lty="-49" rbx="453" rby="-33"/>
 					<data>
 						<root>
 							<header>
@@ -153,29 +153,8 @@
 						</root>
 					</data>
 				</component>
-				<component name="authorFunction" library="user" uid="30" kind="19" visible="0" blackbox="0">
-					<view ltx="489" lty="45" rbx="588" rby="61"/>
-					<data>
-						<root>
-							<header>
-								<namespaces>
-									<namespace/>
-								</namespaces>
-							</header>
-							<entry name="input" inpkey="24" componentid="6"/>
-						</root>
-						<root>
-							<header>
-								<namespaces>
-									<namespace/>
-								</namespaces>
-							</header>
-							<entry name="result" outkey="25" componentid="5"/>
-						</root>
-					</data>
-				</component>
 				<component name="target" library="xml" uid="3" kind="14">
-					<properties XSLTDefaultOutput="1"/>
+					<properties XSLTTargetEncoding="UTF-8" XSLTDefaultOutput="1"/>
 					<view ltx="1029" lty="-26" rbx="1195" rby="174"/>
 					<data>
 						<root>
@@ -203,6 +182,27 @@
 							</entry>
 						</root>
 						<document schema="target.xsd" instanceroot="{}books" inputinstance="target.xml" outputinstance="target.xml"/>
+					</data>
+				</component>
+				<component name="authorFunction" library="user" uid="30" kind="19" visible="0" blackbox="0">
+					<view ltx="489" lty="45" rbx="582" rby="61"/>
+					<data>
+						<root>
+							<header>
+								<namespaces>
+									<namespace/>
+								</namespaces>
+							</header>
+							<entry name="input" inpkey="24" componentid="6"/>
+						</root>
+						<root>
+							<header>
+								<namespaces>
+									<namespace/>
+								</namespaces>
+							</header>
+							<entry name="result" outkey="25" componentid="5"/>
+						</root>
 					</data>
 				</component>
 			</children>
@@ -294,55 +294,16 @@
 		</structure>
 	</component>
 	<component name="authorFunction" library="user" uid="4" inline="1" editable="1" blackbox="0">
-		<description/>
 		<structure>
 			<children>
-				<component name="constant" library="core" uid="10" kind="2">
-					<targets>
-						<datapoint pos="0" key="4"/>
-					</targets>
-					<view ltx="249" lty="163" rbx="293" rby="180"/>
-					<data>
-						<constant value="/" datatype="string"/>
-					</data>
-				</component>
-				<component name="constant" library="core" uid="14" kind="2">
-					<targets>
-						<datapoint pos="0" key="5"/>
-					</targets>
-					<view ltx="381" lty="254" rbx="423" rby="271"/>
-					<data>
-						<constant value="," datatype="string"/>
-					</data>
-				</component>
-				<component name="contains" library="core" uid="13" kind="5">
-					<sources>
-						<datapoint pos="0" key="6"/>
-						<datapoint pos="1" key="7"/>
-					</sources>
-					<targets>
-						<datapoint pos="0" key="8"/>
-					</targets>
-					<view ltx="526" lty="195" rbx="614" rby="249"/>
-				</component>
 				<component name="constant" library="core" uid="17" kind="2">
 					<targets>
 						<datapoint pos="0" key="9"/>
 					</targets>
-					<view ltx="467" lty="40" rbx="509" rby="57"/>
+					<view ltx="467" lty="40" rbx="508" rby="55"/>
 					<data>
 						<constant value="," datatype="string"/>
 					</data>
-				</component>
-				<component name="tokenize" library="core" uid="9" kind="5">
-					<sources>
-						<datapoint pos="0" key="10"/>
-						<datapoint pos="1" key="11"/>
-					</sources>
-					<targets>
-						<datapoint pos="0" key="12"/>
-					</targets>
-					<view ltx="360" lty="99" rbx="445" rby="153"/>
 				</component>
 				<component name="substring-before" library="core" uid="16" kind="5">
 					<sources>
@@ -352,7 +313,7 @@
 					<targets>
 						<datapoint pos="0" key="2"/>
 					</targets>
-					<view ltx="561" lty="26" rbx="668" rby="80"/>
+					<view ltx="561" lty="26" rbx="658" rby="74"/>
 				</component>
 				<component name="substring-after" library="core" uid="21" kind="5">
 					<sources>
@@ -362,7 +323,7 @@
 					<targets>
 						<datapoint pos="0" key="17"/>
 					</targets>
-					<view ltx="570" lty="-78" rbx="667" rby="-24"/>
+					<view ltx="570" lty="-78" rbx="660" rby="-30"/>
 				</component>
 				<component name="normalize-space" library="core" uid="24" kind="5">
 					<sources>
@@ -371,13 +332,13 @@
 					<targets>
 						<datapoint pos="0" key="18"/>
 					</targets>
-					<view ltx="754" lty="-48" rbx="859" rby="-11"/>
+					<view ltx="754" lty="-48" rbx="851" rby="-14"/>
 				</component>
 				<component name="constant" library="core" uid="28" kind="2">
 					<targets>
 						<datapoint pos="0" key="19"/>
 					</targets>
-					<view ltx="831" lty="9" rbx="874" rby="26"/>
+					<view ltx="831" lty="9" rbx="872" rby="24"/>
 					<data>
 						<constant value=" " datatype="string"/>
 					</data>
@@ -389,7 +350,7 @@
 					<targets>
 						<datapoint pos="0" key="20"/>
 					</targets>
-					<view ltx="782" lty="40" rbx="887" rby="77"/>
+					<view ltx="782" lty="40" rbx="879" rby="74"/>
 				</component>
 				<component name="if-else" library="core" uid="11" kind="4">
 					<sources>
@@ -400,13 +361,13 @@
 					<targets>
 						<datapoint pos="0" key="24"/>
 					</targets>
-					<view ltx="994" lty="149" rbx="1089" rby="222"/>
+					<view ltx="994" lty="149" rbx="1082" rby="212"/>
 				</component>
 				<component name="result" library="core" uid="5" kind="7">
 					<sources>
 						<datapoint pos="0" key="25"/>
 					</sources>
-					<view ltx="1307" lty="59" rbx="1360" rby="96"/>
+					<view ltx="1307" lty="59" rbx="1356" rby="93"/>
 					<data>
 						<output datatype="string"/>
 						<parameter usageKind="output" name="result"/>
@@ -421,7 +382,7 @@
 					<targets>
 						<datapoint pos="0" key="29"/>
 					</targets>
-					<view ltx="977" lty="-21" rbx="1060" rby="52"/>
+					<view ltx="977" lty="-21" rbx="1053" rby="42"/>
 				</component>
 				<component name="input" library="core" uid="6" kind="6">
 					<sources>
@@ -430,10 +391,87 @@
 					<targets>
 						<datapoint pos="0" key="30"/>
 					</targets>
-					<view ltx="235" lty="59" rbx="309" rby="96"/>
+					<view ltx="23" lty="58" rbx="91" rby="92"/>
 					<data>
 						<input datatype="string"/>
 						<parameter usageKind="input" name="input"/>
+					</data>
+				</component>
+				<component name="contains" library="core" uid="81" kind="5">
+					<sources>
+						<datapoint pos="0" key="35"/>
+						<datapoint pos="1" key="32"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="36"/>
+					</targets>
+					<view ltx="70" lty="162" rbx="150" rby="210"/>
+				</component>
+				<component name="constant" library="core" uid="82" kind="2">
+					<targets>
+						<datapoint pos="0" key="31"/>
+					</targets>
+					<view ltx="6" lty="262" rbx="47" rby="277"/>
+					<data>
+						<constant value=";" datatype="string"/>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="83" kind="2">
+					<targets>
+						<datapoint pos="0" key="33"/>
+					</targets>
+					<view ltx="36" lty="292" rbx="77" rby="307"/>
+					<data>
+						<constant value=";" datatype="string"/>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="84" kind="2">
+					<targets>
+						<datapoint pos="0" key="34"/>
+					</targets>
+					<view ltx="66" lty="322" rbx="109" rby="337"/>
+					<data>
+						<constant value="/" datatype="string"/>
+					</data>
+				</component>
+				<component name="tokenize" library="core" uid="9" kind="5">
+					<sources>
+						<datapoint pos="0" key="10"/>
+						<datapoint pos="1" key="11"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="12"/>
+					</targets>
+					<view ltx="360" lty="99" rbx="438" rby="147"/>
+				</component>
+				<component name="if-else" library="core" uid="79" kind="4">
+					<sources>
+						<datapoint pos="0" key="37"/>
+						<datapoint pos="1" key="38"/>
+						<datapoint pos="2" key="39"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="40"/>
+					</targets>
+					<view ltx="190" lty="206" rbx="278" rby="269"/>
+				</component>
+				<component name="contains" library="core" uid="13" kind="5">
+					<sources>
+						<datapoint pos="0" key="6"/>
+						<datapoint pos="1" key="7"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="8"/>
+					</targets>
+					<view ltx="526" lty="195" rbx="606" rby="243"/>
+				</component>
+				<component name="constant" library="core" uid="85" kind="2">
+					<targets>
+						<datapoint pos="0" key="41"/>
+					</targets>
+					<view ltx="461" lty="285" rbx="502" rby="300"/>
+					<data>
+						<constant value="," datatype="string"/>
 					</data>
 				</component>
 			</children>
@@ -458,7 +496,7 @@
 							<edge vertexkey="23"/>
 						</edges>
 					</vertex>
-					<vertex vertexkey="5">
+					<vertex vertexkey="41">
 						<edges>
 							<edge vertexkey="7"/>
 						</edges>
@@ -466,9 +504,10 @@
 					<vertex vertexkey="30">
 						<edges>
 							<edge vertexkey="10"/>
+							<edge vertexkey="35"/>
 						</edges>
 					</vertex>
-					<vertex vertexkey="4">
+					<vertex vertexkey="40">
 						<edges>
 							<edge vertexkey="11"/>
 						</edges>
@@ -509,12 +548,31 @@
 							<edge vertexkey="28"/>
 						</edges>
 					</vertex>
+					<vertex vertexkey="31">
+						<edges>
+							<edge vertexkey="32"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="36">
+						<edges>
+							<edge vertexkey="37"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="33">
+						<edges>
+							<edge vertexkey="38"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="34">
+						<edges>
+							<edge vertexkey="39"/>
+						</edges>
+					</vertex>
 				</vertices>
 			</graph>
 		</structure>
 	</component>
 	<component name="titleFunction" library="user" uid="36" inline="1" editable="1" blackbox="0">
-		<description/>
 		<structure>
 			<children>
 				<component name="contains" library="core" uid="41" kind="5">
@@ -631,7 +689,6 @@
 		</structure>
 	</component>
 	<component name="dateFunction" library="user" uid="50" inline="1" editable="1" blackbox="0">
-		<description/>
 		<structure>
 			<children>
 				<component name="result" library="core" uid="51" kind="7">

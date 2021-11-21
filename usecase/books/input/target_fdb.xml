@@ -789,7 +789,8 @@
 		<rating>3</rating>
 		<genre>Fantasy</genre>
 		<authors>
-			<author>Maud Fuller; Petersham, Miska Petersham</author>
+			<author>Maud Fuller Petersham</author>
+			<author>Miska Petersham</author>
 		</authors>
 	</book>
 	<book id="fdb_89">
@@ -843,7 +844,8 @@
 		<rating>1</rating>
 		<genre>General Fiction</genre>
 		<authors>
-			<author>Mary; Buff, Conrad Buff</author>
+			<author>Mary Buff</author>
+			<author>Conrad Buff</author>
 		</authors>
 	</book>
 	<book id="fdb_95">
@@ -1023,7 +1025,8 @@
 		<rating>4</rating>
 		<genre>General Fiction</genre>
 		<authors>
-			<author>Berta; Hader, Elmer Hader</author>
+			<author>Berta Hader</author>
+			<author>Elmer Hader</author>
 		</authors>
 	</book>
 	<book id="fdb_115">
@@ -1239,7 +1242,8 @@
 		<rating>2.5</rating>
 		<genre>General Fiction</genre>
 		<authors>
-			<author>Will; Nicolas, Mordvinoff Lipkind</author>
+			<author>Will Lipkind</author>
+			<author>Mordvinoff Nicolas</author>
 		</authors>
 	</book>
 	<book id="fdb_139">
@@ -1482,7 +1486,8 @@
 		<rating>1</rating>
 		<genre>General Fiction</genre>
 		<authors>
-			<author>Mary; Buff, Conrad Buff</author>
+			<author>Mary Buff</author>
+			<author>Conrad Buff</author>
 		</authors>
 	</book>
 	<book id="fdb_166">
@@ -3310,7 +3315,8 @@
 		<rating>4</rating>
 		<genre>Police/Detective/Law Enforcement</genre>
 		<authors>
-			<author>Maj; Wahloo, Per Sjowall</author>
+			<author>Maj Sjowall</author>
+			<author>Per Wahloo</author>
 		</authors>
 	</book>
 	<book id="fdb_369">
@@ -4688,7 +4694,8 @@
 		<rating>5</rating>
 		<genre>Police/Detective/Law Enforcement</genre>
 		<authors>
-			<author>Maj; Wahloo, Per Sjowall</author>
+			<author>Maj Sjowall</author>
+			<author>Per Wahloo</author>
 		</authors>
 	</book>
 	<book id="fdb_522">
@@ -4796,7 +4803,8 @@
 		<rating>0</rating>
 		<genre>General Fiction</genre>
 		<authors>
-			<author>Dominic; Scot, Virgil Koski</author>
+			<author>Dominic Koski</author>
+			<author>Virgil Scot</author>
 		</authors>
 	</book>
 	<book id="fdb_534">
@@ -8354,7 +8362,8 @@
 		<rating>3.5</rating>
 		<genre>General Fiction</genre>
 		<authors>
-			<author>Stan; Berenstain, Jan Berenstain</author>
+			<author>Stan Berenstain</author>
+			<author>Jan Berenstain</author>
 		</authors>
 	</book>
 	<book id="fdb_929">
@@ -9363,7 +9372,8 @@
 		<rating>5</rating>
 		<genre>Horror</genre>
 		<authors>
-			<author>Stephen; Straub, Peter King</author>
+			<author>Stephen King</author>
+			<author>Peter Straub</author>
 		</authors>
 	</book>
 	<book id="fdb_1041">
@@ -9967,7 +9977,8 @@
 		<rating>5</rating>
 		<genre>Suspense</genre>
 		<authors>
-			<author>Molly; Murphy, Warren Cochran</author>
+			<author>Molly Cochran</author>
+			<author>Warren Murphy</author>
 		</authors>
 	</book>
 	<book id="fdb_1108">
@@ -12691,7 +12702,8 @@
 		<rating>5</rating>
 		<genre>Suspense</genre>
 		<authors>
-			<author>Bodie; Thoene, Brock Thoene</author>
+			<author>Bodie Thoene</author>
+			<author>Brock Thoene</author>
 		</authors>
 	</book>
 	<book id="fdb_1410">
@@ -14080,7 +14092,8 @@
 		<rating>4</rating>
 		<genre>General Fiction</genre>
 		<authors>
-			<author>Bill, Jr.; Archambault, John Martin</author>
+			<author>Bill, Jr. Martin</author>
+			<author>John Archambault</author>
 		</authors>
 	</book>
 	<book id="fdb_1564">
@@ -14098,7 +14111,8 @@
 		<rating>0</rating>
 		<genre>General Fiction</genre>
 		<authors>
-			<author>Sally; Okie, Susan Ride</author>
+			<author>Sally Ride</author>
+			<author>Susan Okie</author>
 		</authors>
 	</book>
 	<book id="fdb_1566">
@@ -14683,7 +14697,8 @@
 		<rating>4.5</rating>
 		<genre>Science Fiction</genre>
 		<authors>
-			<author>Neil; Pratchett, Terry Gaiman</author>
+			<author>Neil Gaiman</author>
+			<author>Terry Pratchett</author>
 		</authors>
 	</book>
 	<book id="fdb_1631">
@@ -14737,7 +14752,8 @@
 		<rating>5</rating>
 		<genre>Historical</genre>
 		<authors>
-			<author>Bodie; Thoene, Brock Thoene</author>
+			<author>Bodie Thoene</author>
+			<author>Brock Thoene</author>
 		</authors>
 	</book>
 	<book id="fdb_1637">
@@ -15124,7 +15140,8 @@
 		<rating>2</rating>
 		<genre>General Fiction</genre>
 		<authors>
-			<author>Nadine Bernard; Hoberman, Mary Ann Westcott</author>
+			<author>Nadine Bernard Westcott</author>
+			<author>Mary Ann Hoberman</author>
 		</authors>
 	</book>
 	<book id="fdb_1680">
@@ -16891,7 +16908,8 @@
 		<rating>0</rating>
 		<genre>Historical</genre>
 		<authors>
-			<author>Wayne; Bly, Stephen A. Davis</author>
+			<author>Wayne Davis</author>
+			<author>Stephen A. Bly</author>
 		</authors>
 	</book>
 	<book id="fdb_1876">
@@ -18170,7 +18188,8 @@
 		<rating>0</rating>
 		<genre>Suspense</genre>
 		<authors>
-			<author>Bodie; Thoene, Brock Thoene</author>
+			<author>Bodie Thoene</author>
+			<author>Brock Thoene</author>
 		</authors>
 	</book>
 	<book id="fdb_2018">
@@ -18530,7 +18549,8 @@
 		<rating>4</rating>
 		<genre>General Fiction</genre>
 		<authors>
-			<author>Malka; Halperin, Michael Drucker</author>
+			<author>Malka Drucker</author>
+			<author>Michael Halperin</author>
 		</authors>
 	</book>
 	<book id="fdb_2058">
@@ -18890,7 +18910,8 @@
 		<rating>3</rating>
 		<genre>General Fiction</genre>
 		<authors>
-			<author>Monica; Katchamakoff, Atanas Shannon</author>
+			<author>Monica Shannon</author>
+			<author>Atanas Katchamakoff</author>
 		</authors>
 	</book>
 	<book id="fdb_2098">
@@ -20294,7 +20315,8 @@
 		<rating>4.5</rating>
 		<genre>Thriller</genre>
 		<authors>
-			<author>Douglas; Child, Lincoln Preston</author>
+			<author>Douglas Preston</author>
+			<author>Lincoln Child</author>
 		</authors>
 	</book>
 	<book id="fdb_2254">
@@ -21942,7 +21964,8 @@
 		<rating>4</rating>
 		<genre>Fantasy</genre>
 		<authors>
-			<author>Janet; Crummel, Susan Stevens Stevens</author>
+			<author>Janet Stevens</author>
+			<author>Susan Stevens Crummel</author>
 		</authors>
 	</book>
 	<book id="fdb_2437">
@@ -22645,7 +22668,8 @@
 		<rating>4</rating>
 		<genre>Medical Thriller</genre>
 		<authors>
-			<author>Douglas; Child, Lincoln Preston</author>
+			<author>Douglas Preston</author>
+			<author>Lincoln Child</author>
 		</authors>
 	</book>
 	<book id="fdb_2515">
@@ -22825,7 +22849,8 @@
 		<rating>4</rating>
 		<genre>Fantasy</genre>
 		<authors>
-			<author>Melanie; Roberson, Jennifer Rawn</author>
+			<author>Melanie Rawn</author>
+			<author>Jennifer Roberson</author>
 		</authors>
 	</book>
 	<book id="fdb_2535">
@@ -24899,7 +24924,8 @@
 		<rating>5</rating>
 		<genre>Suspense</genre>
 		<authors>
-			<author>Nelson; Block, Thomas Demille</author>
+			<author>Nelson Demille</author>
+			<author>Thomas Block</author>
 		</authors>
 	</book>
 	<book id="fdb_2765">
@@ -27780,7 +27806,8 @@
 		<rating>4.5</rating>
 		<genre>Fantasy</genre>
 		<authors>
-			<author>Tim; Jenkins, Jerry B. LaHaye</author>
+			<author>Tim LaHaye</author>
+			<author>Jerry B. Jenkins</author>
 		</authors>
 	</book>
 	<book id="fdb_3085">
@@ -27852,7 +27879,8 @@
 		<rating>4</rating>
 		<genre>General Fiction</genre>
 		<authors>
-			<author>Jane; Coville, Bruce Yolen</author>
+			<author>Jane Yolen</author>
+			<author>Bruce Coville</author>
 		</authors>
 	</book>
 	<book id="fdb_3093">
@@ -28482,7 +28510,8 @@
 		<rating>5</rating>
 		<genre>Fantasy</genre>
 		<authors>
-			<author>Tim; Jenkins, Jerry B. LaHaye</author>
+			<author>Tim LaHaye</author>
+			<author>Jerry B. Jenkins</author>
 		</authors>
 	</book>
 	<book id="fdb_3163">
@@ -29792,7 +29821,8 @@
 		<rating>4.5</rating>
 		<genre>Fantasy</genre>
 		<authors>
-			<author>Tim; Jenkins, Jerry B. LaHaye</author>
+			<author>Tim LaHaye</author>
+			<author>Jerry B. Jenkins</author>
 		</authors>
 	</book>
 	<book id="fdb_3308">
@@ -30233,7 +30263,8 @@
 		<rating>4.5</rating>
 		<genre>Fantasy</genre>
 		<authors>
-			<author>Tim; Jenkins, Jerry B. LaHaye</author>
+			<author>Tim LaHaye</author>
+			<author>Jerry B. Jenkins</author>
 		</authors>
 	</book>
 	<book id="fdb_3357">
@@ -31173,7 +31204,8 @@
 		<rating>3</rating>
 		<genre>Historical Mystery</genre>
 		<authors>
-			<author>Dorothy; Hoobler, Thomas Hoobler</author>
+			<author>Dorothy Hoobler</author>
+			<author>Thomas Hoobler</author>
 		</authors>
 	</book>
 	<book id="fdb_3461">
@@ -31551,7 +31583,8 @@
 		<rating>5</rating>
 		<genre>General Fiction</genre>
 		<authors>
-			<author>Andrea; Clemesha, David Zimmerman</author>
+			<author>Andrea Zimmerman</author>
+			<author>David Clemesha</author>
 		</authors>
 	</book>
 	<book id="fdb_3503">
@@ -31803,7 +31836,8 @@
 		<rating>4</rating>
 		<genre>General Fiction</genre>
 		<authors>
-			<author>Janet; Crummel, Susan Stevens Stevens</author>
+			<author>Janet Stevens</author>
+			<author>Susan Stevens Crummel</author>
 		</authors>
 	</book>
 	<book id="fdb_3531">
@@ -32064,7 +32098,8 @@
 		<rating>0</rating>
 		<genre>General Fiction</genre>
 		<authors>
-			<author>Betsy; Thompson, Ellen Duffey</author>
+			<author>Betsy Duffey</author>
+			<author>Ellen Thompson</author>
 		</authors>
 	</book>
 	<book id="fdb_3560">
@@ -33144,7 +33179,8 @@
 		<rating>4</rating>
 		<genre>Historical</genre>
 		<authors>
-			<author>Deborah; Ransome, James E. Hopkinson</author>
+			<author>Deborah Hopkinson</author>
+			<author>James E. Ransome</author>
 		</authors>
 	</book>
 	<book id="fdb_3680">
@@ -33666,7 +33702,8 @@
 		<rating>4</rating>
 		<genre>Suspense</genre>
 		<authors>
-			<author>Frank E.; Dekker, Ted Peretti</author>
+			<author>Frank E. Peretti</author>
+			<author>Ted Dekker</author>
 		</authors>
 	</book>
 	<book id="fdb_3738">
@@ -34305,7 +34342,8 @@
 		<rating>2</rating>
 		<genre>Fantasy</genre>
 		<authors>
-			<author>Paul; Riddell, Chris Stewart</author>
+			<author>Paul Stewart</author>
+			<author>Chris Riddell</author>
 		</authors>
 	</book>
 	<book id="fdb_3809">
@@ -34611,7 +34649,8 @@
 		<rating>5</rating>
 		<genre>Fantasy</genre>
 		<authors>
-			<author>Tim; Jenkins, Jerry B. LaHaye</author>
+			<author>Tim LaHaye</author>
+			<author>Jerry B. Jenkins</author>
 		</authors>
 	</book>
 	<book id="fdb_3843">
@@ -35223,7 +35262,8 @@
 		<rating>3</rating>
 		<genre>Fantasy</genre>
 		<authors>
-			<author>Ridley; Barry, Dave Pearson</author>
+			<author>Ridley Pearson</author>
+			<author>Dave Barry</author>
 		</authors>
 	</book>
 	<book id="fdb_3911">
@@ -35745,7 +35785,8 @@
 		<rating>4</rating>
 		<genre>General Fiction</genre>
 		<authors>
-			<author>Kate; McMullan, Jim McMullan</author>
+			<author>Kate McMullan</author>
+			<author>Jim McMullan</author>
 		</authors>
 	</book>
 	<book id="fdb_3969">
@@ -35880,7 +35921,8 @@
 		<rating>4</rating>
 		<genre>Science Fiction</genre>
 		<authors>
-			<author>Eric; Dennis, Andrew Flint</author>
+			<author>Eric Flint</author>
+			<author>Andrew Dennis</author>
 		</authors>
 	</book>
 	<book id="fdb_3984">
@@ -36521,7 +36563,8 @@
 		<rating>2</rating>
 		<genre>General Fiction</genre>
 		<authors>
-			<author>Carmela; D'Amico, Steven D'Amico</author>
+			<author>Carmela D'Amico</author>
+			<author>Steven D'Amico</author>
 		</authors>
 	</book>
 	<book id="fdb_4055">
@@ -36989,7 +37032,8 @@
 		<rating>4.5</rating>
 		<genre>Action Adventure</genre>
 		<authors>
-			<author>Clive; Du Brul, Jack Cussler</author>
+			<author>Clive Cussler</author>
+			<author>Jack Du Brul</author>
 		</authors>
 	</book>
 	<book id="fdb_4107">
@@ -39519,7 +39563,8 @@
 		<rating>4</rating>
 		<genre>General Fiction</genre>
 		<authors>
-			<author>Henry; Oliver, Lin Winkler</author>
+			<author>Henry Winkler</author>
+			<author>Lin Oliver</author>
 		</authors>
 	</book>
 	<book id="fdb_4388">
@@ -39861,7 +39906,8 @@
 		<rating>4.5</rating>
 		<genre>Urban Fantasy</genre>
 		<authors>
-			<author>P.C.; Cast, Kristin Cast</author>
+			<author>P.C. Cast</author>
+			<author>Kristin Cast</author>
 		</authors>
 	</book>
 	<book id="fdb_4426">
@@ -39924,7 +39970,8 @@
 		<rating>4</rating>
 		<genre>General Fiction</genre>
 		<authors>
-			<author>Laura; McNeal, Tom McNeal</author>
+			<author>Laura McNeal</author>
+			<author>Tom McNeal</author>
 		</authors>
 	</book>
 	<book id="fdb_4433">
@@ -40789,7 +40836,8 @@
 		<rating>2</rating>
 		<genre>Fantasy</genre>
 		<authors>
-			<author>Paul; Riddell, Chris Stewart</author>
+			<author>Paul Stewart</author>
+			<author>Chris Riddell</author>
 		</authors>
 	</book>
 	<book id="fdb_4529">
@@ -40924,7 +40972,8 @@
 		<rating>4</rating>
 		<genre>Action Adventure</genre>
 		<authors>
-			<author>Mark; Cash, Megan Montague Newgarden</author>
+			<author>Mark Newgarden</author>
+			<author>Megan Montague Cash</author>
 		</authors>
 	</book>
 	<book id="fdb_4544">
@@ -41347,7 +41396,8 @@
 		<rating>4</rating>
 		<genre>Fantasy</genre>
 		<authors>
-			<author>Neil; Reaves, Michael Gaiman</author>
+			<author>Neil Gaiman</author>
+			<author>Michael Reaves</author>
 		</authors>
 	</book>
 	<book id="fdb_4591">
@@ -41581,7 +41631,8 @@
 		<rating>4.5</rating>
 		<genre>Space Opera</genre>
 		<authors>
-			<author>Brian; Anderson, Kevin J. Herbert</author>
+			<author>Brian Herbert</author>
+			<author>Kevin J. Anderson</author>
 		</authors>
 	</book>
 	<book id="fdb_4617">
@@ -42382,7 +42433,8 @@
 		<rating>4.5</rating>
 		<genre>Urban Fantasy</genre>
 		<authors>
-			<author>P.C.; Cast, Kristin Cast</author>
+			<author>P.C. Cast</author>
+			<author>Kristin Cast</author>
 		</authors>
 	</book>
 	<book id="fdb_4706">
@@ -42490,7 +42542,8 @@
 		<rating>4</rating>
 		<genre>Fantasy</genre>
 		<authors>
-			<author>Kelly; Grant, Gavin Link</author>
+			<author>Kelly Link</author>
+			<author>Gavin Grant</author>
 		</authors>
 	</book>
 	<book id="fdb_4718">
@@ -43149,7 +43202,8 @@
 		<rating>4</rating>
 		<genre>Fantasy</genre>
 		<authors>
-			<author>Elizabeth; Monette, Sarah Bear</author>
+			<author>Elizabeth Bear</author>
+			<author>Sarah Monette</author>
 		</authors>
 	</book>
 	<book id="fdb_4791">
@@ -43347,7 +43401,8 @@
 		<rating>4</rating>
 		<genre>Suspense</genre>
 		<authors>
-			<author>Ken; Starr, Jason Bruen</author>
+			<author>Ken Bruen</author>
+			<author>Jason Starr</author>
 		</authors>
 	</book>
 	<book id="fdb_4813">
@@ -43905,7 +43960,8 @@
 		<rating>0</rating>
 		<genre>Historical</genre>
 		<authors>
-			<author>Marcia; Pronzini, Bill Muller</author>
+			<author>Marcia Muller</author>
+			<author>Bill Pronzini</author>
 		</authors>
 	</book>
 	<book id="fdb_4875">
@@ -43950,7 +44006,8 @@
 		<rating>2</rating>
 		<genre>Action Adventure</genre>
 		<authors>
-			<author>Stephen; Hawking, Lucy Hawking</author>
+			<author>Stephen Hawking</author>
+			<author>Lucy Hawking</author>
 		</authors>
 	</book>
 	<book id="fdb_4880">
@@ -43977,7 +44034,8 @@
 		<rating>5</rating>
 		<genre>General Fiction</genre>
 		<authors>
-			<author>Steve; Chast, Roz Martin</author>
+			<author>Steve Martin</author>
+			<author>Roz Chast</author>
 		</authors>
 	</book>
 	<book id="fdb_4883">
@@ -44094,7 +44152,8 @@
 		<rating>4</rating>
 		<genre>Fantasy</genre>
 		<authors>
-			<author>Roderick; Williams, Brian Gordon</author>
+			<author>Roderick Gordon</author>
+			<author>Brian Williams</author>
 		</authors>
 	</book>
 	<book id="fdb_4896">
@@ -44571,7 +44630,8 @@
 		<rating>4.5</rating>
 		<genre>General Fiction</genre>
 		<authors>
-			<author>Sally; Smalley, Gary John</author>
+			<author>Sally John</author>
+			<author>Gary Smalley</author>
 		</authors>
 	</book>
 	<book id="fdb_4949">
@@ -46039,7 +46099,8 @@
 		<rating>4.5</rating>
 		<genre>Urban Fantasy</genre>
 		<authors>
-			<author>P.C.; Cast, Kristin Cast</author>
+			<author>P.C. Cast</author>
+			<author>Kristin Cast</author>
 		</authors>
 	</book>
 	<book id="fdb_5112">
@@ -46138,7 +46199,8 @@
 		<rating>1</rating>
 		<genre>Historical</genre>
 		<authors>
-			<author>Loren; Bildner, Phil Long</author>
+			<author>Loren Long</author>
+			<author>Phil Bildner</author>
 		</authors>
 	</book>
 	<book id="fdb_5123">
@@ -47137,7 +47199,8 @@
 		<rating>3</rating>
 		<genre>General Fiction</genre>
 		<authors>
-			<author>Janet; Crummel, Susan Stevens Stevens</author>
+			<author>Janet Stevens</author>
+			<author>Susan Stevens Crummel</author>
 		</authors>
 	</book>
 	<book id="fdb_5234">
@@ -47182,7 +47245,8 @@
 		<rating>4</rating>
 		<genre>General Fiction</genre>
 		<authors>
-			<author>Kate; McMullan, Jim McMullan</author>
+			<author>Kate McMullan</author>
+			<author>Jim McMullan</author>
 		</authors>
 	</book>
 	<book id="fdb_5239">
@@ -47560,7 +47624,8 @@
 		<rating>5</rating>
 		<genre>Fantasy</genre>
 		<authors>
-			<author>Christopher; Lebbon, Tim Golden</author>
+			<author>Christopher Golden</author>
+			<author>Tim Lebbon</author>
 		</authors>
 	</book>
 	<book id="fdb_5281">
@@ -47749,7 +47814,8 @@
 		<rating>4.5</rating>
 		<genre>Thriller</genre>
 		<authors>
-			<author>Dean; Gorman, Ed Koontz</author>
+			<author>Dean Koontz</author>
+			<author>Ed Gorman</author>
 		</authors>
 	</book>
 	<book id="fdb_5302">
@@ -48028,7 +48094,8 @@
 		<rating>1</rating>
 		<genre>General Fiction</genre>
 		<authors>
-			<author>Laura; Bush, Jenna Bush</author>
+			<author>Laura Bush</author>
+			<author>Jenna Bush</author>
 		</authors>
 	</book>
 	<book id="fdb_5333">
@@ -48118,7 +48185,8 @@
 		<rating>4</rating>
 		<genre>Suspense</genre>
 		<authors>
-			<author>James; Roughan, Howard Patterson</author>
+			<author>James Patterson</author>
+			<author>Howard Roughan</author>
 		</authors>
 	</book>
 	<book id="fdb_5343">
@@ -48812,7 +48880,8 @@
 		<rating>4</rating>
 		<genre>Fantasy</genre>
 		<authors>
-			<author>Jaida; Bennett, Danielle Jones</author>
+			<author>Jaida Jones</author>
+			<author>Danielle Bennett</author>
 		</authors>
 	</book>
 	<book id="fdb_5420">
@@ -49291,7 +49360,8 @@
 		<rating>3.5</rating>
 		<genre>Science Fiction</genre>
 		<authors>
-			<author>James; Ledwidge, Michael Patterson</author>
+			<author>James Patterson</author>
+			<author>Michael Ledwidge</author>
 		</authors>
 	</book>
 	<book id="fdb_5473">
@@ -49309,7 +49379,8 @@
 		<rating>4.5</rating>
 		<genre>Historical</genre>
 		<authors>
-			<author>Mary Ann; Barrows, Annie Shaffer</author>
+			<author>Mary Ann Shaffer</author>
+			<author>Annie Barrows</author>
 		</authors>
 	</book>
 	<book id="fdb_5475">
@@ -50011,7 +50082,8 @@
 		<rating>4</rating>
 		<genre>Space Opera</genre>
 		<authors>
-			<author>Brian; Anderson, Kevin J. Herbert</author>
+			<author>Brian Herbert</author>
+			<author>Kevin J. Anderson</author>
 		</authors>
 	</book>
 	<book id="fdb_5553">
@@ -50047,7 +50119,8 @@
 		<rating>2</rating>
 		<genre>General Fiction</genre>
 		<authors>
-			<author>Marilyn; Hegamin, Tonya C. Nelson</author>
+			<author>Marilyn Nelson</author>
+			<author>Tonya C. Hegamin</author>
 		</authors>
 	</book>
 	<book id="fdb_5557">
@@ -50371,7 +50444,8 @@
 		<rating>4</rating>
 		<genre>General Fiction</genre>
 		<authors>
-			<author>Tiki; Barber, Ronde Barber</author>
+			<author>Tiki Barber</author>
+			<author>Ronde Barber</author>
 		</authors>
 	</book>
 	<book id="fdb_5593">
@@ -51100,7 +51174,8 @@
 		<rating>4.5</rating>
 		<genre>Suspense</genre>
 		<authors>
-			<author>Max Allan; Spillane, Mickey Collins</author>
+			<author>Max Allan Collins</author>
+			<author>Mickey Spillane</author>
 		</authors>
 	</book>
 	<book id="fdb_5674">
@@ -51687,7 +51762,8 @@
 		<rating>4</rating>
 		<genre>General Fiction</genre>
 		<authors>
-			<author>Stan; Berenstain, Jan Berenstain</author>
+			<author>Stan Berenstain</author>
+			<author>Jan Berenstain</author>
 		</authors>
 	</book>
 	<book id="fdb_5739">
@@ -52390,7 +52466,8 @@
 		<rating>4</rating>
 		<genre>General Fiction</genre>
 		<authors>
-			<author>Julia; Roy, Jennifer DeVillers</author>
+			<author>Julia DeVillers</author>
+			<author>Jennifer Roy</author>
 		</authors>
 	</book>
 	<book id="fdb_5817">
@@ -52624,7 +52701,8 @@
 		<rating>4.5</rating>
 		<genre>Historical</genre>
 		<authors>
-			<author>Janette; Bunn, T. Davis Oke</author>
+			<author>Janette Oke</author>
+			<author>T. Davis Bunn</author>
 		</authors>
 	</book>
 	<book id="fdb_5843">
@@ -53057,7 +53135,8 @@
 		<rating>3</rating>
 		<genre>Fantasy</genre>
 		<authors>
-			<author>Christopher; Lebbon, Tim Golden</author>
+			<author>Christopher Golden</author>
+			<author>Tim Lebbon</author>
 		</authors>
 	</book>
 	<book id="fdb_5891">
@@ -53617,7 +53696,8 @@
 		<rating>2</rating>
 		<genre>General Fiction</genre>
 		<authors>
-			<author>Rose; Naden, Corinne J. Blue</author>
+			<author>Rose Blue</author>
+			<author>Corinne J. Naden</author>
 		</authors>
 	</book>
 	<book id="fdb_5953">
@@ -54266,7 +54346,8 @@
 		<rating>2</rating>
 		<genre>General Fiction</genre>
 		<authors>
-			<author>David; Davis, Jacky Soman</author>
+			<author>David Soman</author>
+			<author>Jacky Davis</author>
 		</authors>
 	</book>
 	<book id="fdb_6025">
@@ -54671,7 +54752,8 @@
 		<rating>4</rating>
 		<genre>Mystery</genre>
 		<authors>
-			<author>Lis; Henry, April Wiehl</author>
+			<author>Lis Wiehl</author>
+			<author>April Henry</author>
 		</authors>
 	</book>
 	<book id="fdb_6070">
@@ -54878,7 +54960,8 @@
 		<rating>4.5</rating>
 		<genre>Suspense</genre>
 		<authors>
-			<author>Brandilyn; Collins, Amberly Collins</author>
+			<author>Brandilyn Collins</author>
+			<author>Amberly Collins</author>
 		</authors>
 	</book>
 	<book id="fdb_6093">
@@ -56318,7 +56401,8 @@
 		<rating>4</rating>
 		<genre>Thriller</genre>
 		<authors>
-			<author>Guillermo; Hogan, Chuck del Toro</author>
+			<author>Guillermo del Toro</author>
+			<author>Chuck Hogan</author>
 		</authors>
 	</book>
 	<book id="fdb_6253">
@@ -57255,7 +57339,8 @@
 		<rating>3</rating>
 		<genre>General Fiction</genre>
 		<authors>
-			<author>Rebecca; Emberley, Ed Emberley</author>
+			<author>Rebecca Emberley</author>
+			<author>Ed Emberley</author>
 		</authors>
 	</book>
 	<book id="fdb_6357">
@@ -57642,7 +57727,8 @@
 		<rating>5</rating>
 		<genre>Space Opera</genre>
 		<authors>
-			<author>Brian; Anderson, Kevin J. Herbert</author>
+			<author>Brian Herbert</author>
+			<author>Kevin J. Anderson</author>
 		</authors>
 	</book>
 	<book id="fdb_6400">
@@ -57813,7 +57899,8 @@
 		<rating>5</rating>
 		<genre>General Fiction</genre>
 		<authors>
-			<author>Stan; Berenstain, Jan Berenstain</author>
+			<author>Stan Berenstain</author>
+			<author>Jan Berenstain</author>
 		</authors>
 	</book>
 	<book id="fdb_6419">
@@ -59327,7 +59414,8 @@
 		<rating>4</rating>
 		<genre>Horror</genre>
 		<authors>
-			<author>Dacre; Holt, Ian Stoker</author>
+			<author>Dacre Stoker</author>
+			<author>Ian Holt</author>
 		</authors>
 	</book>
 	<book id="fdb_6587">
@@ -60182,7 +60270,8 @@
 		<rating>4.5</rating>
 		<genre>Urban Fantasy</genre>
 		<authors>
-			<author>P.C.; Cast, Kristin Cast</author>
+			<author>P.C. Cast</author>
+			<author>Kristin Cast</author>
 		</authors>
 	</book>
 	<book id="fdb_6682">
@@ -60614,7 +60703,8 @@
 		<rating>4</rating>
 		<genre>Fantasy</genre>
 		<authors>
-			<author>James; Charbonnet, Gabrielle Patterson</author>
+			<author>James Patterson</author>
+			<author>Gabrielle Charbonnet</author>
 		</authors>
 	</book>
 	<book id="fdb_6730">
@@ -63282,7 +63372,8 @@
 		<rating>3</rating>
 		<genre>General Fiction</genre>
 		<authors>
-			<author>Mal; Graham, Elspeth Peet</author>
+			<author>Mal Peet</author>
+			<author>Elspeth Graham</author>
 		</authors>
 	</book>
 	<book id="fdb_7026">
@@ -63399,7 +63490,8 @@
 		<rating>4</rating>
 		<genre>General Fiction</genre>
 		<authors>
-			<author>John; Levithan, David Green</author>
+			<author>John Green</author>
+			<author>David Levithan</author>
 		</authors>
 	</book>
 	<book id="fdb_7039">
@@ -63615,7 +63707,8 @@
 		<rating>5</rating>
 		<genre>Historical Mystery</genre>
 		<authors>
-			<author>Mary; Mayer, Eric Reed</author>
+			<author>Mary Reed</author>
+			<author>Eric Mayer</author>
 		</authors>
 	</book>
 	<book id="fdb_7063">
@@ -64002,7 +64095,8 @@
 		<rating>5</rating>
 		<genre>Thriller</genre>
 		<authors>
-			<author>Tim; Parshall, Craig LaHaye</author>
+			<author>Tim LaHaye</author>
+			<author>Craig Parshall</author>
 		</authors>
 	</book>
 	<book id="fdb_7106">
@@ -64578,7 +64672,8 @@
 		<rating>4</rating>
 		<genre>Thriller</genre>
 		<authors>
-			<author>Douglas; Child, Lincoln Preston</author>
+			<author>Douglas Preston</author>
+			<author>Lincoln Child</author>
 		</authors>
 	</book>
 	<book id="fdb_7170">
@@ -64839,7 +64934,8 @@
 		<rating>4</rating>
 		<genre>Urban Fantasy</genre>
 		<authors>
-			<author>P.C.; Cast, Kristin Cast</author>
+			<author>P.C. Cast</author>
+			<author>Kristin Cast</author>
 		</authors>
 	</book>
 	<book id="fdb_7199">
@@ -65334,7 +65430,8 @@
 		<rating>2</rating>
 		<genre>General Fiction</genre>
 		<authors>
-			<author>Justin; Parnell, Peter Richardson</author>
+			<author>Justin Richardson</author>
+			<author>Peter Parnell</author>
 		</authors>
 	</book>
 	<book id="fdb_7254">
@@ -65388,7 +65485,8 @@
 		<rating>4.5</rating>
 		<genre>General Fiction</genre>
 		<authors>
-			<author>Stan; Berenstain, Jan Berenstain</author>
+			<author>Stan Berenstain</author>
+			<author>Jan Berenstain</author>
 		</authors>
 	</book>
 	<book id="fdb_7260">
@@ -66000,7 +66098,8 @@
 		<rating>0</rating>
 		<genre>General Fiction</genre>
 		<authors>
-			<author>Beatrice; Pinto, Sara Colin</author>
+			<author>Beatrice Colin</author>
+			<author>Sara Pinto</author>
 		</authors>
 	</book>
 	<book id="fdb_7328">
@@ -66576,7 +66675,8 @@
 		<rating>4</rating>
 		<genre>Mystery</genre>
 		<authors>
-			<author>Barnabas; Orlando, Jordan Miller</author>
+			<author>Barnabas Miller</author>
+			<author>Jordan Orlando</author>
 		</authors>
 	</book>
 	<book id="fdb_7392">
@@ -67674,7 +67774,8 @@
 		<rating>5</rating>
 		<genre>Horror</genre>
 		<authors>
-			<author>Matthew; Tuxbury, Larry McElligott</author>
+			<author>Matthew McElligott</author>
+			<author>Larry Tuxbury</author>
 		</authors>
 	</book>
 	<book id="fdb_7514">
@@ -68421,7 +68522,8 @@
 		<rating>5</rating>
 		<genre>General Fiction</genre>
 		<authors>
-			<author>Kate; McGhee, Alison DiCamillo</author>
+			<author>Kate DiCamillo</author>
+			<author>Alison McGhee</author>
 		</authors>
 	</book>
 	<book id="fdb_7597">
@@ -68430,7 +68532,8 @@
 		<rating>5</rating>
 		<genre>Fantasy</genre>
 		<authors>
-			<author>Adam Jay; Jacobson, Andrew Epstein</author>
+			<author>Adam Jay Epstein</author>
+			<author>Andrew Jacobson</author>
 		</authors>
 	</book>
 	<book id="fdb_7598">
@@ -68863,7 +68966,8 @@
 		<rating>5</rating>
 		<genre>General Fiction</genre>
 		<authors>
-			<author>Kate; McMullan, Jim McMullan</author>
+			<author>Kate McMullan</author>
+			<author>Jim McMullan</author>
 		</authors>
 	</book>
 	<book id="fdb_7646">
@@ -68971,7 +69075,8 @@
 		<rating>5</rating>
 		<genre>General Fiction</genre>
 		<authors>
-			<author>Rebecca; Emberley, Ed Emberley</author>
+			<author>Rebecca Emberley</author>
+			<author>Ed Emberley</author>
 		</authors>
 	</book>
 	<book id="fdb_7658">
@@ -69016,7 +69121,8 @@
 		<rating>4</rating>
 		<genre>Thriller</genre>
 		<authors>
-			<author>Guillermo; Hogan, Chuck del Toro</author>
+			<author>Guillermo del Toro</author>
+			<author>Chuck Hogan</author>
 		</authors>
 	</book>
 	<book id="fdb_7663">
@@ -69746,7 +69852,8 @@
 		<rating>5</rating>
 		<genre>Historical</genre>
 		<authors>
-			<author>Victoria; Simon, T.R. Bond</author>
+			<author>Victoria Bond</author>
+			<author>T.R. Simon</author>
 		</authors>
 	</book>
 	<book id="fdb_7744">
@@ -70475,7 +70582,8 @@
 		<rating>4.5</rating>
 		<genre>Science Fiction</genre>
 		<authors>
-			<author>Kathy; Reichs, Brendan Reichs</author>
+			<author>Kathy Reichs</author>
+			<author>Brendan Reichs</author>
 		</authors>
 	</book>
 	<book id="fdb_7825">
@@ -71510,7 +71618,8 @@
 		<rating>3.5</rating>
 		<genre>Historical</genre>
 		<authors>
-			<author>Janette; Bunn, T. Davis Oke</author>
+			<author>Janette Oke</author>
+			<author>T. Davis Bunn</author>
 		</authors>
 	</book>
 	<book id="fdb_7940">
@@ -71771,7 +71880,8 @@
 		<rating>2</rating>
 		<genre>General Fiction</genre>
 		<authors>
-			<author>Tony; Dungy, Lauren Dungy</author>
+			<author>Tony Dungy</author>
+			<author>Lauren Dungy</author>
 		</authors>
 	</book>
 	<book id="fdb_7969">
@@ -72213,7 +72323,8 @@
 		<rating>3</rating>
 		<genre>General Fiction</genre>
 		<authors>
-			<author>Walter Dean; Workman, Ross Myers</author>
+			<author>Walter Dean Myers</author>
+			<author>Ross Workman</author>
 		</authors>
 	</book>
 	<book id="fdb_8018">
@@ -72816,7 +72927,8 @@
 		<rating>3</rating>
 		<genre>Historical</genre>
 		<authors>
-			<author>Christopher; Lebbon, Tim Golden</author>
+			<author>Christopher Golden</author>
+			<author>Tim Lebbon</author>
 		</authors>
 	</book>
 	<book id="fdb_8085">
@@ -73519,7 +73631,8 @@
 		<rating>3</rating>
 		<genre>General Fiction</genre>
 		<authors>
-			<author>Jessie; Hopkins, Karen Leigh Nelson</author>
+			<author>Jessie Nelson</author>
+			<author>Karen Leigh Hopkins</author>
 		</authors>
 	</book>
 	<book id="fdb_8163">
@@ -74447,7 +74560,8 @@
 		<rating>3</rating>
 		<genre>General Fiction</genre>
 		<authors>
-			<author>Janet; Crummel, Susan Stevens Stevens</author>
+			<author>Janet Stevens</author>
+			<author>Susan Stevens Crummel</author>
 		</authors>
 	</book>
 	<book id="fdb_8266">
@@ -75176,7 +75290,8 @@
 		<rating>5</rating>
 		<genre>Epic Fantasy</genre>
 		<authors>
-			<author>Margaret; Krammes, Robert Weis</author>
+			<author>Margaret Weis</author>
+			<author>Robert Krammes</author>
 		</authors>
 	</book>
 	<book id="fdb_8347">
@@ -75527,7 +75642,8 @@
 		<rating>3</rating>
 		<genre>General Fiction</genre>
 		<authors>
-			<author>Peter; Zekauskas, Felicia Maloney</author>
+			<author>Peter Maloney</author>
+			<author>Felicia Zekauskas</author>
 		</authors>
 	</book>
 	<book id="fdb_8386">
@@ -77093,7 +77209,8 @@
 		<rating>3</rating>
 		<genre>General Fiction</genre>
 		<authors>
-			<author>James; Tebbetts, Chris Patterson</author>
+			<author>James Patterson</author>
+			<author>Chris Tebbetts</author>
 		</authors>
 	</book>
 	<book id="fdb_8560">
@@ -79166,7 +79283,8 @@
 		<rating>3</rating>
 		<genre>Thriller</genre>
 		<authors>
-			<author>Ted; Lee, Tosca Dekker</author>
+			<author>Ted Dekker</author>
+			<author>Tosca Lee</author>
 		</authors>
 	</book>
 	<book id="fdb_8790">
@@ -80165,7 +80283,8 @@
 		<rating>4.5</rating>
 		<genre>General Fiction</genre>
 		<authors>
-			<author>T.I.; Ritz, David Harris</author>
+			<author>T.I. Harris</author>
+			<author>David Ritz</author>
 		</authors>
 	</book>
 	<book id="fdb_8901">
@@ -80670,7 +80789,8 @@
 		<rating>4</rating>
 		<genre>Fantasy</genre>
 		<authors>
-			<author>Katherine; Paterson, John Paterson</author>
+			<author>Katherine Paterson</author>
+			<author>John Paterson</author>
 		</authors>
 	</book>
 	<book id="fdb_8957">
@@ -80823,7 +80943,8 @@
 		<rating>4.5</rating>
 		<genre>Fantasy</genre>
 		<authors>
-			<author>Larry; Kupari, Mike Correia</author>
+			<author>Larry Correia</author>
+			<author>Mike Kupari</author>
 		</authors>
 	</book>
 	<book id="fdb_8974">
@@ -81453,7 +81574,8 @@
 		<rating>4</rating>
 		<genre>General Fiction</genre>
 		<authors>
-			<author>Mark; Rubinstein, Gary Pett</author>
+			<author>Mark Pett</author>
+			<author>Gary Rubinstein</author>
 		</authors>
 	</book>
 	<book id="fdb_9044">
@@ -81760,7 +81882,8 @@
 		<rating>4</rating>
 		<genre>Thriller</genre>
 		<authors>
-			<author>Guillermo; Hogan, Chuck del Toro</author>
+			<author>Guillermo del Toro</author>
+			<author>Chuck Hogan</author>
 		</authors>
 	</book>
 	<book id="fdb_9078">
@@ -81787,7 +81910,8 @@
 		<rating>3.5</rating>
 		<genre>Mystery</genre>
 		<authors>
-			<author>Lene; Friis, Agnete Kaaberbol</author>
+			<author>Lene Kaaberbol</author>
+			<author>Agnete Friis</author>
 		</authors>
 	</book>
 	<book id="fdb_9081">
@@ -82282,7 +82406,8 @@
 		<rating>3</rating>
 		<genre>Fantasy</genre>
 		<authors>
-			<author>Lin; Baker, Theo Oliver</author>
+			<author>Lin Oliver</author>
+			<author>Theo Baker</author>
 		</authors>
 	</book>
 	<book id="fdb_9136">
@@ -82849,7 +82974,8 @@
 		<rating>4</rating>
 		<genre>Thriller</genre>
 		<authors>
-			<author>Douglas; Child, Lincoln Preston</author>
+			<author>Douglas Preston</author>
+			<author>Lincoln Child</author>
 		</authors>
 	</book>
 	<book id="fdb_9199">
@@ -83165,7 +83291,8 @@
 		<rating>5</rating>
 		<genre>General Fiction</genre>
 		<authors>
-			<author>Dave; Zweibel, Alan Barry</author>
+			<author>Dave Barry</author>
+			<author>Alan Zweibel</author>
 		</authors>
 	</book>
 	<book id="fdb_9234">
@@ -83219,7 +83346,8 @@
 		<rating>4.5</rating>
 		<genre>Space Opera</genre>
 		<authors>
-			<author>Brian; Anderson, Kevin J. Herbert</author>
+			<author>Brian Herbert</author>
+			<author>Kevin J. Anderson</author>
 		</authors>
 	</book>
 	<book id="fdb_9240">
@@ -83417,7 +83545,8 @@
 		<rating>3</rating>
 		<genre>Horror</genre>
 		<authors>
-			<author>Henry; Oliver, Lin Winkler</author>
+			<author>Henry Winkler</author>
+			<author>Lin Oliver</author>
 		</authors>
 	</book>
 	<book id="fdb_9262">
@@ -83696,7 +83825,8 @@
 		<rating>1</rating>
 		<genre>Fantasy</genre>
 		<authors>
-			<author>Beth; Fraser, Kay Bracken</author>
+			<author>Beth Bracken</author>
+			<author>Kay Fraser</author>
 		</authors>
 	</book>
 	<book id="fdb_9293">
@@ -84416,7 +84546,8 @@
 		<rating>5</rating>
 		<genre>General Fiction</genre>
 		<authors>
-			<author>Missy; Stevens, Susan Horsfall</author>
+			<author>Missy Horsfall</author>
+			<author>Susan Stevens</author>
 		</authors>
 	</book>
 	<book id="fdb_9373">
@@ -84677,7 +84808,8 @@
 		<rating>2</rating>
 		<genre>General Fiction</genre>
 		<authors>
-			<author>Silas; Vaswani, Neela House</author>
+			<author>Silas House</author>
+			<author>Neela Vaswani</author>
 		</authors>
 	</book>
 	<book id="fdb_9402">
@@ -85442,7 +85574,8 @@
 		<rating>3</rating>
 		<genre>General Fiction</genre>
 		<authors>
-			<author>Sheila; Fox, Nathan Keenan</author>
+			<author>Sheila Keenan</author>
+			<author>Nathan Fox</author>
 		</authors>
 	</book>
 	<book id="fdb_9487">
@@ -85523,7 +85656,8 @@
 		<rating>5</rating>
 		<genre>Historical Mystery</genre>
 		<authors>
-			<author>Mary; Mayer, Eric Reed</author>
+			<author>Mary Reed</author>
+			<author>Eric Mayer</author>
 		</authors>
 	</book>
 	<book id="fdb_9496">
@@ -86325,7 +86459,8 @@
 		<rating>4</rating>
 		<genre>Fantasy</genre>
 		<authors>
-			<author>Mike; Golden, Christopher Mignola</author>
+			<author>Mike Mignola</author>
+			<author>Christopher Golden</author>
 		</authors>
 	</book>
 	<book id="fdb_9585">
@@ -88359,7 +88494,8 @@
 		<rating>3</rating>
 		<genre>General Fiction</genre>
 		<authors>
-			<author>James; Tebbetts, Chris Patterson</author>
+			<author>James Patterson</author>
+			<author>Chris Tebbetts</author>
 		</authors>
 	</book>
 	<book id="fdb_9811">
@@ -88459,7 +88595,8 @@
 		<rating>5</rating>
 		<genre>Suspense</genre>
 		<authors>
-			<author>Kim; Clark, Mindy Starns Alexis</author>
+			<author>Kim Alexis</author>
+			<author>Mindy Starns Clark</author>
 		</authors>
 	</book>
 	<book id="fdb_9822">
@@ -88540,7 +88677,8 @@
 		<rating>5</rating>
 		<genre>Historical</genre>
 		<authors>
-			<author>A.J.; Hewson, David Hartley</author>
+			<author>A.J. Hartley</author>
+			<author>David Hewson</author>
 		</authors>
 	</book>
 	<book id="fdb_9831">
@@ -88900,7 +89038,8 @@
 		<rating>4</rating>
 		<genre>Thriller</genre>
 		<authors>
-			<author>Ted; Lee, Tosca Dekker</author>
+			<author>Ted Dekker</author>
+			<author>Tosca Lee</author>
 		</authors>
 	</book>
 	<book id="fdb_9871">
@@ -89503,7 +89642,8 @@
 		<rating>4</rating>
 		<genre>General Fiction</genre>
 		<authors>
-			<author>Kate; McGhee, Alison DiCamillo</author>
+			<author>Kate DiCamillo</author>
+			<author>Alison McGhee</author>
 		</authors>
 	</book>
 	<book id="fdb_9938">
@@ -89539,7 +89679,8 @@
 		<rating>3.5</rating>
 		<genre>Science Fiction</genre>
 		<authors>
-			<author>Terry; Baxter, Stephen Pratchett</author>
+			<author>Terry Pratchett</author>
+			<author>Stephen Baxter</author>
 		</authors>
 	</book>
 	<book id="fdb_9942">
@@ -89971,7 +90112,8 @@
 		<rating>4</rating>
 		<genre>Thriller</genre>
 		<authors>
-			<author>Iris; Johansen, Roy Johansen</author>
+			<author>Iris Johansen</author>
+			<author>Roy Johansen</author>
 		</authors>
 	</book>
 	<book id="fdb_9990">
@@ -90305,7 +90447,8 @@
 		<rating>4.5</rating>
 		<genre>Science Fiction</genre>
 		<authors>
-			<author>Orson Scott; Johnston, Aaron Card</author>
+			<author>Orson Scott Card</author>
+			<author>Aaron Johnston</author>
 		</authors>
 	</book>
 	<book id="fdb_10027">
@@ -90359,7 +90502,8 @@
 		<rating>4.5</rating>
 		<genre>Thriller</genre>
 		<authors>
-			<author>Camilla; Traff, Asa Grebe</author>
+			<author>Camilla Grebe</author>
+			<author>Asa Traff</author>
 		</authors>
 	</book>
 	<book id="fdb_10033">
@@ -90575,7 +90719,8 @@
 		<rating>4</rating>
 		<genre>Fantasy</genre>
 		<authors>
-			<author>Justine; Brennan, Sarah Rees Larbalestier</author>
+			<author>Justine Larbalestier</author>
+			<author>Sarah Rees Brennan</author>
 		</authors>
 	</book>
 	<book id="fdb_10057">
@@ -91538,7 +91683,8 @@
 		<rating>3</rating>
 		<genre>Action Adventure</genre>
 		<authors>
-			<author>Joan; Williams, Suzanne Holub</author>
+			<author>Joan Holub</author>
+			<author>Suzanne Williams</author>
 		</authors>
 	</book>
 	<book id="fdb_10164">
@@ -92321,7 +92467,8 @@
 		<rating>5</rating>
 		<genre>Suspense</genre>
 		<authors>
-			<author>Robbie; Reed, Erik Cheuvront</author>
+			<author>Robbie Cheuvront</author>
+			<author>Erik Reed</author>
 		</authors>
 	</book>
 	<book id="fdb_10251">
@@ -92960,7 +93107,8 @@
 		<rating>3.5</rating>
 		<genre>Thriller</genre>
 		<authors>
-			<author>James; Ledwidge, Michael Patterson</author>
+			<author>James Patterson</author>
+			<author>Michael Ledwidge</author>
 		</authors>
 	</book>
 	<book id="fdb_10322">
@@ -93239,7 +93387,8 @@
 		<rating>3</rating>
 		<genre>Science Fiction</genre>
 		<authors>
-			<author>Cory; Stross, Charles Doctorow</author>
+			<author>Cory Doctorow</author>
+			<author>Charles Stross</author>
 		</authors>
 	</book>
 	<book id="fdb_10353">
@@ -93599,7 +93748,8 @@
 		<rating>4</rating>
 		<genre>Action Adventure</genre>
 		<authors>
-			<author>Clive; Perry, Thomas Cussler</author>
+			<author>Clive Cussler</author>
+			<author>Thomas Perry</author>
 		</authors>
 	</book>
 	<book id="fdb_10393">
@@ -93608,7 +93758,8 @@
 		<rating>2</rating>
 		<genre>Fantasy</genre>
 		<authors>
-			<author>Sanjay; Haynes, Emily Patel</author>
+			<author>Sanjay Patel</author>
+			<author>Emily Haynes</author>
 		</authors>
 	</book>
 	<book id="fdb_10394">
@@ -93860,7 +94011,8 @@
 		<rating>4</rating>
 		<genre>General Fiction</genre>
 		<authors>
-			<author>Eric; Preston, Theresa Wilson</author>
+			<author>Eric Wilson</author>
+			<author>Theresa Preston</author>
 		</authors>
 	</book>
 	<book id="fdb_10422">
@@ -94184,7 +94336,8 @@
 		<rating>2</rating>
 		<genre>Fantasy</genre>
 		<authors>
-			<author>Kelly; Reed, Tucker &amp; Larkin Reed Moore</author>
+			<author>Kelly Moore</author>
+			<author>Tucker &amp; Larkin Reed Reed</author>
 		</authors>
 	</book>
 	<book id="fdb_10458">
@@ -94202,7 +94355,8 @@
 		<rating>5</rating>
 		<genre>Mystery</genre>
 		<authors>
-			<author>Lene; Friis, Agnete Kaaberbol</author>
+			<author>Lene Kaaberbol</author>
+			<author>Agnete Friis</author>
 		</authors>
 	</book>
 	<book id="fdb_10460">
@@ -94715,7 +94869,8 @@
 		<rating>4</rating>
 		<genre>Science Fiction</genre>
 		<authors>
-			<author>Michael; Applegate, Katherine Grant</author>
+			<author>Michael Grant</author>
+			<author>Katherine Applegate</author>
 		</authors>
 	</book>
 	<book id="fdb_10517">
@@ -94958,7 +95113,8 @@
 		<rating>4</rating>
 		<genre>General Fiction</genre>
 		<authors>
-			<author>Janet; Crummel, Susan Stevens Stevens</author>
+			<author>Janet Stevens</author>
+			<author>Susan Stevens Crummel</author>
 		</authors>
 	</book>
 	<book id="fdb_10544">
@@ -95705,7 +95861,8 @@
 		<rating>4.5</rating>
 		<genre>Fantasy</genre>
 		<authors>
-			<author>Mercedes; Mallory, James Lackey</author>
+			<author>Mercedes Lackey</author>
+			<author>James Mallory</author>
 		</authors>
 	</book>
 	<book id="fdb_10627">
@@ -96056,7 +96213,8 @@
 		<rating>4</rating>
 		<genre>General Fiction</genre>
 		<authors>
-			<author>Ashley Edward; Stentz, Zack Miller</author>
+			<author>Ashley Edward Miller</author>
+			<author>Zack Stentz</author>
 		</authors>
 	</book>
 	<book id="fdb_10666">
@@ -96155,7 +96313,8 @@
 		<rating>4</rating>
 		<genre>General Fiction</genre>
 		<authors>
-			<author>George; Ursone, Adele Matteson</author>
+			<author>George Matteson</author>
+			<author>Adele Ursone</author>
 		</authors>
 	</book>
 	<book id="fdb_10677">
@@ -96524,7 +96683,8 @@
 		<rating>2.5</rating>
 		<genre>General Fiction</genre>
 		<authors>
-			<author>James; Grabenstein, Chris Patterson</author>
+			<author>James Patterson</author>
+			<author>Chris Grabenstein</author>
 		</authors>
 	</book>
 	<book id="fdb_10718">
@@ -96740,7 +96900,8 @@
 		<rating>4</rating>
 		<genre>General Fiction</genre>
 		<authors>
-			<author>Ayun; Hoppe, Paul Halliday</author>
+			<author>Ayun Halliday</author>
+			<author>Paul Hoppe</author>
 		</authors>
 	</book>
 	<book id="fdb_10742">
@@ -96794,7 +96955,8 @@
 		<rating>4.5</rating>
 		<genre>Action Adventure</genre>
 		<authors>
-			<author>Larry; DeFelice, Jim Bond</author>
+			<author>Larry Bond</author>
+			<author>Jim DeFelice</author>
 		</authors>
 	</book>
 	<book id="fdb_10748">
@@ -96866,7 +97028,8 @@
 		<rating>4</rating>
 		<genre>Thriller</genre>
 		<authors>
-			<author>James; Cantrell, Rebecca Rollins</author>
+			<author>James Rollins</author>
+			<author>Rebecca Cantrell</author>
 		</authors>
 	</book>
 	<book id="fdb_10756">
@@ -96965,7 +97128,8 @@
 		<rating>4</rating>
 		<genre>Espionage</genre>
 		<authors>
-			<author>Valerie; Lovett, Sarah Plame</author>
+			<author>Valerie Plame</author>
+			<author>Sarah Lovett</author>
 		</authors>
 	</book>
 	<book id="fdb_10767">
@@ -98729,7 +98893,8 @@
 		<rating>4</rating>
 		<genre>Action Adventure</genre>
 		<authors>
-			<author>Jeff; Tebbetts, Christopher Probst</author>
+			<author>Jeff Probst</author>
+			<author>Christopher Tebbetts</author>
 		</authors>
 	</book>
 	<book id="fdb_10963">
@@ -98756,7 +98921,8 @@
 		<rating>5</rating>
 		<genre>Science Fiction</genre>
 		<authors>
-			<author>Steven; Due, Tananarive Barnes</author>
+			<author>Steven Barnes</author>
+			<author>Tananarive Due</author>
 		</authors>
 	</book>
 	<book id="fdb_10966">
@@ -99197,7 +99363,8 @@
 		<rating>5</rating>
 		<genre>Historical</genre>
 		<authors>
-			<author>Roma; Burnett, Mark Downey</author>
+			<author>Roma Downey</author>
+			<author>Mark Burnett</author>
 		</authors>
 	</book>
 	<book id="fdb_11015">
@@ -99828,7 +99995,8 @@
 		<rating>3.5</rating>
 		<genre>General Fiction</genre>
 		<authors>
-			<author>James; Tebbetts, Chris Patterson</author>
+			<author>James Patterson</author>
+			<author>Chris Tebbetts</author>
 		</authors>
 	</book>
 	<book id="fdb_11085">
@@ -100333,7 +100501,8 @@
 		<rating>3</rating>
 		<genre>General Fiction</genre>
 		<authors>
-			<author>Elizabeth; Bendall-Brunello, John Verdick</author>
+			<author>Elizabeth Verdick</author>
+			<author>John Bendall-Brunello</author>
 		</authors>
 	</book>
 	<book id="fdb_11141">
@@ -100342,7 +100511,8 @@
 		<rating>3</rating>
 		<genre>General Fiction</genre>
 		<authors>
-			<author>Eric A.; Huliska-Beith, Laura Kimmel</author>
+			<author>Eric A. Kimmel</author>
+			<author>Laura Huliska-Beith</author>
 		</authors>
 	</book>
 	<book id="fdb_11142">
@@ -101089,7 +101259,8 @@
 		<rating>4</rating>
 		<genre>General Fiction</genre>
 		<authors>
-			<author>Kate; McGhee, Alison DiCamillo</author>
+			<author>Kate DiCamillo</author>
+			<author>Alison McGhee</author>
 		</authors>
 	</book>
 	<book id="fdb_11225">
@@ -102007,7 +102178,8 @@
 		<rating>5</rating>
 		<genre>Action Adventure</genre>
 		<authors>
-			<author>Jack; Davis, Donald A. Coughlin</author>
+			<author>Jack Coughlin</author>
+			<author>Donald A. Davis</author>
 		</authors>
 	</book>
 	<book id="fdb_11327">
@@ -102385,7 +102557,8 @@
 		<rating>4.5</rating>
 		<genre>Fantasy</genre>
 		<authors>
-			<author>K.L.; Marr, M.A. Armstrong</author>
+			<author>K.L. Armstrong</author>
+			<author>M.A. Marr</author>
 		</authors>
 	</book>
 	<book id="fdb_11369">
@@ -103321,7 +103494,8 @@
 		<rating>4</rating>
 		<genre>Police/Detective/Law Enforcement</genre>
 		<authors>
-			<author>Lotte; Hammer, Soren Hammer</author>
+			<author>Lotte Hammer</author>
+			<author>Soren Hammer</author>
 		</authors>
 	</book>
 	<book id="fdb_11473">
@@ -103393,7 +103567,8 @@
 		<rating>4.5</rating>
 		<genre>Science Fiction</genre>
 		<authors>
-			<author>Orson Scott; Johnston, Aaron Card</author>
+			<author>Orson Scott Card</author>
+			<author>Aaron Johnston</author>
 		</authors>
 	</book>
 	<book id="fdb_11481">
@@ -103843,7 +104018,8 @@
 		<rating>5</rating>
 		<genre>Science Fiction</genre>
 		<authors>
-			<author>Larry; Harrington, Matthew Joseph Niven</author>
+			<author>Larry Niven</author>
+			<author>Matthew Joseph Harrington</author>
 		</authors>
 	</book>
 	<book id="fdb_11531">
@@ -104518,7 +104694,8 @@
 		<rating>4</rating>
 		<genre>Historical</genre>
 		<authors>
-			<author>Suzanne; Nyhan, Loretta Hayes</author>
+			<author>Suzanne Hayes</author>
+			<author>Loretta Nyhan</author>
 		</authors>
 	</book>
 	<book id="fdb_11606">
@@ -105050,7 +105227,8 @@
 		<rating>5</rating>
 		<genre>Epic Fantasy</genre>
 		<authors>
-			<author>Margaret; Krammes, Robert Weis</author>
+			<author>Margaret Weis</author>
+			<author>Robert Krammes</author>
 		</authors>
 	</book>
 	<book id="fdb_11665">
@@ -105491,7 +105669,8 @@
 		<rating>5</rating>
 		<genre>General Fiction</genre>
 		<authors>
-			<author>Karen; Kaufman, Jennifer Mack</author>
+			<author>Karen Mack</author>
+			<author>Jennifer Kaufman</author>
 		</authors>
 	</book>
 	<book id="fdb_11714">
@@ -106364,7 +106543,8 @@
 		<rating>5</rating>
 		<genre>Thriller</genre>
 		<authors>
-			<author>Nicholas; Guggenheim, David Mennuti</author>
+			<author>Nicholas Mennuti</author>
+			<author>David Guggenheim</author>
 		</authors>
 	</book>
 	<book id="fdb_11811">
@@ -106760,7 +106940,8 @@
 		<rating>5</rating>
 		<genre>General Fiction</genre>
 		<authors>
-			<author>Jenny; Vivian, Siobhan Han</author>
+			<author>Jenny Han</author>
+			<author>Siobhan Vivian</author>
 		</authors>
 	</book>
 	<book id="fdb_11855">
@@ -106860,7 +107041,8 @@
 		<rating>4</rating>
 		<genre>General Fiction</genre>
 		<authors>
-			<author>John; Hassett, Ann Hassett</author>
+			<author>John Hassett</author>
+			<author>Ann Hassett</author>
 		</authors>
 	</book>
 	<book id="fdb_11866">
@@ -107913,7 +108095,8 @@
 		<rating>3</rating>
 		<genre>Fantasy</genre>
 		<authors>
-			<author>Steven; White, Skyler Brust</author>
+			<author>Steven Brust</author>
+			<author>Skyler White</author>
 		</authors>
 	</book>
 	<book id="fdb_11983">
@@ -108588,7 +108771,8 @@
 		<rating>3</rating>
 		<genre>Mystery</genre>
 		<authors>
-			<author>Kareem; Obstfeld, Raymond Abdul-Jabbar</author>
+			<author>Kareem Abdul-Jabbar</author>
+			<author>Raymond Obstfeld</author>
 		</authors>
 	</book>
 	<book id="fdb_12058">
@@ -108813,7 +108997,8 @@
 		<rating>5</rating>
 		<genre>Action Adventure</genre>
 		<authors>
-			<author>James; Grabenstein, Chris Patterson</author>
+			<author>James Patterson</author>
+			<author>Chris Grabenstein</author>
 		</authors>
 	</book>
 	<book id="fdb_12083">
@@ -109353,7 +109538,8 @@
 		<rating>3</rating>
 		<genre>General Fiction</genre>
 		<authors>
-			<author>Mal; Graham, Elspeth Peet</author>
+			<author>Mal Peet</author>
+			<author>Elspeth Graham</author>
 		</authors>
 	</book>
 	<book id="fdb_12143">
@@ -109767,7 +109953,8 @@
 		<rating>2</rating>
 		<genre>Action Adventure</genre>
 		<authors>
-			<author>Mac; Scieszka, Jon Barnett</author>
+			<author>Mac Barnett</author>
+			<author>Jon Scieszka</author>
 		</authors>
 	</book>
 	<book id="fdb_12189">
@@ -109894,7 +110081,8 @@
 		<rating>5</rating>
 		<genre>General Fiction</genre>
 		<authors>
-			<author>Tom; Fennelly, Beth Ann Franklin</author>
+			<author>Tom Franklin</author>
+			<author>Beth Ann Fennelly</author>
 		</authors>
 	</book>
 	<book id="fdb_12203">
@@ -110317,7 +110505,8 @@
 		<rating>4</rating>
 		<genre>General Fiction</genre>
 		<authors>
-			<author>Shannon; Mackel, Kathryn Ethridge</author>
+			<author>Shannon Ethridge</author>
+			<author>Kathryn Mackel</author>
 		</authors>
 	</book>
 	<book id="fdb_12250">
@@ -110723,7 +110912,8 @@
 		<rating>2</rating>
 		<genre>Action Adventure</genre>
 		<authors>
-			<author>Lisa; Martin, Valerie Martin</author>
+			<author>Lisa Martin</author>
+			<author>Valerie Martin</author>
 		</authors>
 	</book>
 	<book id="fdb_12295">
@@ -111083,7 +111273,8 @@
 		<rating>4</rating>
 		<genre>Thriller</genre>
 		<authors>
-			<author>Douglas; Child, Lincoln Preston</author>
+			<author>Douglas Preston</author>
+			<author>Lincoln Child</author>
 		</authors>
 	</book>
 	<book id="fdb_12335">
@@ -111155,7 +111346,8 @@
 		<rating>4.5</rating>
 		<genre>Historical</genre>
 		<authors>
-			<author>William W.; Johnstone, J.A. Johnstone</author>
+			<author>William W. Johnstone</author>
+			<author>J.A. Johnstone</author>
 		</authors>
 	</book>
 	<book id="fdb_12343">
@@ -111398,7 +111590,8 @@
 		<rating>5</rating>
 		<genre>Mystery</genre>
 		<authors>
-			<author>Lene; Friis, Agnete Kaaberbol</author>
+			<author>Lene Kaaberbol</author>
+			<author>Agnete Friis</author>
 		</authors>
 	</book>
 	<book id="fdb_12370">
@@ -111920,7 +112113,8 @@
 		<rating>3</rating>
 		<genre>General Fiction</genre>
 		<authors>
-			<author>Sara; Altebrando, Tara Zarr</author>
+			<author>Sara Zarr</author>
+			<author>Tara Altebrando</author>
 		</authors>
 	</book>
 	<book id="fdb_12428">
@@ -113630,7 +113824,8 @@
 		<rating>3</rating>
 		<genre>General Fiction</genre>
 		<authors>
-			<author>Corey Rosen; Coulton, Beth Schwartz</author>
+			<author>Corey Rosen Schwartz</author>
+			<author>Beth Coulton</author>
 		</authors>
 	</book>
 	<book id="fdb_12618">
@@ -113909,7 +114104,8 @@
 		<rating>3</rating>
 		<genre>General Fiction</genre>
 		<authors>
-			<author>Henry; Oliver, Lin Winkler</author>
+			<author>Henry Winkler</author>
+			<author>Lin Oliver</author>
 		</authors>
 	</book>
 	<book id="fdb_12649">
@@ -114089,7 +114285,8 @@
 		<rating>5</rating>
 		<genre>General Fiction</genre>
 		<authors>
-			<author>Amanda; Reeves, Tara McClary Jenkins</author>
+			<author>Amanda Jenkins</author>
+			<author>Tara McClary Reeves</author>
 		</authors>
 	</book>
 	<book id="fdb_12669">
@@ -114638,7 +114835,8 @@
 		<rating>4</rating>
 		<genre>Fantasy</genre>
 		<authors>
-			<author>Pip; Morris, Tee Ballantine</author>
+			<author>Pip Ballantine</author>
+			<author>Tee Morris</author>
 		</authors>
 	</book>
 	<book id="fdb_12730">
@@ -114683,7 +114881,8 @@
 		<rating>3.5</rating>
 		<genre>Science Fiction</genre>
 		<authors>
-			<author>Ann; VanderMeer, Jeff VanderMeer</author>
+			<author>Ann VanderMeer</author>
+			<author>Jeff VanderMeer</author>
 		</authors>
 	</book>
 	<book id="fdb_12735">
@@ -114791,7 +114990,8 @@
 		<rating>4.5</rating>
 		<genre>Action Adventure</genre>
 		<authors>
-			<author>Clive; Scott, Justin Cussler</author>
+			<author>Clive Cussler</author>
+			<author>Justin Scott</author>
 		</authors>
 	</book>
 	<book id="fdb_12747">
@@ -115016,7 +115216,8 @@
 		<rating>2</rating>
 		<genre>General Fiction</genre>
 		<authors>
-			<author>Peter H.; Reynolds, Paul A. Reynolds</author>
+			<author>Peter H. Reynolds</author>
+			<author>Paul A. Reynolds</author>
 		</authors>
 	</book>
 	<book id="fdb_12772">
@@ -116115,7 +116316,8 @@
 		<rating>4.5</rating>
 		<genre>Mystery</genre>
 		<authors>
-			<author>Kate; Lane, Mike Egan</author>
+			<author>Kate Egan</author>
+			<author>Mike Lane</author>
 		</authors>
 	</book>
 	<book id="fdb_12894">
@@ -116691,7 +116893,8 @@
 		<rating>4</rating>
 		<genre>General Fiction</genre>
 		<authors>
-			<author>John; Primiano, Jay Rocco</author>
+			<author>John Rocco</author>
+			<author>Jay Primiano</author>
 		</authors>
 	</book>
 	<book id="fdb_12958">
@@ -117033,7 +117236,8 @@
 		<rating>4</rating>
 		<genre>Science Fiction</genre>
 		<authors>
-			<author>Wendy; Brawer, Michael Mass</author>
+			<author>Wendy Mass</author>
+			<author>Michael Brawer</author>
 		</authors>
 	</book>
 	<book id="fdb_12996">
@@ -117312,7 +117516,8 @@
 		<rating>4</rating>
 		<genre>Action Adventure</genre>
 		<authors>
-			<author>Diana Wynne; Jones, Ursula Jones</author>
+			<author>Diana Wynne Jones</author>
+			<author>Ursula Jones</author>
 		</authors>
 	</book>
 	<book id="fdb_13027">
@@ -117897,7 +118102,8 @@
 		<rating>4.5</rating>
 		<genre>Action Adventure</genre>
 		<authors>
-			<author>James; Blackwood, Grant Rollins</author>
+			<author>James Rollins</author>
+			<author>Grant Blackwood</author>
 		</authors>
 	</book>
 	<book id="fdb_13092">
@@ -118788,7 +118994,8 @@
 		<rating>2</rating>
 		<genre>Science Fiction</genre>
 		<authors>
-			<author>Marisa; Teague, David de los Santos</author>
+			<author>Marisa de los Santos</author>
+			<author>David Teague</author>
 		</authors>
 	</book>
 	<book id="fdb_13191">
@@ -118905,7 +119112,8 @@
 		<rating>4</rating>
 		<genre>General Fiction</genre>
 		<authors>
-			<author>Paul DuBois; Swender, Jennifer Jacobs</author>
+			<author>Paul DuBois Jacobs</author>
+			<author>Jennifer Swender</author>
 		</authors>
 	</book>
 	<book id="fdb_13204">
@@ -118977,7 +119185,8 @@
 		<rating>4</rating>
 		<genre>General Fiction</genre>
 		<authors>
-			<author>Elaine; Bliss, Harry Snyder</author>
+			<author>Elaine Snyder</author>
+			<author>Harry Bliss</author>
 		</authors>
 	</book>
 	<book id="fdb_13212">
@@ -119787,7 +119996,8 @@
 		<rating>4.5</rating>
 		<genre>Action Adventure</genre>
 		<authors>
-			<author>Dale; DeFelice, Jim Brown</author>
+			<author>Dale Brown</author>
+			<author>Jim DeFelice</author>
 		</authors>
 	</book>
 	<book id="fdb_13302">
@@ -120678,7 +120888,8 @@
 		<rating>4.5</rating>
 		<genre>Thriller</genre>
 		<authors>
-			<author>Dennis; Connelly, Michael Lehane</author>
+			<author>Dennis Lehane</author>
+			<author>Michael Connelly</author>
 		</authors>
 	</book>
 	<book id="fdb_13401">
@@ -120687,7 +120898,9 @@
 		<rating>3.5</rating>
 		<genre>Thriller</genre>
 		<authors>
-			<author>R.L.; Preston, Douglas; Child, Lincoln Stine</author>
+			<author>R.L. Stine</author>
+			<author>Douglas Preston</author>
+			<author>Lincoln Child</author>
 		</authors>
 	</book>
 	<book id="fdb_13402">
@@ -120822,7 +121035,8 @@
 		<rating>4.5</rating>
 		<genre>Thriller</genre>
 		<authors>
-			<author>Iris; Johansen, Roy Johansen</author>
+			<author>Iris Johansen</author>
+			<author>Roy Johansen</author>
 		</authors>
 	</book>
 	<book id="fdb_13417">
@@ -120930,7 +121144,8 @@
 		<rating>4</rating>
 		<genre>Mystery</genre>
 		<authors>
-			<author>Steve; Falco, Lisa Hockensmith</author>
+			<author>Steve Hockensmith</author>
+			<author>Lisa Falco</author>
 		</authors>
 	</book>
 	<book id="fdb_13429">
@@ -121362,7 +121577,9 @@
 		<rating>5</rating>
 		<genre>Graphic Novel</genre>
 		<authors>
-			<author>Jennifer; Holm, Matthew; Krosoczka, Jarrett J. Holm</author>
+			<author>Jennifer Holm</author>
+			<author>Matthew Holm</author>
+			<author>Jarrett J. Krosoczka</author>
 		</authors>
 	</book>
 	<book id="fdb_13477">
@@ -121425,7 +121642,8 @@
 		<rating>4.5</rating>
 		<genre>General Fiction</genre>
 		<authors>
-			<author>Bernie; Rorick, Kate Su</author>
+			<author>Bernie Su</author>
+			<author>Kate Rorick</author>
 		</authors>
 	</book>
 	<book id="fdb_13484">
@@ -121569,7 +121787,8 @@
 		<rating>3.5</rating>
 		<genre>Action Adventure</genre>
 		<authors>
-			<author>John; Cook, Michele Sandford</author>
+			<author>John Sandford</author>
+			<author>Michele Cook</author>
 		</authors>
 	</book>
 	<book id="fdb_13500">
@@ -121758,7 +121977,8 @@
 		<rating>0</rating>
 		<genre>General Fiction</genre>
 		<authors>
-			<author>Valeri; Hamilton, Tim Gorbachev</author>
+			<author>Valeri Gorbachev</author>
+			<author>Tim Hamilton</author>
 		</authors>
 	</book>
 	<book id="fdb_13521">
@@ -121767,7 +121987,8 @@
 		<rating>0</rating>
 		<genre>General Fiction</genre>
 		<authors>
-			<author>Mike; Hamilton, Tim Wohnoutka</author>
+			<author>Mike Wohnoutka</author>
+			<author>Tim Hamilton</author>
 		</authors>
 	</book>
 	<book id="fdb_13522">
@@ -122127,7 +122348,8 @@
 		<rating>5</rating>
 		<genre>Science Fiction</genre>
 		<authors>
-			<author>Neil; Russell, P. Craig Gaiman</author>
+			<author>Neil Gaiman</author>
+			<author>P. Craig Russell</author>
 		</authors>
 	</book>
 	<book id="fdb_13562">
@@ -123506,7 +123728,8 @@
 		<rating>4</rating>
 		<genre>Horror</genre>
 		<authors>
-			<author>Jason; Miller, Kirsten Segel</author>
+			<author>Jason Segel</author>
+			<author>Kirsten Miller</author>
 		</authors>
 	</book>
 	<book id="fdb_13715">
@@ -123795,7 +124018,8 @@
 		<rating>5</rating>
 		<genre>Science Fiction</genre>
 		<authors>
-			<author>Wendy; Brawer, Michael Mass</author>
+			<author>Wendy Mass</author>
+			<author>Michael Brawer</author>
 		</authors>
 	</book>
 	<book id="fdb_13747">
@@ -124128,7 +124352,8 @@
 		<rating>4.5</rating>
 		<genre>Fantasy</genre>
 		<authors>
-			<author>Holly; Clare, Cassandra Black</author>
+			<author>Holly Black</author>
+			<author>Cassandra Clare</author>
 		</authors>
 	</book>
 	<book id="fdb_13784">
@@ -124389,7 +124614,8 @@
 		<rating>5</rating>
 		<genre>General Fiction</genre>
 		<authors>
-			<author>Paul; Jeter, Derek Mantell</author>
+			<author>Paul Mantell</author>
+			<author>Derek Jeter</author>
 		</authors>
 	</book>
 	<book id="fdb_13813">
@@ -124452,7 +124678,8 @@
 		<rating>0</rating>
 		<genre>Fantasy</genre>
 		<authors>
-			<author>Wendy; Froud, Brian Froud</author>
+			<author>Wendy Froud</author>
+			<author>Brian Froud</author>
 		</authors>
 	</book>
 	<book id="fdb_13820">
@@ -124524,7 +124751,8 @@
 		<rating>3</rating>
 		<genre>Thriller</genre>
 		<authors>
-			<author>Jonathan; Kellerman, Jesse Kellerman</author>
+			<author>Jonathan Kellerman</author>
+			<author>Jesse Kellerman</author>
 		</authors>
 	</book>
 	<book id="fdb_13828">
@@ -124695,7 +124923,8 @@
 		<rating>5</rating>
 		<genre>General Fiction</genre>
 		<authors>
-			<author>Joan; Patricelli, Leslie Holub</author>
+			<author>Joan Holub</author>
+			<author>Leslie Patricelli</author>
 		</authors>
 	</book>
 	<book id="fdb_13847">
@@ -124740,7 +124969,8 @@
 		<rating>5</rating>
 		<genre>General Fiction</genre>
 		<authors>
-			<author>Mary Lyn; Barr, Stephen Ray</author>
+			<author>Mary Lyn Ray</author>
+			<author>Stephen Barr</author>
 		</authors>
 	</book>
 	<book id="fdb_13852">
@@ -125442,7 +125672,8 @@
 		<rating>5</rating>
 		<genre>Historical</genre>
 		<authors>
-			<author>Mal; Graham, Elspeth Peet</author>
+			<author>Mal Peet</author>
+			<author>Elspeth Graham</author>
 		</authors>
 	</book>
 	<book id="fdb_13930">
@@ -126110,7 +126341,8 @@
 		<rating>4</rating>
 		<genre>Action Adventure</genre>
 		<authors>
-			<author>Melanie; Brockmann, Suzanne Brockmann</author>
+			<author>Melanie Brockmann</author>
+			<author>Suzanne Brockmann</author>
 		</authors>
 	</book>
 	<book id="fdb_14004">
@@ -126128,7 +126360,8 @@
 		<rating>0</rating>
 		<genre>General Fiction</genre>
 		<authors>
-			<author>Michael; McLean, Scott McLean</author>
+			<author>Michael McLean</author>
+			<author>Scott McLean</author>
 		</authors>
 	</book>
 	<book id="fdb_14006">
@@ -126893,7 +127126,8 @@
 		<rating>4</rating>
 		<genre>Thriller</genre>
 		<authors>
-			<author>Douglas; Child, Lincoln Preston</author>
+			<author>Douglas Preston</author>
+			<author>Lincoln Child</author>
 		</authors>
 	</book>
 	<book id="fdb_14091">
@@ -126911,7 +127145,8 @@
 		<rating>5</rating>
 		<genre>Fantasy</genre>
 		<authors>
-			<author>Carrie; Davis, John Parke Ryan</author>
+			<author>Carrie Ryan</author>
+			<author>John Parke Davis</author>
 		</authors>
 	</book>
 	<book id="fdb_14093">
@@ -127064,7 +127299,8 @@
 		<rating>3</rating>
 		<genre>General Fiction</genre>
 		<authors>
-			<author>Rachel Manija; Smith, Sherwood Brown</author>
+			<author>Rachel Manija Brown</author>
+			<author>Sherwood Smith</author>
 		</authors>
 	</book>
 	<book id="fdb_14110">
@@ -127163,7 +127399,8 @@
 		<rating>2.5</rating>
 		<genre>General Fiction</genre>
 		<authors>
-			<author>James; Grabenstein, Chris Patterson</author>
+			<author>James Patterson</author>
+			<author>Chris Grabenstein</author>
 		</authors>
 	</book>
 	<book id="fdb_14121">
@@ -127523,7 +127760,8 @@
 		<rating>3.5</rating>
 		<genre>General Fiction</genre>
 		<authors>
-			<author>Jory; Davies, Benji John</author>
+			<author>Jory John</author>
+			<author>Benji Davies</author>
 		</authors>
 	</book>
 	<book id="fdb_14161">
@@ -127622,7 +127860,8 @@
 		<rating>5</rating>
 		<genre>Police/Detective/Law Enforcement</genre>
 		<authors>
-			<author>Grant; Thomas, Jan Jerkins</author>
+			<author>Grant Jerkins</author>
+			<author>Jan Thomas</author>
 		</authors>
 	</book>
 	<book id="fdb_14172">
@@ -127856,7 +128095,8 @@
 		<rating>5</rating>
 		<genre>Thriller</genre>
 		<authors>
-			<author>Dan; Pyne, Daniel Pyne</author>
+			<author>Dan Pyne</author>
+			<author>Daniel Pyne</author>
 		</authors>
 	</book>
 	<book id="fdb_14198">
@@ -128541,7 +128781,8 @@
 		<rating>3</rating>
 		<genre>General Fiction</genre>
 		<authors>
-			<author>Jory; Barnett, Mac John</author>
+			<author>Jory John</author>
+			<author>Mac Barnett</author>
 		</authors>
 	</book>
 	<book id="fdb_14274">
@@ -130152,7 +130393,8 @@
 		<rating>5</rating>
 		<genre>Thriller</genre>
 		<authors>
-			<author>Ariana; Norman, Samantha Franklin</author>
+			<author>Ariana Franklin</author>
+			<author>Samantha Norman</author>
 		</authors>
 	</book>
 	<book id="fdb_14453">
@@ -130746,7 +130988,8 @@
 		<rating>5</rating>
 		<genre>Fantasy</genre>
 		<authors>
-			<author>Laurence; Ryder, Joanne Yep</author>
+			<author>Laurence Yep</author>
+			<author>Joanne Ryder</author>
 		</authors>
 	</book>
 	<book id="fdb_14519">
@@ -130881,7 +131124,8 @@
 		<rating>4.5</rating>
 		<genre>Private Investigator</genre>
 		<authors>
-			<author>Max Allan; Spillane, Mickey Collins</author>
+			<author>Max Allan Collins</author>
+			<author>Mickey Spillane</author>
 		</authors>
 	</book>
 	<book id="fdb_14534">
@@ -131007,7 +131251,8 @@
 		<rating>5</rating>
 		<genre>General Fiction</genre>
 		<authors>
-			<author>Rebecca; Rue, Nancy St. James</author>
+			<author>Rebecca St. James</author>
+			<author>Nancy Rue</author>
 		</authors>
 	</book>
 	<book id="fdb_14548">
@@ -131547,7 +131792,8 @@
 		<rating>5</rating>
 		<genre>Literary</genre>
 		<authors>
-			<author>Han-Min; Kim, Hanmin Kim</author>
+			<author>Han-Min Kim</author>
+			<author>Hanmin Kim</author>
 		</authors>
 	</book>
 	<book id="fdb_14608">
@@ -132205,7 +132451,8 @@
 		<rating>5</rating>
 		<genre>Fantasy</genre>
 		<authors>
-			<author>Pip; Morris, Tee Ballantine</author>
+			<author>Pip Ballantine</author>
+			<author>Tee Morris</author>
 		</authors>
 	</book>
 	<book id="fdb_14681">
@@ -132818,7 +133065,8 @@
 		<rating>3.5</rating>
 		<genre>General Fiction</genre>
 		<authors>
-			<author>Lucy; Piazza, Jo Sykes</author>
+			<author>Lucy Sykes</author>
+			<author>Jo Piazza</author>
 		</authors>
 	</book>
 	<book id="fdb_14749">
@@ -133151,7 +133399,8 @@
 		<rating>5</rating>
 		<genre>Literary</genre>
 		<authors>
-			<author>Kelly; Kath, Katie Jones</author>
+			<author>Kelly Jones</author>
+			<author>Katie Kath</author>
 		</authors>
 	</book>
 	<book id="fdb_14786">
@@ -133746,7 +133995,8 @@
 		<rating>5</rating>
 		<genre>Literary</genre>
 		<authors>
-			<author>Deborah; Hunt, Meg Underwood</author>
+			<author>Deborah Underwood</author>
+			<author>Meg Hunt</author>
 		</authors>
 	</book>
 	<book id="fdb_14852">
@@ -133827,7 +134077,8 @@
 		<rating>5</rating>
 		<genre>Action Adventure</genre>
 		<authors>
-			<author>Maggie; Pearce, Jackson Stiefvater</author>
+			<author>Maggie Stiefvater</author>
+			<author>Jackson Pearce</author>
 		</authors>
 	</book>
 	<book id="fdb_14861">
@@ -134295,7 +134546,8 @@
 		<rating>3</rating>
 		<genre>Historical Mystery</genre>
 		<authors>
-			<author>Win; Blevins, Meredith Blevins</author>
+			<author>Win Blevins</author>
+			<author>Meredith Blevins</author>
 		</authors>
 	</book>
 	<book id="fdb_14913">
@@ -135465,7 +135717,8 @@
 		<rating>4</rating>
 		<genre>Thriller</genre>
 		<authors>
-			<author>Iris; Johansen, Roy Johansen</author>
+			<author>Iris Johansen</author>
+			<author>Roy Johansen</author>
 		</authors>
 	</book>
 	<book id="fdb_15043">
@@ -135672,7 +135925,8 @@
 		<rating>5</rating>
 		<genre>Literary</genre>
 		<authors>
-			<author>Jonah; Evans, Shane Winter</author>
+			<author>Jonah Winter</author>
+			<author>Shane Evans</author>
 		</authors>
 	</book>
 	<book id="fdb_15066">
@@ -135681,7 +135935,8 @@
 		<rating>5</rating>
 		<genre>Literary</genre>
 		<authors>
-			<author>Elizabeth; Groenink, Chuck Bram</author>
+			<author>Elizabeth Bram</author>
+			<author>Chuck Groenink</author>
 		</authors>
 	</book>
 	<book id="fdb_15067">
@@ -135933,7 +136188,8 @@
 		<rating>2.5</rating>
 		<genre>Science Fiction</genre>
 		<authors>
-			<author>Eric; Hunt, Walter H. Flint</author>
+			<author>Eric Flint</author>
+			<author>Walter H. Hunt</author>
 		</authors>
 	</book>
 	<book id="fdb_15095">
@@ -137139,7 +137395,8 @@
 		<rating>5</rating>
 		<genre>General Fiction</genre>
 		<authors>
-			<author>Emma; Kraus, Nicola McLaughlin</author>
+			<author>Emma McLaughlin</author>
+			<author>Nicola Kraus</author>
 		</authors>
 	</book>
 	<book id="fdb_15229">
@@ -137976,7 +138233,8 @@
 		<rating>5</rating>
 		<genre>General Fiction</genre>
 		<authors>
-			<author>Kes; Field, Jim Gray</author>
+			<author>Kes Gray</author>
+			<author>Jim Field</author>
 		</authors>
 	</book>
 	<book id="fdb_15322">
@@ -138381,7 +138639,8 @@
 		<rating>5</rating>
 		<genre>Literary</genre>
 		<authors>
-			<author>Emily; Zelinsky, Paul O. Jenkins</author>
+			<author>Emily Jenkins</author>
+			<author>Paul O. Zelinsky</author>
 		</authors>
 	</book>
 	<book id="fdb_15367">
@@ -138399,7 +138658,8 @@
 		<rating>5</rating>
 		<genre>Literary</genre>
 		<authors>
-			<author>Lucy Margaret; Espinosa, Leo Rozier</author>
+			<author>Lucy Margaret Rozier</author>
+			<author>Leo Espinosa</author>
 		</authors>
 	</book>
 	<book id="fdb_15369">
@@ -138777,7 +139037,8 @@
 		<rating>4.5</rating>
 		<genre>Police/Detective/Law Enforcement</genre>
 		<authors>
-			<author>Kareem; Waterhouse, Anna Abdul-Jabbar</author>
+			<author>Kareem Abdul-Jabbar</author>
+			<author>Anna Waterhouse</author>
 		</authors>
 	</book>
 	<book id="fdb_15411">
@@ -140127,7 +140388,8 @@
 		<rating>5</rating>
 		<genre>Cozy Mystery</genre>
 		<authors>
-			<author>E.J.; Cohen, Jeff Copperman</author>
+			<author>E.J. Copperman</author>
+			<author>Jeff Cohen</author>
 		</authors>
 	</book>
 	<book id="fdb_15561">
@@ -140334,7 +140596,8 @@
 		<rating>5</rating>
 		<genre>Mystery</genre>
 		<authors>
-			<author>Walter Dean; Sims, Guy A. Myers</author>
+			<author>Walter Dean Myers</author>
+			<author>Guy A. Sims</author>
 		</authors>
 	</book>
 	<book id="fdb_15584">
@@ -140388,7 +140651,8 @@
 		<rating>5</rating>
 		<genre>Science Fiction</genre>
 		<authors>
-			<author>Joseph; Cranor, Jeffrey Fink</author>
+			<author>Joseph Fink</author>
+			<author>Jeffrey Cranor</author>
 		</authors>
 	</book>
 	<book id="fdb_15590">
@@ -140460,7 +140724,9 @@
 		<rating>5</rating>
 		<genre>Action Adventure</genre>
 		<authors>
-			<author>Scott; Lanagan, Margo; Biancotti, Deborah Westerfeld</author>
+			<author>Scott Westerfeld</author>
+			<author>Margo Lanagan</author>
+			<author>Deborah Biancotti</author>
 		</authors>
 	</book>
 	<book id="fdb_15598">
@@ -140550,7 +140816,8 @@
 		<rating>5</rating>
 		<genre>Literary</genre>
 		<authors>
-			<author>Emil; Wyman, David M. Sher</author>
+			<author>Emil Sher</author>
+			<author>David M. Wyman</author>
 		</authors>
 	</book>
 	<book id="fdb_15608">
@@ -140775,7 +141042,8 @@
 		<rating>5</rating>
 		<genre>Action Adventure</genre>
 		<authors>
-			<author>Lauren; Chester, H.C. Oliver</author>
+			<author>Lauren Oliver</author>
+			<author>H.C. Chester</author>
 		</authors>
 	</book>
 	<book id="fdb_15633">
@@ -141558,7 +141826,8 @@
 		<rating>5</rating>
 		<genre>Literary</genre>
 		<authors>
-			<author>David; Goode, Diane Zeltser</author>
+			<author>David Zeltser</author>
+			<author>Diane Goode</author>
 		</authors>
 	</book>
 	<book id="fdb_15720">
@@ -141819,7 +142088,8 @@
 		<rating>5</rating>
 		<genre>General Fiction</genre>
 		<authors>
-			<author>Anne; Block, Emma Michaels</author>
+			<author>Anne Michaels</author>
+			<author>Emma Block</author>
 		</authors>
 	</book>
 	<book id="fdb_15749">
@@ -141837,7 +142107,8 @@
 		<rating>4</rating>
 		<genre>Thriller</genre>
 		<authors>
-			<author>Douglas; Child, Lincoln Preston</author>
+			<author>Douglas Preston</author>
+			<author>Lincoln Child</author>
 		</authors>
 	</book>
 	<book id="fdb_15751">
@@ -141972,7 +142243,8 @@
 		<rating>5</rating>
 		<genre>Literary</genre>
 		<authors>
-			<author>Robb; Helquist, Brett Pearlman</author>
+			<author>Robb Pearlman</author>
+			<author>Brett Helquist</author>
 		</authors>
 	</book>
 	<book id="fdb_15766">
@@ -142341,7 +142613,9 @@
 		<rating>5</rating>
 		<genre>Fantasy</genre>
 		<authors>
-			<author>Mike; Carey, Linda; Carey, Louise Carey</author>
+			<author>Mike Carey</author>
+			<author>Linda Carey</author>
+			<author>Louise Carey</author>
 		</authors>
 	</book>
 	<book id="fdb_15807">
@@ -142449,7 +142723,8 @@
 		<rating>5</rating>
 		<genre>General Fiction</genre>
 		<authors>
-			<author>Surishtha; Sehgal, Kabir Sehgal</author>
+			<author>Surishtha Sehgal</author>
+			<author>Kabir Sehgal</author>
 		</authors>
 	</book>
 	<book id="fdb_15819">
@@ -142494,7 +142769,8 @@
 		<rating>3</rating>
 		<genre>Science Fiction</genre>
 		<authors>
-			<author>Eric; Dennis, Andrew Flint</author>
+			<author>Eric Flint</author>
+			<author>Andrew Dennis</author>
 		</authors>
 	</book>
 	<book id="fdb_15824">
@@ -142701,7 +142977,8 @@
 		<rating>5</rating>
 		<genre>General Fiction</genre>
 		<authors>
-			<author>Katarina; Menzies, Alice Bivald</author>
+			<author>Katarina Bivald</author>
+			<author>Alice Menzies</author>
 		</authors>
 	</book>
 	<book id="fdb_15847">
@@ -143115,7 +143392,8 @@
 		<rating>5</rating>
 		<genre>General Fiction</genre>
 		<authors>
-			<author>Katherine; Murphy, Kelly Marsh</author>
+			<author>Katherine Marsh</author>
+			<author>Kelly Murphy</author>
 		</authors>
 	</book>
 	<book id="fdb_15893">
@@ -143268,7 +143546,8 @@
 		<rating>4.5</rating>
 		<genre>Historical</genre>
 		<authors>
-			<author>Bodie; Thoene, Brock Thoene</author>
+			<author>Bodie Thoene</author>
+			<author>Brock Thoene</author>
 		</authors>
 	</book>
 	<book id="fdb_15910">
@@ -143439,7 +143718,8 @@
 		<rating>4</rating>
 		<genre>Historical Mystery</genre>
 		<authors>
-			<author>Marcia; Pronzini, Bill Muller</author>
+			<author>Marcia Muller</author>
+			<author>Bill Pronzini</author>
 		</authors>
 	</book>
 	<book id="fdb_15929">
@@ -144312,7 +144592,8 @@
 		<rating>5</rating>
 		<genre>General Fiction</genre>
 		<authors>
-			<author>Terry; Fan, Eric Fan</author>
+			<author>Terry Fan</author>
+			<author>Eric Fan</author>
 		</authors>
 	</book>
 	<book id="fdb_16026">
@@ -145248,7 +145529,8 @@
 		<rating>5</rating>
 		<genre>General Fiction</genre>
 		<authors>
-			<author>Bill, Jr.; Sampson, Michael Martin</author>
+			<author>Bill, Jr. Martin</author>
+			<author>Michael Sampson</author>
 		</authors>
 	</book>
 	<book id="fdb_16130">
@@ -146346,7 +146628,8 @@
 		<rating>5</rating>
 		<genre>General Fiction</genre>
 		<authors>
-			<author>Richard; Hawkes, Kevin Jackson</author>
+			<author>Richard Jackson</author>
+			<author>Kevin Hawkes</author>
 		</authors>
 	</book>
 	<book id="fdb_16252">
@@ -147498,7 +147781,8 @@
 		<rating>3</rating>
 		<genre>Mystery</genre>
 		<authors>
-			<author>Lauren; Chester, H.C. Oliver</author>
+			<author>Lauren Oliver</author>
+			<author>H.C. Chester</author>
 		</authors>
 	</book>
 	<book id="fdb_16380">
@@ -147570,7 +147854,8 @@
 		<rating>4</rating>
 		<genre>Thriller</genre>
 		<authors>
-			<author>Sean; Witter, Bret McFate</author>
+			<author>Sean McFate</author>
+			<author>Bret Witter</author>
 		</authors>
 	</book>
 	<book id="fdb_16388">
@@ -148704,7 +148989,8 @@
 		<rating>5</rating>
 		<genre>Literary</genre>
 		<authors>
-			<author>Mac; Myers, Matthew Barnett</author>
+			<author>Mac Barnett</author>
+			<author>Matthew Myers</author>
 		</authors>
 	</book>
 	<book id="fdb_16514">
@@ -149361,7 +149647,8 @@
 		<rating>5</rating>
 		<genre>Thriller</genre>
 		<authors>
-			<author>Bill; Finch, J.R. Schutt</author>
+			<author>Bill Schutt</author>
+			<author>J.R. Finch</author>
 		</authors>
 	</book>
 	<book id="fdb_16587">
@@ -149496,7 +149783,8 @@
 		<rating>5</rating>
 		<genre>Historical Mystery</genre>
 		<authors>
-			<author>Thomas; Purdy, Douglas Graham O'Malley</author>
+			<author>Thomas O'Malley</author>
+			<author>Douglas Graham Purdy</author>
 		</authors>
 	</book>
 	<book id="fdb_16602">
@@ -149631,7 +149919,8 @@
 		<rating>5</rating>
 		<genre>General Fiction</genre>
 		<authors>
-			<author>Diana; Collier, Bryan Murray</author>
+			<author>Diana Murray</author>
+			<author>Bryan Collier</author>
 		</authors>
 	</book>
 	<book id="fdb_16617">
@@ -149731,7 +150020,8 @@
 		<rating>5</rating>
 		<genre>Science Fiction</genre>
 		<authors>
-			<author>Stephen; Reynolds, Alastair Baxter</author>
+			<author>Stephen Baxter</author>
+			<author>Alastair Reynolds</author>
 		</authors>
 	</book>
 	<book id="fdb_16628">
@@ -150073,7 +150363,8 @@
 		<rating>5</rating>
 		<genre>General Fiction</genre>
 		<authors>
-			<author>Curtis; Berube, Kate Manley</author>
+			<author>Curtis Manley</author>
+			<author>Kate Berube</author>
 		</authors>
 	</book>
 	<book id="fdb_16666">
@@ -152170,7 +152461,8 @@
 		<rating>3.5</rating>
 		<genre>Science Fiction</genre>
 		<authors>
-			<author>Eric; Carrico, David Flint</author>
+			<author>Eric Flint</author>
+			<author>David Carrico</author>
 		</authors>
 	</book>
 	<book id="fdb_16899">
@@ -152233,7 +152525,8 @@
 		<rating>5</rating>
 		<genre>Fantasy</genre>
 		<authors>
-			<author>Ann M.; Parnell, Annie Martin</author>
+			<author>Ann M. Martin</author>
+			<author>Annie Parnell</author>
 		</authors>
 	</book>
 	<book id="fdb_16906">
@@ -152990,7 +153283,8 @@
 		<rating>5</rating>
 		<genre>General Fiction</genre>
 		<authors>
-			<author>Olugbemisola; Vernick, Audrey Rhuday-Perkovich</author>
+			<author>Olugbemisola Rhuday-Perkovich</author>
+			<author>Audrey Vernick</author>
 		</authors>
 	</book>
 	<book id="fdb_16990">
@@ -153422,7 +153716,8 @@
 		<rating>5</rating>
 		<genre>General Fiction</genre>
 		<authors>
-			<author>Lynn; Gal, Susan Plourde</author>
+			<author>Lynn Plourde</author>
+			<author>Susan Gal</author>
 		</authors>
 	</book>
 	<book id="fdb_17038">
@@ -153692,7 +153987,8 @@
 		<rating>4</rating>
 		<genre>Thriller</genre>
 		<authors>
-			<author>Iris; Johansen, Roy Johansen</author>
+			<author>Iris Johansen</author>
+			<author>Roy Johansen</author>
 		</authors>
 	</book>
 	<book id="fdb_17068">
@@ -154306,7 +154602,9 @@
 		<rating>5</rating>
 		<genre>Action Adventure</genre>
 		<authors>
-			<author>Scott; Lanagan, Margo; Biancotti, Deborah Westerfeld</author>
+			<author>Scott Westerfeld</author>
+			<author>Margo Lanagan</author>
+			<author>Deborah Biancotti</author>
 		</authors>
 	</book>
 	<book id="fdb_17136">
@@ -154783,7 +155081,8 @@
 		<rating>5</rating>
 		<genre>Literary</genre>
 		<authors>
-			<author>Florence Parry; Groenink, Chuck Heide</author>
+			<author>Florence Parry Heide</author>
+			<author>Chuck Groenink</author>
 		</authors>
 	</book>
 	<book id="fdb_17189">
@@ -155107,7 +155406,8 @@
 		<rating>5</rating>
 		<genre>Literary</genre>
 		<authors>
-			<author>Javier; Maraias, Javier Marias</author>
+			<author>Javier Marias</author>
+			<author>Javier Maraias</author>
 		</authors>
 	</book>
 	<book id="fdb_17225">
@@ -155359,7 +155659,8 @@
 		<rating>4.5</rating>
 		<genre>Thriller</genre>
 		<authors>
-			<author>Mary Higgins; Burke, Alafair Clark</author>
+			<author>Mary Higgins Clark</author>
+			<author>Alafair Burke</author>
 		</authors>
 	</book>
 	<book id="fdb_17253">
@@ -155665,7 +155966,8 @@
 		<rating>5</rating>
 		<genre>General Fiction</genre>
 		<authors>
-			<author>James; Grabenstein, Chris Patterson</author>
+			<author>James Patterson</author>
+			<author>Chris Grabenstein</author>
 		</authors>
 	</book>
 	<book id="fdb_17287">
