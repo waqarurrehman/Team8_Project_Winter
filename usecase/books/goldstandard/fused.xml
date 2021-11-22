@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<books>
+    <book id="bbe_33">
+		<title>Harry Potter and the Philosopher's Stone</title>
+		<release_date>26/6/1997</release_date>
+        <publisher>Bloomsbury Publishing</publisher>
+		<genre>Fantasy</genre>
+		<part_of_a_series>Y</part_of_a_series>
+		<language>English</language>
+		<authors>
+			<author>J. K. Rowling</author>
+		</authors>
+	</book>
+	<book id="bbe_5776">
+		<title>Midnight Predator</title>
+		<release_date>14/5/2002</release_date>
+		<publisher>Delacorte Press</publisher>
+		<genre>Vampire Novel</genre>
+		<language>English</language>
+		<part_of_a_series>Y</part_of_a_series>
+		<authors>
+			<author>Amelia Atwater-Rhodes</author>
+		</authors>
+	</book>
+	<book id="bbe_67">
+		<title>The Adventures of Sherlock Holmes</title>
+		<release_date>14/10/1892</release_date>
+		<publisher>George Newnes</publisher>
+		<genre>Detective</genre>
+		<language>English</language>
+		<part_of_a_series>Y</part_of_a_series>
+		<formats>Paperback</formats>
+        		<authors>
+			<author>Arthur Conan Doyle</author>
+		</authors>
+	</book>
+	<book id="bbe_23">
+		<title>Lord of the Flies</title>
+		<release_date>17/9/1954</release_date>
+		<part_of_a_series>N</part_of_a_series>
+		<genre>Fiction</genre>
+		<publisher>Penguin Books</publisher>
+		<language>English</language>
+		<authors>
+			<author>William Golding</author>
+		</authors>
+	</book>
+	<book id="bbe_17395">
+		<title>High Windows</title>
+		<release_date>29/10/1974</release_date>
+		<part_of_a_series>N</part_of_a_series>
+		<genre>Poetry</genre>
+		<publisher>Faber and Faber</publisher>
+		<language>English</language>
+		<authors>
+			<author>Philip Larkin</author>
+		</authors>
+	</book>
+	<book id="bbe_1">
+		<title>The Hunger Games</title>
+		<release_date>14/9/2008</release_date>
+		<part_of_a_series>Y</part_of_a_series>
+		<genre>Fiction</genre>
+		<publisher>Scholastic Press</publisher>
+		<language>English</language>
+		<authors>
+			<author>Suzanne Collins</author>
+		</authors>
+	</book>
+</books>
