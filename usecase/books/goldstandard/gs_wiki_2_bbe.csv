@@ -66,7 +66,7 @@ wiki_2766,bbe_9812,TRUE
 wiki_491,bbe_14798,FALSE
 wiki_2905,bbe_42654,FALSE
 wiki_7012,bbe_43511,FALSE
-wiki_4726,bbe_35793,TRUE
+wiki_4726,bbe_35793,FALSE
 wiki_2590,bbe_50063,TRUE
 wiki_637,bbe_35255,TRUE
 wiki_11388,bbe_44059,TRUE
@@ -171,7 +171,7 @@ wiki_9542,bbe_41506,FALSE
 wiki_7562,bbe_42992,FALSE
 wiki_6027,bbe_48506,FALSE
 wiki_1818,bbe_787,FALSE
-wiki_5735,bbe_43114,TRUE
+wiki_5735,bbe_43114,FALSE
 wiki_8033,bbe_1197,TRUE
 wiki_10106,bbe_5592,TRUE
 wiki_976,bbe_11706,FALSE
@@ -275,7 +275,7 @@ wiki_1654,bbe_4196,FALSE
 wiki_7124,bbe_19145,FALSE
 wiki_995,bbe_5855,TRUE
 wiki_3109,bbe_13970,FALSE
-wiki_6943,bbe_5522,TRUE
+wiki_6943,bbe_5522,FALSE
 wiki_1453,bbe_10408,TRUE
 wiki_8495,bbe_37089,TRUE
 wiki_2025,bbe_37812,TRUE
@@ -284,7 +284,7 @@ wiki_3069,bbe_43608,FALSE
 wiki_3583,bbe_15444,TRUE
 wiki_6901,bbe_46134,FALSE
 wiki_4823,bbe_1832,TRUE
-wiki_11661,bbe_36231,TRUE
+wiki_11661,bbe_36231,FALSE
 wiki_10618,bbe_20418,TRUE
 wiki_4826,bbe_2581,TRUE
 wiki_3497,bbe_23770,TRUE
@@ -292,7 +292,7 @@ wiki_7035,bbe_25819,TRUE
 wiki_894,bbe_29712,FALSE
 wiki_2673,bbe_37102,TRUE
 wiki_11454,bbe_35856,TRUE
-wiki_3761,bbe_818,TRUE
+wiki_3761,bbe_818,FALSE
 wiki_3216,bbe_48148,TRUE
 wiki_5271,bbe_19399,FALSE
 wiki_7011,bbe_7563,TRUE
@@ -323,7 +323,7 @@ wiki_9344,bbe_8943,FALSE
 wiki_3277,bbe_20317,FALSE
 wiki_4122,bbe_15135,FALSE
 wiki_9979,bbe_49156,FALSE
-wiki_2206,bbe_16417,TRUE
+wiki_2206,bbe_16417,FALSE
 wiki_11829,bbe_23480,TRUE
 wiki_5931,bbe_37965,FALSE
 wiki_2542,bbe_40654,TRUE
@@ -347,7 +347,7 @@ wiki_375,bbe_12388,FALSE
 wiki_10708,bbe_45858,FALSE
 wiki_10692,bbe_33976,TRUE
 wiki_8615,bbe_27687,TRUE
-wiki_1453,bbe_43114,TRUE
+wiki_1453,bbe_43114,FALSE
 wiki_8364,bbe_4710,FALSE
 wiki_4678,bbe_5633,FALSE
 wiki_9598,bbe_26501,FALSE
@@ -409,9 +409,9 @@ wiki_9386,bbe_23005,FALSE
 wiki_10337,bbe_47727,FALSE
 wiki_3849,bbe_35061,FALSE
 wiki_10146,bbe_37984,FALSE
-wiki_3930,bbe_46208,TRUE
+wiki_3930,bbe_46208,FALSE
 wiki_9474,bbe_50811,TRUE
-wiki_5072,bbe_639,TRUE
+wiki_5072,bbe_639,FALSE
 wiki_11601,bbe_48039,FALSE
 wiki_2727,bbe_38596,FALSE
 wiki_10726,bbe_19816,FALSE

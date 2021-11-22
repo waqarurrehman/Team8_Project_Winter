@@ -1,8 +1,6 @@
 package com.team8.webdataintegration.winter;
 
-import com.team8.webdataintegration.winter.identityResolution.BookAuthorComparatorLowerJaccard;
-import com.team8.webdataintegration.winter.identityResolution.BookBlockingKeyByTitleGenerator;
-import com.team8.webdataintegration.winter.identityResolution.BookCustomTitleComparator;
+import com.team8.webdataintegration.winter.identityResolution.*;
 import com.team8.webdataintegration.winter.model.Book;
 import com.team8.webdataintegration.winter.model.BookXMLReader;
 import de.uni_mannheim.informatik.dws.winter.matching.MatchingEngine;
@@ -67,14 +65,11 @@ public class BooksIdentityResolution_Example {
 		// create a matching rule
 		LinearCombinationMatchingRule<Book, Attribute> matchingRule = new LinearCombinationMatchingRule<>(
 				0.8);
-		matchingRule.activateDebugReport("usecase/books/output/debugResultsMatchingRule_wiki_2_bbe.csv", 1000, gsTest_wiki_bbe);
+		matchingRule.activateDebugReport("usecase/books/output/debugResultsMatchingRule_wiki_2_bbe.csv", 10000, gsTest_wiki_bbe);
 
 		try {
-			logger.info("Adding Title and Author Comparator");
-			matchingRule.addComparator(new BookCustomTitleComparator(), 0.5);
-			logger.info("Adding Authro and Author Comparator");
-			matchingRule.addComparator(new BookAuthorComparatorLowerJaccard(), 0.5);
-			logger.info("Adding Authro and Release Date Comparator");
+			matchingRule.addComparator(new BookCustomTitleComparator(), 0.6);
+			matchingRule.addComparator(new BookCustomAuthorComparator(), 0.4);
 		} catch (Exception e1) {
 			// TODO Auto-generated catch block
 			e1.printStackTrace();
