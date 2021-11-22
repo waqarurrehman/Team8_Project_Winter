@@ -67,4 +67,26 @@
 			<author>Suzanne Collins</author>
 		</authors>
 	</book>
+	<book id="bbe_1223">
+		<title>Days of Blood and Starlight</title>
+		<release_date>6/11/2012</release_date>
+		<part_of_a_series>Y</part_of_a_series>
+		<genre>Fantasy</genre>
+		<publisher>Little, Brown</publisher>
+		<language>English</language>
+		<authors>
+			<author>Laini Taylor</author>
+		</authors>
+	</book>
+	<book id="bbe_4130">
+		<title>Sword in the Storm</title>
+		<release_date>28/10/1998</release_date>
+		<part_of_a_series>Y</part_of_a_series>
+		<genre>Fantasy</genre>
+		<publisher>Del Rey</publisher>
+		<language>English</language>
+		<authors>
+			<author>David Gemmell</author>
+		</authors>
+	</book>
 </books>
