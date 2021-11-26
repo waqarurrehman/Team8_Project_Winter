@@ -74,7 +74,7 @@ public class BookMatchingForGoldStandard_Main
 //		 correspondences = maxWeight.getResult();
 
         // write the correspondences to the output file
-        new CSVCorrespondenceFormatter().writeCSV(new File("usecase/result.csv"), correspondences);
+        new CSVCorrespondenceFormatter().writeCSV(new File("usecase/books/output/goldstandard_test_correspondances.csv"), correspondences);
 
     }
 }
