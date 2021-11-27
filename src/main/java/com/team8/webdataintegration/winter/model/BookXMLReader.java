@@ -3,8 +3,11 @@ package com.team8.webdataintegration.winter.model;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
+import java.util.Collections;
+import java.util.LinkedList;
 import java.util.List;
 
+import org.apache.commons.lang3.StringUtils;
 import org.w3c.dom.Attr;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
@@ -15,6 +18,7 @@ import de.uni_mannheim.informatik.dws.winter.model.FusibleFactory;
 import de.uni_mannheim.informatik.dws.winter.model.RecordGroup;
 import de.uni_mannheim.informatik.dws.winter.model.defaultmodel.Attribute;
 import de.uni_mannheim.informatik.dws.winter.model.io.XMLMatchableReader;
+
 
 
 
@@ -40,7 +44,17 @@ FusibleFactory<Book, Attribute> {
 	@Override
 	public Book createInstanceForFusion(RecordGroup<Book, Attribute> cluster) {
 		// TODO Auto-generated method stub
-		return null;
+		List<String> ids = new LinkedList<>();
+
+		for (Book b : cluster.getRecords()) {
+			ids.add(b.getIdentifier());
+		}
+
+		Collections.sort(ids);
+
+		String mergedId = StringUtils.join(ids, '+');
+
+		return new Book(mergedId, "fused");
 	}
 
 	@Override

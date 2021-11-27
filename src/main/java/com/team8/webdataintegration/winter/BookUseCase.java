@@ -9,18 +9,14 @@ import java.util.Locale;
 
 import org.slf4j.Logger;
 
-import com.team8.webdataintegration.winter.datafusion.evaluation.BookAuthorsEvaluationRule;
-import com.team8.webdataintegration.winter.datafusion.evaluation.BookPublisherEvaluationRule;
-import com.team8.webdataintegration.winter.datafusion.evaluation.BookReleaseDateEvaluationRule;
-import com.team8.webdataintegration.winter.datafusion.evaluation.BookTitleEvaluationRule;
-import com.team8.webdataintegration.winter.datafusion.fusers.BookAuthorsFuserUnion;
-import com.team8.webdataintegration.winter.datafusion.fusers.BookPubihserFuserLongsetString;
-import com.team8.webdataintegration.winter.datafusion.fusers.BookReleaseDateFuserVoting;
-import com.team8.webdataintegration.winter.datafusion.fusers.BookTileFuserShortestString;
+import com.team8.webdataintegration.winter.datafusion.evaluation.*;
+import com.team8.webdataintegration.winter.datafusion.fusers.*;
 import com.team8.webdataintegration.winter.identityResolution.BookAuthorComparatorEqual;
 import com.team8.webdataintegration.winter.identityResolution.BookAuthorComparatorLowerJaccard;
 import com.team8.webdataintegration.winter.identityResolution.BookBlockingKeyByDecadeGenerator;
 import com.team8.webdataintegration.winter.identityResolution.BookBlockingKeyByTitleGenerator;
+import com.team8.webdataintegration.winter.identityResolution.BookCustomAuthorComparator;
+import com.team8.webdataintegration.winter.identityResolution.BookCustomTitleComparator;
 import com.team8.webdataintegration.winter.identityResolution.BookReleaseDateComparatorWeightedDateSimilarity;
 import com.team8.webdataintegration.winter.identityResolution.BookTitleComparatorEqual;
 import com.team8.webdataintegration.winter.identityResolution.BookTitleComparatorLowerJaccard;
@@ -30,17 +26,20 @@ import com.team8.webdataintegration.winter.model.BookXMLReader;
 
 import de.uni_mannheim.informatik.dws.winter.datafusion.CorrespondenceSet;
 import de.uni_mannheim.informatik.dws.winter.datafusion.DataFusionEngine;
+import de.uni_mannheim.informatik.dws.winter.datafusion.DataFusionEvaluator;
 import de.uni_mannheim.informatik.dws.winter.datafusion.DataFusionStrategy;
 import de.uni_mannheim.informatik.dws.winter.matching.MatchingEngine;
 import de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator;
 import de.uni_mannheim.informatik.dws.winter.matching.blockers.StandardRecordBlocker;
 import de.uni_mannheim.informatik.dws.winter.matching.rules.LinearCombinationMatchingRule;
 import de.uni_mannheim.informatik.dws.winter.model.Correspondence;
+import de.uni_mannheim.informatik.dws.winter.model.DataSet;
 import de.uni_mannheim.informatik.dws.winter.model.FusibleDataSet;
 import de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet;
 import de.uni_mannheim.informatik.dws.winter.model.HashedDataSet;
 import de.uni_mannheim.informatik.dws.winter.model.MatchingGoldStandard;
 import de.uni_mannheim.informatik.dws.winter.model.Performance;
+import de.uni_mannheim.informatik.dws.winter.model.RecordGroupFactory;
 import de.uni_mannheim.informatik.dws.winter.model.defaultmodel.Attribute;
 import de.uni_mannheim.informatik.dws.winter.model.io.CSVCorrespondenceFormatter;
 import de.uni_mannheim.informatik.dws.winter.processing.Processable;
@@ -110,9 +109,13 @@ public class BookUseCase {
 		matchingRule.activateDebugReport("usecase/books/output/debugResultsMatchingRule_wiki_2_bbe.csv", 1000, gsTest_DS1_DS2);
 		
 		logger.info("Adding Title and Author Comparator");
-		matchingRule.addComparator(new BookTitleComparatorLowerJaccard(), 0.70);
+	   //	matchingRule.addComparator(new BookTitleComparatorLowerJaccard(), 0.70);
+		matchingRule.addComparator(new BookCustomTitleComparator(), 0.60);
+		
 		logger.info("Adding Authro and Author Comparator");
-		matchingRule.addComparator(new BookAuthorComparatorLowerJaccard(), 0.25);
+		 //matchingRule.addComparator(new BookAuthorComparatorLowerJaccard(), 0.25);
+		matchingRule.addComparator( new BookCustomAuthorComparator(), 0.35);
+		
 		logger.info("Adding Authro and Release Date Comparator");
 		matchingRule.addComparator(new BookReleaseDateComparatorWeightedDateSimilarity(), 0.05);
 		
@@ -179,7 +182,8 @@ public class BookUseCase {
 	}
 	
 	public void RunDataFusion() throws Exception {
-
+		
+		logger.info("Starting   RunDataFusion  Method Execution");
 		FusibleDataSet<Book, Attribute> ds1 = new FusibleHashedDataSet<>();
 		new BookXMLReader().loadFromXML(new File(this.sDS1_Path), this.sXPath_Book, ds1);
 		ds1.printDataSetDensityReport();
@@ -192,9 +196,10 @@ public class BookUseCase {
 		new BookXMLReader().loadFromXML(new File(this.sDS3_Path), this.sXPath_Book , ds3);
 		ds3.printDataSetDensityReport();
 		
-		ds1.setScore(3.0);
+		/*ds1.setScore(3.0);
 		ds2.setScore(1.0);
 		ds3.setScore(2.0);
+		*/
 		
 		// Date (e.g. last update)
 		DateTimeFormatter formatter = new DateTimeFormatterBuilder()
@@ -210,14 +215,17 @@ public class BookUseCase {
 		
 		
 		// load correspondences
+		logger.info("load correspondences");
 		CorrespondenceSet<Book, Attribute> correspondences = new CorrespondenceSet<>();
 		correspondences.loadCorrespondences(new File(this.sCorrespondance_DS1_2_DS2_Path),ds1, ds2);
 		correspondences.loadCorrespondences(new File(this.sCorrespondance_DS2_2_DS3_Path),ds2, ds3);
 
 		// write group size distribution
+		
 		correspondences.printGroupSizeDistribution();
 		
 		// define the fusion strategy
+		logger.info("define the fusion strategy");
 		DataFusionStrategy<Book, Attribute> strategy = new DataFusionStrategy<>(new BookXMLReader());
 				
 		// add attribute fusers
@@ -225,18 +233,41 @@ public class BookUseCase {
 		strategy.addAttributeFuser(Book.PUBLISHER,new BookPubihserFuserLongsetString(), new BookPublisherEvaluationRule());
 		strategy.addAttributeFuser(Book.RELEASE_DATE, new BookReleaseDateFuserVoting(),new BookReleaseDateEvaluationRule());
 		strategy.addAttributeFuser(Book.AUTHORS,new BookAuthorsFuserUnion(),new BookAuthorsEvaluationRule());
-				
+		strategy.addAttributeFuser(Book.GENRE, new BookGenreFuserLongestString(),new BookGenreEvaluationRule());
+		strategy.addAttributeFuser(Book.LANGUAGE, new BookLanguageFuserLongestString(),new BookLanguageEvaluationRule());
+		strategy.addAttributeFuser(Book.PAGES, new BookPagesFuserLongestString(),new BookPageEvaluationRule());
+		strategy.addAttributeFuser(Book.PRICE, new BookPriceFuserLongestString(),new BookPriceEvaluationRule());
+		strategy.addAttributeFuser(Book.FORMATS, new BookFormatFuserLongestString(),new BookFormatEvaluationRule());
+		strategy.addAttributeFuser(Book.ISBN, new BookISBNFuserLongestStirng(),new BookISBNEvaluationRule());		
 				// create the fusion engine
+		logger.info("create the fusion engine");
 		DataFusionEngine<Book, Attribute> engine = new DataFusionEngine<>(strategy);
-
+		logger.info("printClusterConsistency");
 		engine.printClusterConsistencyReport(correspondences, null);
-				
 		// run the fusion
+		logger.info("Running the Fusion Engine");
 		FusibleDataSet<Book, Attribute> fusedDataSet = engine.run(correspondences, null);
 		fusedDataSet.printDataSetDensityReport();
 
 		// write the result
-		new BookXMLFormatter().writeXML(new File(this.sFusedXMLPath), fusedDataSet);		
+		new BookXMLFormatter().writeXML(new File(this.sFusedXMLPath), fusedDataSet);
+		
+		engine.writeRecordGroupsByConsistency(new File("usecase/books/output/recordGroupConsistencies.csv"), correspondences, null);
+		/*
+		// load the gold standard
+				DataSet<Book, Attribute> gs = new FusibleHashedDataSet<>();
+				new BookXMLReader().loadFromXML(new File("usecase/books/goldstandard/fused.xml"), "this.sXPath_Book", gs);
+				
+				// evaluate
+				DataFusionEvaluator<Book, Attribute> evaluator = new DataFusionEvaluator<>(
+						strategy, new RecordGroupFactory<Book, Attribute>());
+				double accuracy = evaluator.evaluate(fusedDataSet, gs, null);
+
+				logger.info(String.format("Accuracy: %.2f", accuracy));
+		*/
+				logger.info("Ended   RunDataFusion  Method Execution");
+				
+				
 		
 	}
 	

@@ -31,9 +31,11 @@ public class BookPubihserFuserLongsetString extends AttributeValueFuser<String, 
 		// TODO Auto-generated method stub
 		
 		FusedValue<String, Book, Attribute> fused = getFusedValue(group, schemaCorrespondences, schemaElement);
-		fusedRecord.setPublisher(fused.getValue());
-		fusedRecord.setAttributeProvenance(Book.PUBLISHER,
-				fused.getOriginalIds());
+		if (fusedRecord != null) {
+			fusedRecord.setPublisher(fused.getValue());
+			fusedRecord.setAttributeProvenance(Book.PUBLISHER,
+					fused.getOriginalIds());
+		}
 		
 	}
 

@@ -10,13 +10,14 @@ public class AuthorXMLFormatter extends XMLFormatter<Author> {
 	@Override
 	public Element createRootElement(Document doc) {
 		// TODO Auto-generated method stub
-		return null;
+		return doc.createElement("authors");
 	}
 
 	@Override
 	public Element createElementFromRecord(Author record, Document doc) {
 		// TODO Auto-generated method stub
-		return null;
+		Element author = createTextElement("author", record.getAuthor_name(), doc);
+		return author;
 	}
 
 }

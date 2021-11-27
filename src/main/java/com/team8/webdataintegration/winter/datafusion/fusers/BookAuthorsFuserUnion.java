@@ -35,9 +35,10 @@ public class BookAuthorsFuserUnion extends AttributeValueFuser<List<Author>, Boo
 			Processable<Correspondence<Attribute, Matchable>> schemaCorrespondences, Attribute schemaElement) {
 		// TODO Auto-generated method stub
 		FusedValue<List<Author>, Book, Attribute> fused = getFusedValue(group, schemaCorrespondences, schemaElement);
-		fusedRecord.setAuthors(fused.getValue());
-		fusedRecord.setAttributeProvenance(Book.AUTHORS, fused.getOriginalIds());
-		
+		if(fusedRecord != null) {
+			fusedRecord.setAuthors(fused.getValue());
+			fusedRecord.setAttributeProvenance(Book.AUTHORS, fused.getOriginalIds());
+		}
 	}
 
 	@Override
