@@ -89,4 +89,59 @@
 			<author>David Gemmell</author>
 		</authors>
 	</book>
+	<book id="bbe_7272">
+		<title>The Brief History of the Dead</title>
+		<release_date>3/5/2006</release_date>
+		<part_of_a_series>N</part_of_a_series>
+		<genre>Fantasy</genre>
+		<publisher>Pantheon Books</publisher>
+		<language>English</language>
+		<authors>
+			<author>Kevin Brockmeier</author>
+		</authors>
+	</book>
+	<book id="bbe_393">
+		<title>The Martian</title>
+		<release_date>1/1/2011</release_date>
+		<part_of_a_series>Y</part_of_a_series>
+		<genre>'Science Fiction', 'Fiction', 'Audiobook', 'Adventure', 'Space', 'Adult', 'Science Fiction Fantasy', 'Thriller', 'Humor', 'Survival'</genre>
+		<publisher>Crown</publisher>
+		<language>English</language>
+		<authors>
+			<author>Andy Weir</author>
+		</authors>
+	</book>
+	<book id="bbe_2410">
+		<title>Smile</title>
+		<release_date>1/2/2010</release_date>
+		<part_of_a_series>Y</part_of_a_series>
+		<genre>Graphic Novel</genre>
+		<publisher>Scholastic</publisher>
+		<language>English</language>
+		<authors>
+			<author>Raina Telgemeier</author>
+		</authors>
+	</book>
+	<book id="bbe_4424">
+		<title>The Riddle</title>
+		<release_date>1/11/2004</release_date>
+		<part_of_a_series>Y</part_of_a_series>
+		<genre>Fantasy</genre>
+		<publisher>Penguin Books</publisher>
+		<language>English</language>
+		<authors>
+			<author>Alison Croggon</author>
+		</authors>
+	</book>
+	<book id="bbe_49930">
+		<title>The Rhesus Chart</title>
+		<release_date>1/7/2014</release_date>
+		<part_of_a_series>Y</part_of_a_series>
+		<genre>Science Fiction</genre>
+		<publisher>Orbit</publisher>
+		<language>English</language>
+		<authors>
+			<author>Charles Stross</author>
+		</authors>
+	</book>
 </books>
