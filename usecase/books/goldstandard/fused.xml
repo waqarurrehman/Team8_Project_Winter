@@ -144,4 +144,82 @@
 			<author>Charles Stross</author>
 		</authors>
 	</book>
+	<book id="bbe_4209">
+		<title>Full Dark, No Stars</title>
+		<release_date>9/11/2010</release_date>
+		<part_of_a_series>N</part_of_a_series>
+		<genre>Horror</genre>
+		<language>English</language>
+		<publisher>Scribner</publisher>
+		<authors>
+			<author>Stephen King</author>
+		</authors>
+	</book>
+	<book id="bbe_5088">
+		<title>The Dangerous Days of Daniel X</title>
+		<release_date>21/7/2008</release_date>
+		<part_of_a_series>Y</part_of_a_series>
+		<genre>Science Fiction</genre>
+		<publisher>Little, Brown</publisher>
+		<language>English</language>
+		<authors>
+			<author>James Patterson</author>
+			<author>Michael Ledwidge</author>
+		</authors>
+	</book>
+	<book id="bbe_1049">
+		<title>And the Mountains Echoed</title>
+		<release_date>21/5/2013</release_date>
+		<part_of_a_series>N</part_of_a_series>
+		<genre>Historical Fiction</genre>
+		<publisher>Riverhead Books</publisher>
+		<language>English</language>
+		<authors>
+			<author>Khaled Hosseini</author>
+		</authors>
+	</book>
+	<book id="bbe_17625">
+		<title>Asylum</title>
+		<release_date>29/8/1996</release_date>
+		<part_of_a_series>N</part_of_a_series>
+		<genre>Gothic</genre>
+		<publisher>Vintage</publisher>
+		<language>English</language>
+		<authors>
+			<author>Patrick McGrath</author>
+		</authors>
+	</book>
+	<book id="bbe_13536">
+		<title>The White Road</title>
+		<release_date>25/5/2010</release_date>
+		<part_of_a_series>Y</part_of_a_series>
+		<genre>Fantasy</genre>
+		<publisher>Spectra</publisher>
+		<language>English</language>
+		<authors>
+			<author>Lynn Flewelling</author>
+		</authors>
+	</book>
+	<book id="bbe_3617">
+		<title>Red Harvest</title>
+		<release_date>1/2/1929</release_date>
+		<part_of_a_series>Y</part_of_a_series>
+		<genre>Detective</genre>
+		<publisher>Alfred A. Knopf</publisher>
+		<language>English</language>
+		<authors>
+			<author>Dashiell Hammett</author>
+		</authors>
+	</book>
+	<book id="bbe_5611">
+		<title>Where the Mountain Meets the Moon</title>
+		<release_date>30/6/2009</release_date>
+		<part_of_a_series>N</part_of_a_series>
+		<genre>Fantasy</genre>
+		<publisher>Little, Brown</publisher>
+		<language>English</language>
+		<authors>
+			<author>Grace Lin</author>
+		</authors>
+	</book>
 </books>
