@@ -30,14 +30,91 @@ public class BookXMLFormatter extends XMLFormatter<Book> {
 		book.appendChild(createTextElementWithProvenance("title",
 				record.getTitle(),
 				record.getMergedAttributeProvenance(Book.TITLE), doc));
-		book.appendChild(createTextElementWithProvenance("publisher",
+		
+		if(record.hasValue(Book.RELEASE_DATE)) {
+		book.appendChild(createTextElementWithProvenance("Release_Date", 
+				record.getRelease_date().toString(), 
+				record.getMergedAttributeProvenance(Book.RELEASE_DATE), doc));
+		}else {
+			book.appendChild(createTextElementWithProvenance("Release_Date", 
+					"", 
+					"", doc));
+		}
+		
+		if(record.hasValue(Book.PUBLISHER)) {
+			book.appendChild(createTextElementWithProvenance("publisher",
 				record.getPublisher(),
 				record.getMergedAttributeProvenance(Book.PUBLISHER), doc));
-		book.appendChild(createTextElementWithProvenance("Release_Date", record
-				.getRelease_date().toString(), record
-				.getMergedAttributeProvenance(Book.RELEASE_DATE), doc));
-
+		}else {
+			
+			book.appendChild(createTextElementWithProvenance("publisher",
+					"",
+					"" , doc));
+			
+		}
+		
+		if(record.hasValue(Book.GENRE)) {
+			book.appendChild(createTextElementWithProvenance("genre",
+				record.getGenre(),
+				record.getMergedAttributeProvenance(Book.GENRE), doc));
+		}else {
+			book.appendChild(createTextElementWithProvenance("genre",
+					"",
+					"", doc));
+		}
+		
 		book.appendChild(createActorsElement(record, doc));
+		
+		if(record.hasValue(Book.PRICE)) {
+		
+			book.appendChild(createTextElementWithProvenance("price",
+				record.getPrice(),
+				record.getMergedAttributeProvenance(Book.PRICE), doc));
+		}else {
+			book.appendChild(createTextElementWithProvenance("price",
+					"",
+					"", doc));
+		}
+		if(record.hasValue(Book.FORMATS)) {
+			book.appendChild(createTextElementWithProvenance("formats",
+				record.getFormats(),
+				record.getMergedAttributeProvenance(Book.FORMATS), doc));
+		}else {
+			book.appendChild(createTextElementWithProvenance("formats",
+					"",
+					"", doc));
+		}
+		
+		if(record.hasValue(Book.LANGUAGE)) {
+		book.appendChild(createTextElementWithProvenance("language",
+				record.getLanguage(),
+				record.getMergedAttributeProvenance(Book.LANGUAGE), doc));
+		}else {
+			book.appendChild(createTextElementWithProvenance("language",
+					"",
+					"", doc));
+		}
+		
+		if(record.hasValue(Book.PAGES)) {
+			book.appendChild(createTextElementWithProvenance("pages",
+				record.getPages(),
+				record.getMergedAttributeProvenance(Book.PAGES), doc));
+		}else {
+			book.appendChild(createTextElementWithProvenance("pages",
+					"",
+					"", doc));
+		}
+		
+		if(record.hasValue(Book.ISBN)) {
+			book.appendChild(createTextElementWithProvenance("isbn",
+				record.getIsbn(),
+				record.getMergedAttributeProvenance(Book.ISBN), doc));
+		}else {
+			book.appendChild(createTextElementWithProvenance("isbn",
+					"",
+					"", doc));
+		}
+		
 
 		return book;
 	}

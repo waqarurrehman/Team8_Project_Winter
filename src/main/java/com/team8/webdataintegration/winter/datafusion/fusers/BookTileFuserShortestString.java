@@ -35,10 +35,11 @@ public class BookTileFuserShortestString extends AttributeValueFuser<String, Boo
 				FusedValue<String, Book, Attribute> fused = getFusedValue(group, schemaCorrespondences, schemaElement);
 
 				// set the value for the fused record
-				fusedRecord.setTitle(fused.getValue());
-
-				// add provenance info
-				fusedRecord.setAttributeProvenance(Book.TITLE, fused.getOriginalIds());
+				if(fusedRecord != null) {
+					fusedRecord.setTitle(fused.getValue());
+					// add provenance info
+					fusedRecord.setAttributeProvenance(Book.TITLE, fused.getOriginalIds());
+				}
 		
 	}
 
