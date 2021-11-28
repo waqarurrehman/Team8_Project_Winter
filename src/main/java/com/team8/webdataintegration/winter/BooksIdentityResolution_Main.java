@@ -35,8 +35,8 @@ public class BooksIdentityResolution_Main {
 	private static final String sDS3_Path = "usecase/books/input/target_fdb.xml";
 	private static final String sIdentityResolution_GoldStandard_DS1_2_DS2 = "usecase/books/goldstandard/gs_wiki_2_bbe.csv";
 	private static final String sIdentityResolution_GoldStandard_DS2_2_DS3 = "usecase/books/goldstandard/gs_fdb_2_bbe.csv";
-	private static final String sCorrespondance_DS1_2_DS2_Path = "usecase/books/output/Wiki_2_BBE_correspondences.csv";
-	private static final String sCorrespondance_DS2_2_DS3_Path = "usecase/books/output/BBE_2_FDB_correspondences.csv";
+	private static final String sCorrespondance_DS1_2_DS2_Path = "usecase/books/output/Wiki_2_BBE_correspondences_New.csv";
+	private static final String sCorrespondance_DS2_2_DS3_Path = "usecase/books/output/BBE_2_FDB_correspondences_New.csv";
 	private static final String sXPath_Book = "/books/book";
 	private static final String sFusedXMLPath = "usecase/books/output/target_Fused.xml";
 	public static void main(String[] args) {

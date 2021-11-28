@@ -105,7 +105,7 @@ public class BookUseCase {
 		gsTest_DS2_DS3.loadFromCSVFile(new File(sIdentityResolution_GoldStandard_DS2_2_DS3));
 		
 		LinearCombinationMatchingRule<Book, Attribute> matchingRule = new LinearCombinationMatchingRule<>(
-				0.85);
+				0.80);
 		matchingRule.activateDebugReport("usecase/books/output/debugResultsMatchingRule_wiki_2_bbe.csv", 1000, gsTest_DS1_DS2);
 		
 		logger.info("Adding Title and Author Comparator");
@@ -114,10 +114,10 @@ public class BookUseCase {
 		
 		logger.info("Adding Authro and Author Comparator");
 		 //matchingRule.addComparator(new BookAuthorComparatorLowerJaccard(), 0.25);
-		matchingRule.addComparator( new BookCustomAuthorComparator(), 0.35);
+		matchingRule.addComparator( new BookCustomAuthorComparator(), 0.40);
 		
-		logger.info("Adding Authro and Release Date Comparator");
-		matchingRule.addComparator(new BookReleaseDateComparatorWeightedDateSimilarity(), 0.05);
+		//logger.info("Adding Authro and Release Date Comparator");
+		//matchingRule.addComparator(new BookReleaseDateComparatorWeightedDateSimilarity(), 0.05);
 		
 		logger.info("Adding Standard Record Blocker");
 		// create a blocker (blocking strategy)
@@ -253,19 +253,19 @@ public class BookUseCase {
 		new BookXMLFormatter().writeXML(new File(this.sFusedXMLPath), fusedDataSet);
 		
 		engine.writeRecordGroupsByConsistency(new File("usecase/books/output/recordGroupConsistencies.csv"), correspondences, null);
-		/*
+		
 		// load the gold standard
-				DataSet<Book, Attribute> gs = new FusibleHashedDataSet<>();
-				new BookXMLReader().loadFromXML(new File("usecase/books/goldstandard/fused.xml"), "this.sXPath_Book", gs);
-				
-				// evaluate
-				DataFusionEvaluator<Book, Attribute> evaluator = new DataFusionEvaluator<>(
-						strategy, new RecordGroupFactory<Book, Attribute>());
-				double accuracy = evaluator.evaluate(fusedDataSet, gs, null);
+		DataSet<Book, Attribute> gs = new FusibleHashedDataSet<>();
+		new BookXMLReader().loadFromXML(new File("usecase/books/goldstandard/fused.xml"), this.sXPath_Book, gs);
+		
+		// evaluate
+		DataFusionEvaluator<Book, Attribute> evaluator = new DataFusionEvaluator<>(
+				strategy, new RecordGroupFactory<Book, Attribute>());
+		double accuracy = evaluator.evaluate(fusedDataSet, gs, null);
 
-				logger.info(String.format("Accuracy: %.2f", accuracy));
-		*/
-				logger.info("Ended   RunDataFusion  Method Execution");
+		logger.info(String.format("Accuracy: %.2f", accuracy));
+
+		logger.info("Ended   RunDataFusion  Method Execution");
 				
 				
 		
