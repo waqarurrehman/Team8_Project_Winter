@@ -33,10 +33,14 @@ public class Book extends AbstractRecord<Attribute> implements Serializable {
 	private String formats;
 	private String publisher;
 	private List<Author> authors;
+	private String rating;
+	private String part_of_Series;
 	
 	
 	
 	
+
+
 	private Map<Attribute, Collection<String>> provenance = new HashMap<>();
 	private Collection<String> recordProvenance;
 
@@ -77,6 +81,8 @@ public class Book extends AbstractRecord<Attribute> implements Serializable {
 	public static final Attribute PRICE = new Attribute("Price");
 	public static final Attribute PUBLISHER = new Attribute("Publisher");
 	public static final Attribute AUTHORS = new Attribute("Authors");
+	public static final Attribute RATING = new Attribute("Rating");
+	public static final Attribute PARTOFASERIES = new Attribute("Part_OF_A_Series");
 	
 	@Override
 	public boolean hasValue(Attribute attribute) {
@@ -87,7 +93,7 @@ public class Book extends AbstractRecord<Attribute> implements Serializable {
 		else if(attribute==AUTHORS)
 			return getAuthors() != null && getAuthors().size() > 0;
 		else if(attribute==ISBN)
-				return getIsbn() != null && !getIsbn().isEmpty();
+			return getIsbn() != null && !getIsbn().isEmpty();
 		else if(attribute==LANGUAGE)
 			return getLanguage() != null && !getLanguage().isEmpty();
 		else if(attribute==PAGES)
@@ -100,7 +106,10 @@ public class Book extends AbstractRecord<Attribute> implements Serializable {
 			return getFormats() != null && !getFormats().isEmpty();
 		else if(attribute==PUBLISHER)
 			return getPublisher() != null && !getPublisher().isEmpty();
-		else
+		else if(attribute == RATING)
+			return getRating() != null && !getRating().isEmpty();
+		else if(attribute == PARTOFASERIES)
+			return getPart_of_Series() != null && !getPart_of_Series().isEmpty();
 			return false;
 	}
 
@@ -203,6 +212,23 @@ public class Book extends AbstractRecord<Attribute> implements Serializable {
 
 	public void setPublisher(String publisher) {
 		this.publisher = publisher;
+	}
+	
+
+	public String getRating() {
+		return rating;
+	}
+
+	public void setRating(String rating) {
+		this.rating = rating;
+	}
+
+	public String getPart_of_Series() {
+		return part_of_Series;
+	}
+
+	public void setPart_of_Series(String part_of_Series) {
+		this.part_of_Series = part_of_Series;
 	}
 
 }

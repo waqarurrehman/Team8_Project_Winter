@@ -238,7 +238,9 @@ public class BookUseCase {
 		strategy.addAttributeFuser(Book.PAGES, new BookPagesFuserLongestString(),new BookPageEvaluationRule());
 		strategy.addAttributeFuser(Book.PRICE, new BookPriceFuserLongestString(),new BookPriceEvaluationRule());
 		strategy.addAttributeFuser(Book.FORMATS, new BookFormatFuserLongestString(),new BookFormatEvaluationRule());
-		strategy.addAttributeFuser(Book.ISBN, new BookISBNFuserLongestStirng(),new BookISBNEvaluationRule());		
+		strategy.addAttributeFuser(Book.ISBN, new BookISBNFuserLongestStirng(),new BookISBNEvaluationRule());
+		strategy.addAttributeFuser(Book.RATING, new BookRatingFuserLongestString(),new BookRatingEvaluationRule());
+		strategy.addAttributeFuser(Book.PARTOFASERIES, new BookPartOfASeriesFuserLongestString(),new BookPartOfASeriesEvaluationRule());
 				// create the fusion engine
 		logger.info("create the fusion engine");
 		DataFusionEngine<Book, Attribute> engine = new DataFusionEngine<>(strategy);

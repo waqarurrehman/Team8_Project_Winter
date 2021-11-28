@@ -74,6 +74,8 @@ FusibleFactory<Book, Attribute> {
 	    book.setFormats(getValueFromChildElement(node, "formats"));
 	    book.setGenre(getValueFromChildElement(node, "genre"));
 	    book.setPublisher(getValueFromChildElement(node, "publisher"));
+	    book.setRating(getValueFromChildElement(node, "rating"));
+	    book.setPart_of_Series(getValueFromChildElement(node, "part_of_a_series"));
 	    //convert string into date
 	    
 	    try {

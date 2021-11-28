@@ -32,11 +32,11 @@ public class BookXMLFormatter extends XMLFormatter<Book> {
 				record.getMergedAttributeProvenance(Book.TITLE), doc));
 		
 		if(record.hasValue(Book.RELEASE_DATE)) {
-		book.appendChild(createTextElementWithProvenance("Release_Date", 
+		book.appendChild(createTextElementWithProvenance("release_date", 
 				record.getRelease_date().toString(), 
 				record.getMergedAttributeProvenance(Book.RELEASE_DATE), doc));
 		}else {
-			book.appendChild(createTextElementWithProvenance("Release_Date", 
+			book.appendChild(createTextElementWithProvenance("release_rate", 
 					"", 
 					"", doc));
 		}
@@ -115,7 +115,25 @@ public class BookXMLFormatter extends XMLFormatter<Book> {
 					"", doc));
 		}
 		
-
+		if(record.hasValue(Book.RATING)) {
+			book.appendChild(createTextElementWithProvenance("rating",
+				record.getRating(),
+				record.getMergedAttributeProvenance(Book.RATING), doc));
+		}else {
+			book.appendChild(createTextElementWithProvenance("rating",
+					"",
+					"", doc));
+		}
+		
+		if(record.hasValue(Book.PARTOFASERIES)) {
+			book.appendChild(createTextElementWithProvenance("part_of_a_series",
+				record.getRating(),
+				record.getMergedAttributeProvenance(Book.PARTOFASERIES), doc));
+		}else {
+			book.appendChild(createTextElementWithProvenance("part_of_a_series",
+					"",
+					"", doc));
+		}
 		return book;
 	}
 	
