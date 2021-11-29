@@ -20,7 +20,18 @@ public class BookCustomAuthorComparator implements Comparator<Book, Attribute> {
 	public double compare(Book record1, Book record2, Correspondence<Attribute, Matchable> schemaCorrespondence) {
 		String author1 = record1.getAuthors().get(0).getAuthor_name().replaceAll("\\.|,", " ").toLowerCase().replaceAll(" +", " ");
 		String author2 = record2.getAuthors().get(0).getAuthor_name().replaceAll("\\.|,", " ").toLowerCase().replaceAll(" +", " ");
-		return lev.calculate(author1, author2);
+		double sim = lev.calculate(author1, author2);
+
+		if(comparisonLog != null) {
+			comparisonLog.setComparatorName(getClass().getName());
+			comparisonLog.setRecord1Value(record1.getAuthors().get(0).getAuthor_name());
+			comparisonLog.setRecord2Value(record2.getAuthors().get(0).getAuthor_name());
+			comparisonLog.setRecord1PreprocessedValue(author1);
+			comparisonLog.setRecord2PreprocessedValue(author2);
+			comparisonLog.setSimilarity(Double.toString(sim));
+		}
+
+		return sim;
 	} 
 	
 	@Override

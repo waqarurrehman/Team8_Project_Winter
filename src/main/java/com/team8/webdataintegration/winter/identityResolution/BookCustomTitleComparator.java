@@ -32,7 +32,7 @@ public class BookCustomTitleComparator implements Comparator<Book, Attribute> {
         if (this.comparisonLog != null) {
             this.comparisonLog.setComparatorName(getClass().getName());
             this.comparisonLog.setRecord1Value(record1.getTitle());
-            this.comparisonLog.setRecord2Value(record1.getTitle());
+            this.comparisonLog.setRecord2Value(record2.getTitle());
         }
 
         double similarity;
@@ -55,9 +55,6 @@ public class BookCustomTitleComparator implements Comparator<Book, Attribute> {
         }
 
         if (this.comparisonLog != null) {
-            this.comparisonLog.setRecord1PreprocessedValue(record1.getTitle());
-            this.comparisonLog.setRecord2PreprocessedValue(record1.getTitle());
-
             this.comparisonLog.setSimilarity(Double.toString(similarity));
         }
         return similarity;

@@ -98,7 +98,7 @@ public class BookUseCase {
 		LinearCombinationMatchingRule<Book, Attribute> matchingRule = new LinearCombinationMatchingRule<>(
 				0.80);
 		matchingRule.activateDebugReport("usecase/books/output/debugResultsMatchingRule_wiki_2_bbe.csv", 10000, wikiBbeGoldstandard);
-		
+		matchingRule.activateDebugReport("usecase/books/output/debugResultsMatchingRule_bbe_2_fdb.csv", 10000, fdbBbeGoldstandard);
 		logger.info("Adding Title and Author Comparator");
 	    // matchingRule.addComparator(new BookTitleComparatorLowerJaccard(), 0.70);
 		matchingRule.addComparator(new BookCustomTitleComparator(), 0.60);
@@ -119,16 +119,12 @@ public class BookUseCase {
 		logger.info("Initializing the matching engine");
 		// Initialize Matching Engine
 		MatchingEngine<Book, Attribute> engine = new MatchingEngine<>();
-		
+
 		logger.info("Getting correspondence for wiki data and bbe dataset");
 		// Execute the matching for wiki and bbe dataset
 		Processable<Correspondence<Book, Attribute>> wikiBbeCorrespondences = engine.runIdentityResolution(
 				wiki, bbe, null, matchingRule,
 				blocker);
-		
-		logger.info("Getting correspondence for wiki data and bbe dataset operation completed");
-		//updating the gold standard for wiki and wdc dataset
-		matchingRule.activateDebugReport("usecase/books/output/debugResultsMatchingRule_bbe_2_fdb.csv", 10000, fdbBbeGoldstandard);
 		
 		// Execute the matching for wiki and bbe dataset
 		logger.info("Getting correspondence for BBE and FDB");
