@@ -7,13 +7,11 @@ import java.time.format.DateTimeFormatterBuilder;
 import java.time.temporal.ChronoField;
 import java.util.Locale;
 
+import com.team8.webdataintegration.winter.identityResolution.*;
 import org.slf4j.Logger;
 
 import com.team8.webdataintegration.winter.datafusion.evaluation.*;
 import com.team8.webdataintegration.winter.datafusion.fusers.*;
-import com.team8.webdataintegration.winter.identityResolution.BookBlockingKeyByTitleGenerator;
-import com.team8.webdataintegration.winter.identityResolution.BookCustomAuthorComparator;
-import com.team8.webdataintegration.winter.identityResolution.BookCustomTitleComparator;
 import com.team8.webdataintegration.winter.model.Book;
 import com.team8.webdataintegration.winter.model.BookXMLFormatter;
 import com.team8.webdataintegration.winter.model.BookXMLReader;
@@ -94,21 +92,32 @@ public class BookUseCase {
 		// load the gold standard (target_wiki 2 target_fdb)
 		MatchingGoldStandard fdbBbeGoldstandard = new MatchingGoldStandard();
 		fdbBbeGoldstandard.loadFromCSVFile(new File(fdbBbeGoldstandardPath));
-		
-		LinearCombinationMatchingRule<Book, Attribute> matchingRule = new LinearCombinationMatchingRule<>(
-				0.80);
-		matchingRule.activateDebugReport("usecase/books/output/debugResultsMatchingRule_wiki_2_bbe.csv", 10000, wikiBbeGoldstandard);
-		matchingRule.activateDebugReport("usecase/books/output/debugResultsMatchingRule_bbe_2_fdb.csv", 10000, fdbBbeGoldstandard);
-		logger.info("Adding Title and Author Comparator");
-	    // matchingRule.addComparator(new BookTitleComparatorLowerJaccard(), 0.70);
-		matchingRule.addComparator(new BookCustomTitleComparator(), 0.60);
-		
-		logger.info("Adding Author and Author Comparator");
-		//matchingRule.addComparator(new BookAuthorComparatorLowerJaccard(), 0.25);
-		matchingRule.addComparator( new BookCustomAuthorComparator(), 0.40);
 
-		//matchingRule.addComparator(new BookReleaseDateComparatorWeightedDateSimilarity(), 0.05);
+		LinearCombinationMatchingRule<Book, Attribute> wikiBbeMatchingRule = new LinearCombinationMatchingRule<>(
+				0.80);
+		wikiBbeMatchingRule.activateDebugReport("usecase/books/output/debugResultsMatchingRule_wiki_2_bbe.csv", 10000, wikiBbeGoldstandard);
+
+		logger.info("Adding Title and Author Comparator");
+		wikiBbeMatchingRule.addComparator(new BookCustomTitleComparator(), 0.55);
+	    // matchingRule.addComparator(new BookTitleComparatorLowerJaccard(), 0.70);
 		
+		logger.info("Adding Author and Date Comparator");
+		wikiBbeMatchingRule.addComparator( new BookCustomAuthorComparator(), 0.35);
+		//matchingRule.addComparator(new BookAuthorComparatorLowerJaccard(), 0.25);
+		wikiBbeMatchingRule.addComparator(new BookDateComparator10Years(), 0.10);
+		//matchingRule.addComparator(new BookReleaseDateComparatorWeightedDateSimilarity(), 0.05);
+
+
+		LinearCombinationMatchingRule<Book, Attribute> fdbBbeMatchingRule = new LinearCombinationMatchingRule<>(
+				0.80);
+		fdbBbeMatchingRule.activateDebugReport("usecase/books/output/debugResultsMatchingRule_bbe_2_fdb.csv", 10000, fdbBbeGoldstandard);
+		logger.info("Adding Title and Author Comparator");
+		fdbBbeMatchingRule.addComparator(new BookCustomTitleComparator(), 0.55);
+
+		logger.info("Adding Author and Date Comparator");
+		fdbBbeMatchingRule.addComparator( new BookCustomAuthorComparator(), 0.35);
+		fdbBbeMatchingRule.addComparator(new BookDateComparator10Years(), 0.10);
+
 		logger.info("Adding Standard Record Blocker");
 		// create a blocker (blocking strategy)
 		//StandardRecordBlocker<Book, Attribute> blocker = new StandardRecordBlocker<Book, Attribute>(new BookBlockingKeyByDecadeGenerator());
@@ -123,13 +132,13 @@ public class BookUseCase {
 		logger.info("Getting correspondence for wiki data and bbe dataset");
 		// Execute the matching for wiki and bbe dataset
 		Processable<Correspondence<Book, Attribute>> wikiBbeCorrespondences = engine.runIdentityResolution(
-				wiki, bbe, null, matchingRule,
+				wiki, bbe, null, wikiBbeMatchingRule,
 				blocker);
 		
 		// Execute the matching for wiki and bbe dataset
 		logger.info("Getting correspondence for BBE and FDB");
 		Processable<Correspondence<Book, Attribute>> fdbBbeCorrespondences = engine.runIdentityResolution(
-				bbe, fdb, null, matchingRule,
+				bbe, fdb, null, fdbBbeMatchingRule,
 				blocker);
 		logger.info("Getting correspondence for BBE dataset and FDB dataset operation completed");
 		
@@ -146,7 +155,7 @@ public class BookUseCase {
 		logger.info(String.format("Precision: %.4f", wikiBbePerfTest.getPrecision()));
 		logger.info(String.format("Recall: %.4f", wikiBbePerfTest.getRecall()));
 		logger.info(String.format("F1: %.4f", wikiBbePerfTest.getF1()));
-				
+
 		MatchingEvaluator<Book, Attribute> fdbBbeEvaluator = new MatchingEvaluator<Book, Attribute>();
 		Performance fdbBbePerfTest = fdbBbeEvaluator.evaluateMatching(fdbBbeCorrespondences.get(),
 				fdbBbeGoldstandard);
@@ -174,7 +183,7 @@ public class BookUseCase {
 		FusibleDataSet<Book, Attribute> fdb = new FusibleHashedDataSet<>();
 		new BookXMLReader().loadFromXML(new File(this.fdbSourcePath), this.sXPath_Book , fdb);
 		fdb.printDataSetDensityReport();
-		
+
 		/*ds1.setScore(3.0);
 		ds2.setScore(1.0);
 		ds3.setScore(2.0);
