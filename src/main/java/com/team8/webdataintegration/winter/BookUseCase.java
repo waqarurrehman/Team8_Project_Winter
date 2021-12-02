@@ -5,9 +5,11 @@ import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.time.format.DateTimeFormatterBuilder;
 import java.time.temporal.ChronoField;
+import java.util.List;
 import java.util.Locale;
 
 import com.team8.webdataintegration.winter.identityResolution.*;
+import de.uni_mannheim.informatik.dws.winter.model.*;
 import org.slf4j.Logger;
 
 import com.team8.webdataintegration.winter.datafusion.evaluation.*;
@@ -24,14 +26,6 @@ import de.uni_mannheim.informatik.dws.winter.matching.MatchingEngine;
 import de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator;
 import de.uni_mannheim.informatik.dws.winter.matching.blockers.StandardRecordBlocker;
 import de.uni_mannheim.informatik.dws.winter.matching.rules.LinearCombinationMatchingRule;
-import de.uni_mannheim.informatik.dws.winter.model.Correspondence;
-import de.uni_mannheim.informatik.dws.winter.model.DataSet;
-import de.uni_mannheim.informatik.dws.winter.model.FusibleDataSet;
-import de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet;
-import de.uni_mannheim.informatik.dws.winter.model.HashedDataSet;
-import de.uni_mannheim.informatik.dws.winter.model.MatchingGoldStandard;
-import de.uni_mannheim.informatik.dws.winter.model.Performance;
-import de.uni_mannheim.informatik.dws.winter.model.RecordGroupFactory;
 import de.uni_mannheim.informatik.dws.winter.model.defaultmodel.Attribute;
 import de.uni_mannheim.informatik.dws.winter.model.io.CSVCorrespondenceFormatter;
 import de.uni_mannheim.informatik.dws.winter.processing.Processable;
@@ -98,13 +92,13 @@ public class BookUseCase {
 		wikiBbeMatchingRule.activateDebugReport("usecase/books/output/debugResultsMatchingRule_wiki_2_bbe.csv", 10000, wikiBbeGoldstandard);
 
 		logger.info("Adding Title and Author Comparator");
-		wikiBbeMatchingRule.addComparator(new BookCustomTitleComparator(), 0.45);
+		wikiBbeMatchingRule.addComparator(new BookCustomTitleComparator(), 0.4);
 	    // matchingRule.addComparator(new BookTitleComparatorLowerJaccard(), 0.70);
 		
 		logger.info("Adding Author and Date Comparator");
-		wikiBbeMatchingRule.addComparator( new BookCustomAuthorComparator(), 0.45);
+		wikiBbeMatchingRule.addComparator( new BookCustomAuthorComparator(), 0.5);
 		//matchingRule.addComparator(new BookAuthorComparatorLowerJaccard(), 0.25);
-		wikiBbeMatchingRule.addComparator(new BookDateComparator10Years(), 0.10);
+		wikiBbeMatchingRule.addComparator(new BookDateComparator10Years(), 0.1);
 		//matchingRule.addComparator(new BookReleaseDateComparatorWeightedDateSimilarity(), 0.05);
 
 
@@ -211,7 +205,16 @@ public class BookUseCase {
 		// write group size distribution
 		
 		correspondences.printGroupSizeDistribution();
-		
+
+		for(RecordGroup<Book, Attribute> l : correspondences.getRecordGroups()) {
+			if(l.getSize() > 3) {
+				for(Book b : l.getRecords()) {
+					System.out.println(qb.getIdentifier() + " " + b.getTitle() + " " + b.getAuthors().get(0).getAuthor_name() + " " + b.getRelease_date());
+				}
+				System.out.println();
+			}
+		}
+
 		// define the fusion strategy
 		logger.info("define the fusion strategy");
 		DataFusionStrategy<Book, Attribute> strategy = new DataFusionStrategy<>(new BookXMLReader());

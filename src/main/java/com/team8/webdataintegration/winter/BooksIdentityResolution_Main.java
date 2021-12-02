@@ -44,7 +44,7 @@ public class BooksIdentityResolution_Main {
 
 
         try {
-            //_usecase.RunDataFusion();
+            _usecase.RunDataFusion();
         } catch (Exception ex) {
             logger.info("Excepiton in DataFusion[" + ex.toString() + "]");
             ex.printStackTrace();

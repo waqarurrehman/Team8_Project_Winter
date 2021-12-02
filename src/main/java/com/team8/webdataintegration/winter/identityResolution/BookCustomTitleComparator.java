@@ -13,7 +13,7 @@ public class BookCustomTitleComparator implements Comparator<Book, Attribute> {
 
     private static final double WEIGHT_TITLE = 1.0;
     private static final double WEIGHT_SUBTITLE = 1.0;
-    private static final double TITLE_COMPARATOR_CUTOFF = 0.5;
+    private static final double TITLE_COMPARATOR_CUTOFF = 0.7;
     private static final long serialVersionUID = 1L;
     LevenshteinSimilarity levSim = new LevenshteinSimilarity();
     LevenshteinEditDistance lev = new LevenshteinEditDistance();
