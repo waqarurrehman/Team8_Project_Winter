@@ -25,7 +25,17 @@ public class BookCustomAuthorComparator implements Comparator<Book, Attribute> {
 		String max2 = normalizeAuthorName(record2.getAuthors().get(0).getAuthor_name());
 		for(Author author1 : record1.getAuthors()) {
 			for(Author author2 : record2.getAuthors()){
-				sim = lev.calculate(normalizeAuthorName(author1.getAuthor_name()), normalizeAuthorName(author2.getAuthor_name()));
+				String name1 = normalizeAuthorName(author1.getAuthor_name());
+				String name2 = normalizeAuthorName(author2.getAuthor_name());
+				String[] tokens1 = name1.split(" ");
+				String[] tokens2 = name2.split(" ");
+				String initials1 = getInitials(tokens1);
+				String initials2 = getInitials(tokens2);
+				if(initials1.equals(initials2) && initials1.length() > 2) {
+					name1 = tokens1[0] + " " + tokens1[tokens1.length - 1];
+					name2 = tokens2[0] + " " + tokens2[tokens2.length - 1];
+				}
+				sim = lev.calculate(name1, name2);
 				if(sim > max) {
 					max = sim;
 					max1 = normalizeAuthorName(author1.getAuthor_name());
@@ -58,6 +68,14 @@ public class BookCustomAuthorComparator implements Comparator<Book, Attribute> {
 	@Override
 	public void setComparisonLog(ComparatorLogger comparatorLog) {
 		this.comparisonLog = comparatorLog;
+	}
+
+	public String getInitials(String[] nameTokenized) {
+		String res = "";
+		for(String s : nameTokenized) {
+			res += s.charAt(0);
+		}
+		return res;
 	}
 
 }

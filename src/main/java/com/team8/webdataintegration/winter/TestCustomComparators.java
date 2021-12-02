@@ -29,17 +29,17 @@ public class TestCustomComparators
     {
         // loading data
         logger.info("*\tLoading datasets\t*");
-        HashedDataSet<Book, Attribute> wiki = new HashedDataSet<>();
-        new BookXMLReader().loadFromXML(new File("usecase/books/input/target_wiki.xml"), "/books/book", wiki);
-        HashedDataSet<Book, Attribute> bbe = new HashedDataSet<>();
-        new BookXMLReader().loadFromXML(new File("usecase/books/input/target_bbe.xml"), "/books/book", bbe);
         HashedDataSet<Book, Attribute> fdb = new HashedDataSet<>();
         new BookXMLReader().loadFromXML(new File("usecase/books/input/target_fdb.xml"), "/books/book", fdb);
+        HashedDataSet<Book, Attribute> bbe = new HashedDataSet<>();
+        new BookXMLReader().loadFromXML(new File("usecase/books/input/target_bbe.xml"), "/books/book", bbe);
+        HashedDataSet<Book, Attribute> wiki = new HashedDataSet<>();
+        new BookXMLReader().loadFromXML(new File("usecase/books/input/target_wiki.xml"), "/books/book", wiki);
 
-        MatchingGoldStandard wikiBbeGoldstandard = new MatchingGoldStandard();
-        wikiBbeGoldstandard.loadFromCSVFile(new File("usecase/books/goldstandard/gs_wiki_2_bbe.csv"));
         MatchingGoldStandard fdbBbeGoldstandard = new MatchingGoldStandard();
         fdbBbeGoldstandard.loadFromCSVFile(new File("usecase/books/goldstandard/gs_fdb_2_bbe.csv"));
+        MatchingGoldStandard wikiBbeGoldstandard = new MatchingGoldStandard();
+        wikiBbeGoldstandard.loadFromCSVFile(new File("usecase/books/goldstandard/gs_wiki_2_bbe.csv"));
 
         // create a matching rule
         String options[] = new String[] { "-S" };
@@ -59,7 +59,7 @@ public class TestCustomComparators
         // train the matching rule's model
         logger.info("*\tLearning matching rule\t*");
         RuleLearner<Book, Attribute> learner = new RuleLearner<>();
-        learner.learnMatchingRule(wiki, bbe, null, matchingRule, wikiBbeGoldstandard);
+        learner.learnMatchingRule(fdb, bbe, null, matchingRule, fdbBbeGoldstandard);
         logger.info(String.format("Matching rule is:\n%s", matchingRule.getModelDescription()));
 
         // create a blocker (blocking strategy)
@@ -71,20 +71,20 @@ public class TestCustomComparators
         // Execute the matching
         logger.info("*\tRunning identity resolution\t*");
         Processable<Correspondence<Book, Attribute>> correspondences = engine.runIdentityResolution(
-                bbe, fdb, null, matchingRule,
+                bbe, wiki, null, matchingRule,
                 blocker);
 
         // write the correspondences to the output file
         new CSVCorrespondenceFormatter().writeCSV(new File("usecase/books/output/temptemp.csv"), correspondences);
 
-        MatchingEvaluator<Book, Attribute> fdbBbeEvaluator = new MatchingEvaluator<Book, Attribute>();
-        Performance fdbBbePerfTest = fdbBbeEvaluator.evaluateMatching(correspondences.get(),
-                fdbBbeGoldstandard);
+        MatchingEvaluator<Book, Attribute> wikiBbeEvaluator = new MatchingEvaluator<Book, Attribute>();
+        Performance wikiBbePerfTest = wikiBbeEvaluator.evaluateMatching(correspondences.get(),
+                wikiBbeGoldstandard);
 
         // print the evaluation result
-        logger.info(String.format("Precision: %.4f", fdbBbePerfTest.getPrecision()));
-        logger.info(String.format("Recall: %.4f", fdbBbePerfTest.getRecall()));
-        logger.info(String.format("F1: %.4f", fdbBbePerfTest.getF1()));
+        logger.info(String.format("Precision: %.4f", wikiBbePerfTest.getPrecision()));
+        logger.info(String.format("Recall: %.4f", wikiBbePerfTest.getRecall()));
+        logger.info(String.format("F1: %.4f", wikiBbePerfTest.getF1()));
     }
 
     public static void main(String[] args) {

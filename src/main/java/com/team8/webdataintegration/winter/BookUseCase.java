@@ -94,15 +94,15 @@ public class BookUseCase {
 		fdbBbeGoldstandard.loadFromCSVFile(new File(fdbBbeGoldstandardPath));
 
 		LinearCombinationMatchingRule<Book, Attribute> wikiBbeMatchingRule = new LinearCombinationMatchingRule<>(
-				0.80);
+				0.70);
 		wikiBbeMatchingRule.activateDebugReport("usecase/books/output/debugResultsMatchingRule_wiki_2_bbe.csv", 10000, wikiBbeGoldstandard);
 
 		logger.info("Adding Title and Author Comparator");
-		wikiBbeMatchingRule.addComparator(new BookCustomTitleComparator(), 0.55);
+		wikiBbeMatchingRule.addComparator(new BookCustomTitleComparator(), 0.45);
 	    // matchingRule.addComparator(new BookTitleComparatorLowerJaccard(), 0.70);
 		
 		logger.info("Adding Author and Date Comparator");
-		wikiBbeMatchingRule.addComparator( new BookCustomAuthorComparator(), 0.35);
+		wikiBbeMatchingRule.addComparator( new BookCustomAuthorComparator(), 0.45);
 		//matchingRule.addComparator(new BookAuthorComparatorLowerJaccard(), 0.25);
 		wikiBbeMatchingRule.addComparator(new BookDateComparator10Years(), 0.10);
 		//matchingRule.addComparator(new BookReleaseDateComparatorWeightedDateSimilarity(), 0.05);

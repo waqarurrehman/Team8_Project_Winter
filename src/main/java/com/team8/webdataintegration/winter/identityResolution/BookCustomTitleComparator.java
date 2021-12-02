@@ -71,8 +71,20 @@ public class BookCustomTitleComparator implements Comparator<Book, Attribute> {
     }
 
     public double compareBookTitle(String titleA, String titleB) {
+        titleA = titleA.replaceAll("&", "and");
+        titleB = titleB.replaceAll("&", "and");
+
         titleA = titleA.replaceAll("[^a-zA-Z0-9 ]", "");
         titleB = titleB.replaceAll("[^a-zA-Z0-9 ]", "");
+
+        int loc = 0;
+        if((loc = titleA.indexOf("and other")) != -1) {
+            titleA = titleA.substring(0, loc);
+        }
+        if((loc = titleB.indexOf("and other")) != -1) {
+            titleB = titleB.substring(0, loc);
+        }
+
         String[] tokensA = titleA.split(" ");
         String[] tokensB = titleB.split(" ");
         double sim = 0;
@@ -81,6 +93,9 @@ public class BookCustomTitleComparator implements Comparator<Book, Attribute> {
         if(titleA.matches(end) && !titleB.matches(end) || !titleA.matches(end) && titleB.matches(end)) {
             return 0;
         }
+
+
+
         if(tokensA.length != tokensB.length) {
             if(lev.calculate(titleA, titleB) < Math.max(titleA.length(), titleB.length()) / 4) {
                 return levSim.calculate(titleA, titleB);
