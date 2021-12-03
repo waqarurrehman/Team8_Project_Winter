@@ -1,36 +1,35 @@
 package com.team8.webdataintegration.winter;
 
-import java.io.File;
-import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
-import java.time.format.DateTimeFormatterBuilder;
-import java.time.temporal.ChronoField;
-import java.util.List;
-import java.util.Locale;
-
-import com.team8.webdataintegration.winter.identityResolution.*;
-import de.uni_mannheim.informatik.dws.winter.matching.algorithms.RuleLearner;
-import de.uni_mannheim.informatik.dws.winter.matching.rules.WekaMatchingRule;
-import de.uni_mannheim.informatik.dws.winter.model.*;
-import org.slf4j.Logger;
-
 import com.team8.webdataintegration.winter.datafusion.evaluation.*;
 import com.team8.webdataintegration.winter.datafusion.fusers.*;
+import com.team8.webdataintegration.winter.identityResolution.BookBlockingKeyByTitleGenerator;
+import com.team8.webdataintegration.winter.identityResolution.BookCustomAuthorComparator;
+import com.team8.webdataintegration.winter.identityResolution.BookCustomTitleComparator;
+import com.team8.webdataintegration.winter.identityResolution.BookDateComparator2Years;
 import com.team8.webdataintegration.winter.model.Book;
 import com.team8.webdataintegration.winter.model.BookXMLFormatter;
 import com.team8.webdataintegration.winter.model.BookXMLReader;
-
 import de.uni_mannheim.informatik.dws.winter.datafusion.CorrespondenceSet;
 import de.uni_mannheim.informatik.dws.winter.datafusion.DataFusionEngine;
 import de.uni_mannheim.informatik.dws.winter.datafusion.DataFusionEvaluator;
 import de.uni_mannheim.informatik.dws.winter.datafusion.DataFusionStrategy;
 import de.uni_mannheim.informatik.dws.winter.matching.MatchingEngine;
 import de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator;
+import de.uni_mannheim.informatik.dws.winter.matching.algorithms.RuleLearner;
 import de.uni_mannheim.informatik.dws.winter.matching.blockers.StandardRecordBlocker;
-import de.uni_mannheim.informatik.dws.winter.matching.rules.LinearCombinationMatchingRule;
+import de.uni_mannheim.informatik.dws.winter.matching.rules.WekaMatchingRule;
+import de.uni_mannheim.informatik.dws.winter.model.*;
 import de.uni_mannheim.informatik.dws.winter.model.defaultmodel.Attribute;
 import de.uni_mannheim.informatik.dws.winter.model.io.CSVCorrespondenceFormatter;
 import de.uni_mannheim.informatik.dws.winter.processing.Processable;
+import org.slf4j.Logger;
+
+import java.io.File;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+import java.time.format.DateTimeFormatterBuilder;
+import java.time.temporal.ChronoField;
+import java.util.Locale;
 
 public class BookUseCase {
 	
