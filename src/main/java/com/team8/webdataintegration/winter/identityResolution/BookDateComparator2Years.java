@@ -19,10 +19,10 @@ import de.uni_mannheim.informatik.dws.winter.model.Matchable;
 import de.uni_mannheim.informatik.dws.winter.model.defaultmodel.Attribute;
 import de.uni_mannheim.informatik.dws.winter.similarity.date.YearSimilarity;
 
-public class BookDateComparator10Years implements Comparator<Book, Attribute> {
+public class BookDateComparator2Years implements Comparator<Book, Attribute> {
 
 	private static final long serialVersionUID = 1L;
-	private YearSimilarity sim = new YearSimilarity(10);
+	private YearSimilarity sim = new YearSimilarity(2);
 	
 	private ComparatorLogger comparisonLog;
 

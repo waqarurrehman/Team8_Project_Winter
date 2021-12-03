@@ -1,7 +1,6 @@
 package com.team8.webdataintegration.winter;
 
-import com.team8.webdataintegration.winter.identityResolution.BookBlockingKeyByTitleGenerator;
-import com.team8.webdataintegration.winter.identityResolution.BookTitleComparatorLowerJaccard;
+import com.team8.webdataintegration.winter.identityResolution.*;
 import com.team8.webdataintegration.winter.model.Book;
 import com.team8.webdataintegration.winter.model.BookXMLReader;
 import de.uni_mannheim.informatik.dws.winter.matching.MatchingEngine;
@@ -38,17 +37,20 @@ public class BookMatchingForGoldStandard_Main
     {
         // loading data
         logger.info("*\tLoading datasets\t*");
-        HashedDataSet<Book, Attribute> fdb = new HashedDataSet<>();
-        new BookXMLReader().loadFromXML(new File("usecase/books/input/target_fdb.xml"), "/books/book", fdb);
         HashedDataSet<Book, Attribute> bbe = new HashedDataSet<>();
         new BookXMLReader().loadFromXML(new File("usecase/books/input/target_bbe.xml"), "/books/book", bbe);
+        HashedDataSet<Book, Attribute> wiki = new HashedDataSet<>();
+        new BookXMLReader().loadFromXML(new File("usecase/books/input/target_wiki.xml"), "/books/book", wiki);
+
 
         // create a matching rule
         LinearCombinationMatchingRule<Book, Attribute> matchingRule = new LinearCombinationMatchingRule<>(
-                0.5);
+                0.85);
 
         // add comparators
-        matchingRule.addComparator(new BookTitleComparatorLowerJaccard(), 1);
+        matchingRule.addComparator(new BookTitleComparatorLevenshtein(), 0.5);
+
+        matchingRule.addComparator(new BookAuthorComparatorLevenshtein(), 0.5);
 
         // create a blocker (blocking strategy)
         StandardRecordBlocker<Book, Attribute> blocker = new StandardRecordBlocker<Book, Attribute>(new BookBlockingKeyByTitleGenerator());
@@ -62,7 +64,7 @@ public class BookMatchingForGoldStandard_Main
         // Execute the matching
         logger.info("*\tRunning identity resolution\t*");
         Processable<Correspondence<Book, Attribute>> correspondences = engine.runIdentityResolution(
-                fdb, bbe, null, matchingRule,
+                wiki, bbe, null, matchingRule,
                 blocker);
 
         // Create a top-1 global matching

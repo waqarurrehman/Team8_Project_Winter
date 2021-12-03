@@ -98,19 +98,19 @@ public class BookUseCase {
 		logger.info("Adding Author and Date Comparator");
 		wikiBbeMatchingRule.addComparator( new BookCustomAuthorComparator(), 0.5);
 		//matchingRule.addComparator(new BookAuthorComparatorLowerJaccard(), 0.25);
-		wikiBbeMatchingRule.addComparator(new BookDateComparator10Years(), 0.1);
+		wikiBbeMatchingRule.addComparator(new BookDateComparator2Years(), 0.1);
 		//matchingRule.addComparator(new BookReleaseDateComparatorWeightedDateSimilarity(), 0.05);
 
 
 		LinearCombinationMatchingRule<Book, Attribute> fdbBbeMatchingRule = new LinearCombinationMatchingRule<>(
-				0.80);
+				0.70);
 		fdbBbeMatchingRule.activateDebugReport("usecase/books/output/debugResultsMatchingRule_bbe_2_fdb.csv", 10000, fdbBbeGoldstandard);
 		logger.info("Adding Title and Author Comparator");
-		fdbBbeMatchingRule.addComparator(new BookCustomTitleComparator(), 0.55);
+		fdbBbeMatchingRule.addComparator(new BookCustomTitleComparator(), 0.4);
 
 		logger.info("Adding Author and Date Comparator");
-		fdbBbeMatchingRule.addComparator( new BookCustomAuthorComparator(), 0.35);
-		fdbBbeMatchingRule.addComparator(new BookDateComparator10Years(), 0.10);
+		fdbBbeMatchingRule.addComparator( new BookCustomAuthorComparator(), 0.5);
+		fdbBbeMatchingRule.addComparator(new BookDateComparator2Years(), 0.10);
 
 		logger.info("Adding Standard Record Blocker");
 		// create a blocker (blocking strategy)
@@ -209,7 +209,7 @@ public class BookUseCase {
 		for(RecordGroup<Book, Attribute> l : correspondences.getRecordGroups()) {
 			if(l.getSize() > 3) {
 				for(Book b : l.getRecords()) {
-					System.out.println(qb.getIdentifier() + " " + b.getTitle() + " " + b.getAuthors().get(0).getAuthor_name() + " " + b.getRelease_date());
+					System.out.println(b.getIdentifier() + " " + b.getTitle() + " " + b.getAuthors().get(0).getAuthor_name() + " " + b.getRelease_date());
 				}
 				System.out.println();
 			}
