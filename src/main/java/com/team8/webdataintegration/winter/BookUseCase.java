@@ -9,6 +9,8 @@ import java.util.List;
 import java.util.Locale;
 
 import com.team8.webdataintegration.winter.identityResolution.*;
+import de.uni_mannheim.informatik.dws.winter.matching.algorithms.RuleLearner;
+import de.uni_mannheim.informatik.dws.winter.matching.rules.WekaMatchingRule;
 import de.uni_mannheim.informatik.dws.winter.model.*;
 import org.slf4j.Logger;
 
@@ -81,36 +83,52 @@ public class BookUseCase {
 		// load the gold standard (target_wiki 2 target_bbe)
 	    MatchingGoldStandard wikiBbeGoldstandard = new MatchingGoldStandard();
 	    wikiBbeGoldstandard.loadFromCSVFile(new File(wikiBbeGoldstandardPath));
-		
+
+		MatchingGoldStandard wikiBbeGoldstandardTrain = new MatchingGoldStandard();
+		wikiBbeGoldstandardTrain.loadFromCSVFile(new File("usecase/books/goldstandard/gs_wiki_2_bbe_train.csv"));
+
 	    logger.info("Loading Gold Standard DS 2 to DS 3 ["+ fdbBbeGoldstandardPath +"]");
 		// load the gold standard (target_wiki 2 target_fdb)
 		MatchingGoldStandard fdbBbeGoldstandard = new MatchingGoldStandard();
 		fdbBbeGoldstandard.loadFromCSVFile(new File(fdbBbeGoldstandardPath));
 
-		LinearCombinationMatchingRule<Book, Attribute> wikiBbeMatchingRule = new LinearCombinationMatchingRule<>(
-				0.70);
-		wikiBbeMatchingRule.activateDebugReport("usecase/books/output/debugResultsMatchingRule_wiki_2_bbe.csv", 10000, wikiBbeGoldstandard);
-
-		logger.info("Adding Title and Author Comparator");
-		wikiBbeMatchingRule.addComparator(new BookCustomTitleComparator(), 0.4);
-	    // matchingRule.addComparator(new BookTitleComparatorLowerJaccard(), 0.70);
-		
-		logger.info("Adding Author and Date Comparator");
-		wikiBbeMatchingRule.addComparator( new BookCustomAuthorComparator(), 0.5);
-		//matchingRule.addComparator(new BookAuthorComparatorLowerJaccard(), 0.25);
-		wikiBbeMatchingRule.addComparator(new BookDateComparator2Years(), 0.1);
-		//matchingRule.addComparator(new BookReleaseDateComparatorWeightedDateSimilarity(), 0.05);
+		MatchingGoldStandard fdbBbeGoldstandardTrain = new MatchingGoldStandard();
+		fdbBbeGoldstandardTrain.loadFromCSVFile(new File("usecase/books/goldstandard/gs_fdb_2_bbe_train.csv"));
 
 
-		LinearCombinationMatchingRule<Book, Attribute> fdbBbeMatchingRule = new LinearCombinationMatchingRule<>(
-				0.70);
-		fdbBbeMatchingRule.activateDebugReport("usecase/books/output/debugResultsMatchingRule_bbe_2_fdb.csv", 10000, fdbBbeGoldstandard);
-		logger.info("Adding Title and Author Comparator");
-		fdbBbeMatchingRule.addComparator(new BookCustomTitleComparator(), 0.4);
 
-		logger.info("Adding Author and Date Comparator");
-		fdbBbeMatchingRule.addComparator( new BookCustomAuthorComparator(), 0.5);
-		fdbBbeMatchingRule.addComparator(new BookDateComparator2Years(), 0.10);
+
+		// create a matching rule
+		String options[] = new String[] { "-S" };
+		String modelType = "SimpleLogistic"; // use a logistic regression
+		WekaMatchingRule<Book, Attribute> wikiBbeMatchingRule = new WekaMatchingRule<>(0.7, modelType, options);
+
+		wikiBbeMatchingRule.addComparator(new BookCustomAuthorComparator());
+		wikiBbeMatchingRule.addComparator(new BookCustomTitleComparator());
+		wikiBbeMatchingRule.addComparator(new BookDateComparator2Years());
+		//wikiBbeMatchingRule.addComparator(new BookAuthorComparatorJaroWinkler());
+		//wikiBbeMatchingRule.addComparator(new BookAuthorComparatorLevenshtein());
+		//wikiBbeMatchingRule.addComparator(new BookTitleComparatorLowerJaccard());
+
+		// train the matching rule's model
+		logger.info("*\tLearning matching rule\t*");
+		RuleLearner<Book, Attribute> learner = new RuleLearner<>();
+		learner.learnMatchingRule(wiki, bbe, null, wikiBbeMatchingRule, wikiBbeGoldstandardTrain);
+		logger.info(String.format("Matching rule is:\n%s", wikiBbeMatchingRule.getModelDescription()));
+
+		WekaMatchingRule<Book, Attribute> fdbBbeMatchingRule = new WekaMatchingRule<>(0.7, modelType, options);
+
+		fdbBbeMatchingRule.addComparator(new BookCustomAuthorComparator());
+		fdbBbeMatchingRule.addComparator(new BookCustomTitleComparator());
+		fdbBbeMatchingRule.addComparator(new BookDateComparator2Years());
+
+		// train the matching rule's model
+		logger.info("*\tLearning matching rule\t*");
+		RuleLearner<Book, Attribute> fdblearner = new RuleLearner<>();
+		fdblearner.learnMatchingRule(bbe, fdb, null, fdbBbeMatchingRule, fdbBbeGoldstandardTrain);
+		logger.info(String.format("Matching rule is:\n%s", fdbBbeMatchingRule.getModelDescription()));
+
+
 
 		logger.info("Adding Standard Record Blocker");
 		// create a blocker (blocking strategy)

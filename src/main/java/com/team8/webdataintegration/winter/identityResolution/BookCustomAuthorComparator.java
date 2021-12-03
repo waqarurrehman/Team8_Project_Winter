@@ -12,8 +12,6 @@ import de.uni_mannheim.informatik.dws.winter.similarity.string.LevenshteinSimila
 
 public class BookCustomAuthorComparator implements Comparator<Book, Attribute> {
 
-	private static final long serialVersionUID = 1L;
-	private EqualsSimilarity<String> sim = new EqualsSimilarity<String>();
 	private ComparatorLogger comparisonLog;
 	private LevenshteinSimilarity lev = new LevenshteinSimilarity();
 
@@ -38,8 +36,8 @@ public class BookCustomAuthorComparator implements Comparator<Book, Attribute> {
 				sim = lev.calculate(name1, name2);
 				if(sim > max) {
 					max = sim;
-					max1 = normalizeAuthorName(author1.getAuthor_name());
-					max2 = normalizeAuthorName(author2.getAuthor_name());
+					max1 = name1;
+					max2 = name2;
 				}
 			}
 		}
