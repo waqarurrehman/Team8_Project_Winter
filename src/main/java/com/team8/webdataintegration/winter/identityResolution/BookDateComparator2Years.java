@@ -37,6 +37,16 @@ public class BookDateComparator2Years implements Comparator<Book, Attribute> {
 			similarity = sim.calculate(record1.getRelease_date(), record2.getRelease_date());
 		}
 
+		if(comparisonLog != null) {
+			if(record1.getRelease_date() != null) {
+				comparisonLog.setRecord1Value(record1.getRelease_date().toString());
+			}
+			if(record2.getRelease_date() != null) {
+				comparisonLog.setRecord2Value(record2.getRelease_date().toString());
+			}
+			comparisonLog.setSimilarity(Double.toString(similarity));
+		}
+
 		return similarity;
 
 	}

@@ -28,8 +28,6 @@ public class BookAuthorComparatorLevenshtein implements Comparator<Book, Attribu
 		List<Author> listauth1 = record1.getAuthors();
 		List<Author> listauth2 = record2.getAuthors();
 		List<Double> authorsimilarity = new ArrayList<Double>();
-		String book1Title = record1.getTitle();
-		String book2Title = record2.getTitle();
 		//run the comparison only when both both book have authors 
 		if(listauth1 != null && !listauth1.isEmpty() 
 				&& 
@@ -44,12 +42,13 @@ public class BookAuthorComparatorLevenshtein implements Comparator<Book, Attribu
 						double similarity = sim.calculate(a.getAuthor_name().toLowerCase(), b.getAuthor_name().toLowerCase());
 						authorsimilarity.add(similarity);
 						
-						//if(this.comparisonLog != null){
-						//	this.comparisonLog.setComparatorName(getClass().getName());
-						//	this.comparisonLog.setRecord1Value(book1Title+"_"+a.getAuthor_name());
-						//	this.comparisonLog.setRecord2Value(book2Title+"_"+b.getAuthor_name());
-						//	this.comparisonLog.setSimilarity(Double.toString(similarity));
-						//}
+						if(this.comparisonLog != null){
+							this.comparisonLog.setComparatorName(getClass().getName());
+							this.comparisonLog.setRecord1Value(a.getAuthor_name());
+							this.comparisonLog.setRecord2Value(b.getAuthor_name());
+							this.comparisonLog.setSimilarity(Double.toString(similarity));
+						}
+
 					} else {
 						authorsimilarity.add(0d);
 					}

@@ -17,13 +17,17 @@ import java.util.List;
 public class BookAuthorComparatorJaroWinkler implements Comparator<Book, Attribute> {
 
 	private static final long serialVersionUID = 1L;
-    private	LevenshteinSimilarity sim = new LevenshteinSimilarity();
 	
 	private ComparatorLogger comparisonLog;
 
 	@Override
 	public double compare(Book record1, Book record2, Correspondence<Attribute, Matchable> schemaCorrespondence) {
 		double sim = apply(record1.getAuthors().get(0).getAuthor_name(), record2.getAuthors().get(0).getAuthor_name());
+		if(comparisonLog != null) {
+			comparisonLog.setRecord1Value(record1.getAuthors().get(0).getAuthor_name());
+			comparisonLog.setRecord2Value(record2.getAuthors().get(0).getAuthor_name());
+			comparisonLog.setSimilarity(Double.toString(sim));
+		}
 		return sim;
 	}
 
@@ -117,8 +121,4 @@ public class BookAuthorComparatorJaroWinkler implements Comparator<Book, Attribu
 	public void setComparisonLog(ComparatorLogger comparatorLog) {
 		this.comparisonLog = comparatorLog;
 	}
-
-	
-	
-
 }

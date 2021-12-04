@@ -94,6 +94,7 @@ public class BookUseCase {
 		String options[] = new String[] { "-S" };
 		String modelType = "SimpleLogistic";
 		WekaMatchingRule<Book, Attribute> wikiBbeMatchingRule = new WekaMatchingRule<>(0.7, modelType, options);
+		wikiBbeMatchingRule.activateDebugReport("usecase/books/output/debugResultsMatchingRule_wiki_2_bbe.csv", 1000, wikiBbeGoldstandardTrain);
 
 		wikiBbeMatchingRule.addComparator(new BookCustomAuthorComparator());
 		wikiBbeMatchingRule.addComparator(new BookCustomTitleComparator());
@@ -109,6 +110,7 @@ public class BookUseCase {
 		logger.info(String.format("wiki/bbe matching rule is:\n%s", wikiBbeMatchingRule.getModelDescription()));
 
 		WekaMatchingRule<Book, Attribute> fdbBbeMatchingRule = new WekaMatchingRule<>(0.7, modelType, options);
+		fdbBbeMatchingRule.activateDebugReport("usecase/books/output/debugResultsMatchingRule_fdb_2_bbe.csv", 1000, fdbBbeGoldstandardTrain);
 
 		fdbBbeMatchingRule.addComparator(new BookCustomAuthorComparator());
 		fdbBbeMatchingRule.addComparator(new BookCustomTitleComparator());
@@ -122,7 +124,6 @@ public class BookUseCase {
 		RuleLearner<Book, Attribute> fdbLearner = new RuleLearner<>();
 		fdbLearner.learnMatchingRule(bbe, fdb, null, fdbBbeMatchingRule, fdbBbeGoldstandardTrain);
 		logger.info(String.format("fdb/bbe matching rule is:\n%s", fdbBbeMatchingRule.getModelDescription()));
-
 
 		logger.info("Adding Standard Record Blocker");
 		StandardRecordBlocker<Book, Attribute> blocker = new StandardRecordBlocker<Book, Attribute>(new BookBlockingKeyByTitleGenerator());
@@ -169,13 +170,11 @@ public class BookUseCase {
 		logger.info(String.format("Precision: %.4f", fdbBbePerfTest.getPrecision()));
 		logger.info(String.format("Recall: %.4f", fdbBbePerfTest.getRecall()));
 		logger.info(String.format("F1: %.4f", fdbBbePerfTest.getF1()));
-
-		logger.info("Ended  RunIdentityResolution Method Execution");
 	}
 	
 	public void RunDataFusion() throws Exception {
 		
-		logger.info("Starting   RunDataFusion  Method Execution");
+		logger.info("Started fusion");
 		FusibleDataSet<Book, Attribute> wiki = new FusibleHashedDataSet<>();
 		new BookXMLReader().loadFromXML(new File(this.wikiSourcePath), this.sXPath_Book, wiki);
 		wiki.printDataSetDensityReport();
@@ -187,11 +186,6 @@ public class BookUseCase {
 		FusibleDataSet<Book, Attribute> fdb = new FusibleHashedDataSet<>();
 		new BookXMLReader().loadFromXML(new File(this.fdbSourcePath), this.sXPath_Book , fdb);
 		fdb.printDataSetDensityReport();
-
-		/*ds1.setScore(3.0);
-		ds2.setScore(1.0);
-		ds3.setScore(2.0);
-		*/
 		
 		// Date (e.g. last update)
 		DateTimeFormatter formatter = new DateTimeFormatterBuilder()
@@ -207,7 +201,7 @@ public class BookUseCase {
 		
 		
 		// load correspondences
-		logger.info("load correspondences");
+		logger.info("Loading correspondences");
 		CorrespondenceSet<Book, Attribute> correspondences = new CorrespondenceSet<>();
 		correspondences.loadCorrespondences(new File(this.wikiBbeCorrespondencesPath),wiki, bbe);
 		correspondences.loadCorrespondences(new File(this.fdbBbeCorrespondencesPath),bbe, fdb);
@@ -242,10 +236,11 @@ public class BookUseCase {
 		strategy.addAttributeFuser(Book.ISBN, new BookISBNFuserLongestStirng(),new BookISBNEvaluationRule());
 		strategy.addAttributeFuser(Book.RATING, new BookRatingFuserAverage(),new BookRatingEvaluationRule());
 		strategy.addAttributeFuser(Book.PARTOFASERIES, new BookPartOfASeriesFuserLogicalOr(),new BookPartOfASeriesEvaluationRule());
-				// create the fusion engine
-		logger.info("create the fusion engine");
+
+		// create the fusion engine
+		logger.info("Creating the fusion engine");
 		DataFusionEngine<Book, Attribute> engine = new DataFusionEngine<>(strategy);
-		logger.info("printClusterConsistency");
+		logger.info("Printing cluster consistency");
 		engine.printClusterConsistencyReport(correspondences, null);
 		// run the fusion
 		logger.info("Running the Fusion Engine");
@@ -267,11 +262,6 @@ public class BookUseCase {
 		double accuracy = evaluator.evaluate(fusedDataSet, gs, null);
 
 		logger.info(String.format("Accuracy: %.2f", accuracy));
-
-		logger.info("Ended   RunDataFusion  Method Execution");
-				
-				
-		
 	}
 	
 
