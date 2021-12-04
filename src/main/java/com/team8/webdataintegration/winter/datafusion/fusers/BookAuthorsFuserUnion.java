@@ -2,6 +2,7 @@ package com.team8.webdataintegration.winter.datafusion.fusers;
 
 import java.util.List;
 
+import com.team8.webdataintegration.winter.datafusion.fusers.conflictresolution.AuthorConflictResolution;
 import com.team8.webdataintegration.winter.model.Author;
 import com.team8.webdataintegration.winter.model.Book;
 
@@ -19,14 +20,11 @@ public class BookAuthorsFuserUnion extends AttributeValueFuser<List<Author>, Boo
 
 	
 	public BookAuthorsFuserUnion() {
-		super(new Union<Author, Book, Attribute>());
-		
-		
+		super(new AuthorConflictResolution<Author, Book, Attribute>());
 	}
 
 	@Override
 	public List<Author> getValue(Book record, Correspondence<Attribute, Matchable> correspondence) {
-		// TODO Auto-generated method stub
 		return record.getAuthors();
 	}
 
@@ -43,7 +41,6 @@ public class BookAuthorsFuserUnion extends AttributeValueFuser<List<Author>, Boo
 
 	@Override
 	public boolean hasValue(Book record, Correspondence<Attribute, Matchable> correspondence) {
-		// TODO Auto-generated method stub
 		return record.hasValue(Book.AUTHORS);
 	}
 

@@ -10,6 +10,9 @@ import de.uni_mannheim.informatik.dws.winter.model.defaultmodel.Attribute;
 import de.uni_mannheim.informatik.dws.winter.similarity.EqualsSimilarity;
 import de.uni_mannheim.informatik.dws.winter.similarity.string.LevenshteinSimilarity;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class BookCustomAuthorComparator implements Comparator<Book, Attribute> {
 
 	private ComparatorLogger comparisonLog;
@@ -17,14 +20,26 @@ public class BookCustomAuthorComparator implements Comparator<Book, Attribute> {
 
 	@Override
 	public double compare(Book record1, Book record2, Correspondence<Attribute, Matchable> schemaCorrespondence) {
+		List<String> authors1 = new ArrayList<>();
+		List<String> authors2 = new ArrayList<>();
+		for(Author a : record1.getAuthors()) {
+			authors1.add(a.getAuthor_name());
+		}
+		for(Author a : record2.getAuthors()) {
+			authors2.add(a.getAuthor_name());
+		}
+		return compare(authors1, authors2, schemaCorrespondence);
+	}
+
+	public double compare(List<String> record1, List<String> record2, Correspondence<Attribute, Matchable> schemaCorrespondence) {
 		double sim;
 		double max = 0;
-		String max1 = normalizeAuthorName(record1.getAuthors().get(0).getAuthor_name());
-		String max2 = normalizeAuthorName(record2.getAuthors().get(0).getAuthor_name());
-		for(Author author1 : record1.getAuthors()) {
-			for(Author author2 : record2.getAuthors()){
-				String name1 = normalizeAuthorName(author1.getAuthor_name());
-				String name2 = normalizeAuthorName(author2.getAuthor_name());
+		String max1 = normalizeAuthorName(record1.get(0));
+		String max2 = normalizeAuthorName(record2.get(0));
+		for(String author1 : record1) {
+			for(String author2 : record2){
+				String name1 = normalizeAuthorName(author1);
+				String name2 = normalizeAuthorName(author2);
 				String[] tokens1 = name1.split(" ");
 				String[] tokens2 = name2.split(" ");
 				String initials1 = getInitials(tokens1);
@@ -44,8 +59,8 @@ public class BookCustomAuthorComparator implements Comparator<Book, Attribute> {
 
 		if(comparisonLog != null) {
 			comparisonLog.setComparatorName(getClass().getName());
-			comparisonLog.setRecord1Value(record1.getAuthors().get(0).getAuthor_name());
-			comparisonLog.setRecord2Value(record2.getAuthors().get(0).getAuthor_name());
+			comparisonLog.setRecord1Value(record1.get(0));
+			comparisonLog.setRecord2Value(record2.get(0));
 			comparisonLog.setRecord1PreprocessedValue(max1);
 			comparisonLog.setRecord2PreprocessedValue(max2);
 			comparisonLog.setSimilarity(Double.toString(max));
