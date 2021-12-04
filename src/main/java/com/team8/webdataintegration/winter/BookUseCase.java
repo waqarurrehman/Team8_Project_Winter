@@ -64,27 +64,25 @@ public class BookUseCase {
 	}
 	
 	public void RunIdentityResolution() throws Exception {
-		logger.info("Started  RunIdentityResolution Method Execution");
+		logger.info("Started identity resolution");
 		HashedDataSet<Book, Attribute> wiki = new HashedDataSet<>();
 		HashedDataSet<Book, Attribute> bbe = new HashedDataSet<>();
 		HashedDataSet<Book, Attribute> fdb = new HashedDataSet<>();
-		logger.info("Loading Data Set 1 ["+this.wikiSourcePath +"]");
+		logger.info("Loading wiki data set [" + this.wikiSourcePath + "]");
 		new BookXMLReader().loadFromXML(new File(this.wikiSourcePath), this.sXPath_Book, wiki);
-		logger.info("Loading Data Set 2 ["+this.bbeSourcePath +"]");
+		logger.info("Loading bbe data set [" + this.bbeSourcePath + "]");
 		new BookXMLReader().loadFromXML(new File(this.bbeSourcePath),this.sXPath_Book, bbe);
-		logger.info("Loading Data Set 3 ["+this.wikiSourcePath +"]");
+		logger.info("Loading fdb data set [" + this.wikiSourcePath + "]");
 		new BookXMLReader().loadFromXML(new File(this.fdbSourcePath), this.sXPath_Book, fdb);
 		
-		logger.info("Loading Gold Standard DS 1 to DS 2 ["+ wikiBbeGoldstandardPath +"]");
-		// load the gold standard (target_wiki 2 target_bbe)
+		logger.info("Loading wiki/bbe train and test goldstandards");
 	    MatchingGoldStandard wikiBbeGoldstandard = new MatchingGoldStandard();
 	    wikiBbeGoldstandard.loadFromCSVFile(new File(wikiBbeGoldstandardPath));
 
 		MatchingGoldStandard wikiBbeGoldstandardTrain = new MatchingGoldStandard();
 		wikiBbeGoldstandardTrain.loadFromCSVFile(new File("usecase/books/goldstandard/gs_wiki_2_bbe_train.csv"));
 
-	    logger.info("Loading Gold Standard DS 2 to DS 3 ["+ fdbBbeGoldstandardPath +"]");
-		// load the gold standard (target_wiki 2 target_fdb)
+	    logger.info("Loading fdb/bbe train and test goldstandards");
 		MatchingGoldStandard fdbBbeGoldstandard = new MatchingGoldStandard();
 		fdbBbeGoldstandard.loadFromCSVFile(new File(fdbBbeGoldstandardPath));
 
@@ -92,11 +90,9 @@ public class BookUseCase {
 		fdbBbeGoldstandardTrain.loadFromCSVFile(new File("usecase/books/goldstandard/gs_fdb_2_bbe_train.csv"));
 
 
-
-
-		// create a matching rule
+		// Create a matching rule
 		String options[] = new String[] { "-S" };
-		String modelType = "SimpleLogistic"; // use a logistic regression
+		String modelType = "SimpleLogistic";
 		WekaMatchingRule<Book, Attribute> wikiBbeMatchingRule = new WekaMatchingRule<>(0.7, modelType, options);
 
 		wikiBbeMatchingRule.addComparator(new BookCustomAuthorComparator());
@@ -107,48 +103,48 @@ public class BookUseCase {
 		wikiBbeMatchingRule.addComparator(new BookTitleComparatorLowerJaccard());
 
 		// train the matching rule's model
-		logger.info("*\tLearning matching rule\t*");
-		RuleLearner<Book, Attribute> learner = new RuleLearner<>();
-		learner.learnMatchingRule(wiki, bbe, null, wikiBbeMatchingRule, wikiBbeGoldstandardTrain);
-		logger.info(String.format("Matching rule is:\n%s", wikiBbeMatchingRule.getModelDescription()));
+		logger.info("Learning wiki/bbe matching rule");
+		RuleLearner<Book, Attribute> wikiLearner = new RuleLearner<>();
+		wikiLearner.learnMatchingRule(wiki, bbe, null, wikiBbeMatchingRule, wikiBbeGoldstandardTrain);
+		logger.info(String.format("wiki/bbe matching rule is:\n%s", wikiBbeMatchingRule.getModelDescription()));
 
 		WekaMatchingRule<Book, Attribute> fdbBbeMatchingRule = new WekaMatchingRule<>(0.7, modelType, options);
 
 		fdbBbeMatchingRule.addComparator(new BookCustomAuthorComparator());
 		fdbBbeMatchingRule.addComparator(new BookCustomTitleComparator());
 		fdbBbeMatchingRule.addComparator(new BookDateComparator2Years());
+		fdbBbeMatchingRule.addComparator(new BookAuthorComparatorJaroWinkler());
+		fdbBbeMatchingRule.addComparator(new BookAuthorComparatorLevenshtein());
+		fdbBbeMatchingRule.addComparator(new BookTitleComparatorLowerJaccard());
 
 		// train the matching rule's model
-		logger.info("*\tLearning matching rule\t*");
-		RuleLearner<Book, Attribute> fdblearner = new RuleLearner<>();
-		fdblearner.learnMatchingRule(bbe, fdb, null, fdbBbeMatchingRule, fdbBbeGoldstandardTrain);
-		logger.info(String.format("Matching rule is:\n%s", fdbBbeMatchingRule.getModelDescription()));
-
+		logger.info("Learning fdb/bbe matching rule");
+		RuleLearner<Book, Attribute> fdbLearner = new RuleLearner<>();
+		fdbLearner.learnMatchingRule(bbe, fdb, null, fdbBbeMatchingRule, fdbBbeGoldstandardTrain);
+		logger.info(String.format("fdb/bbe matching rule is:\n%s", fdbBbeMatchingRule.getModelDescription()));
 
 
 		logger.info("Adding Standard Record Blocker");
-		// create a blocker (blocking strategy)
-		//StandardRecordBlocker<Book, Attribute> blocker = new StandardRecordBlocker<Book, Attribute>(new BookBlockingKeyByDecadeGenerator());
 		StandardRecordBlocker<Book, Attribute> blocker = new StandardRecordBlocker<Book, Attribute>(new BookBlockingKeyByTitleGenerator());
 		//Write debug results to file:
 		blocker.collectBlockSizeData("usecase/books/output/debugResultsBlocking.csv", 100);
-		
+
+
 		logger.info("Initializing the matching engine");
 		// Initialize Matching Engine
 		MatchingEngine<Book, Attribute> engine = new MatchingEngine<>();
 
-		logger.info("Getting correspondence for wiki data and bbe dataset");
+		logger.info("Getting correspondence for BBE and WIKI");
 		// Execute the matching for wiki and bbe dataset
 		Processable<Correspondence<Book, Attribute>> wikiBbeCorrespondences = engine.runIdentityResolution(
 				wiki, bbe, null, wikiBbeMatchingRule,
 				blocker);
-		
-		// Execute the matching for wiki and bbe dataset
+
 		logger.info("Getting correspondence for BBE and FDB");
+		// Execute the matching for wiki and bbe dataset
 		Processable<Correspondence<Book, Attribute>> fdbBbeCorrespondences = engine.runIdentityResolution(
 				bbe, fdb, null, fdbBbeMatchingRule,
 				blocker);
-		logger.info("Getting correspondence for BBE dataset and FDB dataset operation completed");
 		
 		new CSVCorrespondenceFormatter().writeCSV(new File(wikiBbeCorrespondencesPath), wikiBbeCorrespondences);
 		new CSVCorrespondenceFormatter().writeCSV(new File(fdbBbeCorrespondencesPath), fdbBbeCorrespondences);
