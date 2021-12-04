@@ -8,6 +8,7 @@ import com.team8.webdataintegration.winter.model.Book;
 import de.uni_mannheim.informatik.dws.winter.datafusion.AttributeValueFuser;
 import de.uni_mannheim.informatik.dws.winter.datafusion.conflictresolution.ConflictResolutionFunction;
 import de.uni_mannheim.informatik.dws.winter.datafusion.conflictresolution.Voting;
+import de.uni_mannheim.informatik.dws.winter.datafusion.conflictresolution.meta.MostRecent;
 import de.uni_mannheim.informatik.dws.winter.model.Correspondence;
 import de.uni_mannheim.informatik.dws.winter.model.FusedValue;
 import de.uni_mannheim.informatik.dws.winter.model.Matchable;
@@ -17,11 +18,11 @@ import de.uni_mannheim.informatik.dws.winter.processing.Processable;
 
 
 
-public class BookReleaseDateFuserVoting  extends AttributeValueFuser<LocalDateTime, Book, Attribute>  {
+public class BookReleaseDateFuserMostRecent  extends AttributeValueFuser<LocalDateTime, Book, Attribute>  {
 
 	
-	public BookReleaseDateFuserVoting() {
-		super(new Voting<LocalDateTime, Book, Attribute>());
+	public BookReleaseDateFuserMostRecent() {
+		super(new MostRecent<LocalDateTime, Book, Attribute>());
 	}
 	
 	

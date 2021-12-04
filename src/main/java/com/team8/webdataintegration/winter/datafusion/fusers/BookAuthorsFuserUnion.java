@@ -2,7 +2,7 @@ package com.team8.webdataintegration.winter.datafusion.fusers;
 
 import java.util.List;
 
-import com.team8.webdataintegration.winter.datafusion.fusers.conflictresolution.AuthorConflictResolution;
+import com.team8.webdataintegration.winter.datafusion.fusers.conflictResolution.AuthorConflictResolution;
 import com.team8.webdataintegration.winter.model.Author;
 import com.team8.webdataintegration.winter.model.Book;
 

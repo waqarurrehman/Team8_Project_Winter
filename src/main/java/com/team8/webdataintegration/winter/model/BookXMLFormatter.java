@@ -122,7 +122,7 @@ public class BookXMLFormatter extends XMLFormatter<Book> {
 		
 		if(record.hasValue(Book.RATING)) {
 			book.appendChild(createTextElementWithProvenance("rating",
-				record.getRating().toString(),
+					String.format("%.2f", record.getRating()),
 				record.getMergedAttributeProvenance(Book.RATING), doc));
 		}else {
 			book.appendChild(createTextElementWithProvenance("rating",
