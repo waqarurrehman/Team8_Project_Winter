@@ -2,10 +2,7 @@ package com.team8.webdataintegration.winter;
 
 import com.team8.webdataintegration.winter.datafusion.evaluation.*;
 import com.team8.webdataintegration.winter.datafusion.fusers.*;
-import com.team8.webdataintegration.winter.identityResolution.BookBlockingKeyByTitleGenerator;
-import com.team8.webdataintegration.winter.identityResolution.BookCustomAuthorComparator;
-import com.team8.webdataintegration.winter.identityResolution.BookCustomTitleComparator;
-import com.team8.webdataintegration.winter.identityResolution.BookDateComparator2Years;
+import com.team8.webdataintegration.winter.identityResolution.*;
 import com.team8.webdataintegration.winter.model.Book;
 import com.team8.webdataintegration.winter.model.BookXMLFormatter;
 import com.team8.webdataintegration.winter.model.BookXMLReader;
@@ -105,9 +102,9 @@ public class BookUseCase {
 		wikiBbeMatchingRule.addComparator(new BookCustomAuthorComparator());
 		wikiBbeMatchingRule.addComparator(new BookCustomTitleComparator());
 		wikiBbeMatchingRule.addComparator(new BookDateComparator2Years());
-		//wikiBbeMatchingRule.addComparator(new BookAuthorComparatorJaroWinkler());
-		//wikiBbeMatchingRule.addComparator(new BookAuthorComparatorLevenshtein());
-		//wikiBbeMatchingRule.addComparator(new BookTitleComparatorLowerJaccard());
+		wikiBbeMatchingRule.addComparator(new BookAuthorComparatorJaroWinkler());
+		wikiBbeMatchingRule.addComparator(new BookAuthorComparatorLevenshtein());
+		wikiBbeMatchingRule.addComparator(new BookTitleComparatorLowerJaccard());
 
 		// train the matching rule's model
 		logger.info("*\tLearning matching rule\t*");

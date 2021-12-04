@@ -27,21 +27,22 @@ public class AuthorConflictResolution<ValueType, RecordType extends Matchable & 
             Collection<FusibleValue<List<ValueType>, RecordType, SchemaElementType>> values) {
 
         List<ValueType> longest = null;
+        FusibleValue<List<ValueType>, RecordType, SchemaElementType> originalRecord = null;
         for (FusibleValue<List<ValueType>, RecordType, SchemaElementType> value : values) {
             if(longest == null) {
                 longest = value.getValue();
+                originalRecord = value;
             } else {
                 if( value.getValue().size() > longest.size()) {
                     longest = value.getValue();
+                    originalRecord = value;
                 }
             }
         }
 
         FusedValue<List<ValueType>, RecordType, SchemaElementType> fused = new FusedValue<>(longest);
 
-        for (FusibleValue<List<ValueType>, RecordType, SchemaElementType> value : values) {
-            fused.addOriginalRecord(value);
-        }
+        fused.addOriginalRecord(originalRecord);
 
         return fused;
     }
