@@ -1,8 +1,11 @@
 package com.team8.webdataintegration.winter.datafusion.evaluation;
 
+import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.LinkedList;
 import java.util.Set;
 
+import com.team8.webdataintegration.winter.identityResolution.BookCustomAuthorComparator;
 import com.team8.webdataintegration.winter.model.Author;
 import com.team8.webdataintegration.winter.model.Book;
 
@@ -16,20 +19,25 @@ public class BookAuthorsEvaluationRule extends EvaluationRule<Book, Attribute> {
 
 	@Override
 	public boolean isEqual(Book record1, Book record2, Attribute schemaElement) {
-		// TODO Auto-generated method stub
-		Set<String> author1 = new HashSet<>();
+		BookCustomAuthorComparator comp = new BookCustomAuthorComparator();
+		ArrayList<String> author1 = new ArrayList<>();
 
 		for (Author a : record1.getAuthors()) {
-			
 			author1.add(a.getAuthor_name());
 		}
 
-		Set<String> author2 = new HashSet<>();
+		ArrayList<String> author2 = new ArrayList<>();
 		for (Author a : record2.getAuthors()) {
 			author2.add(a.getAuthor_name());
 		}
 
-		return author1.containsAll(author2) && author2.containsAll(author1);
+		double sim = comp.compare(author1, author2, null);
+
+		if(sim > 0.8) {
+			return true;
+		} else {
+			return false;
+		}
 	}
 
 	@Override
