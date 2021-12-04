@@ -1,11 +1,16 @@
 package com.team8.webdataintegration.winter.datafusion.fusers;
 
+import java.util.List;
+import java.util.Map;
+
 import com.team8.webdataintegration.winter.model.Book;
 
 import de.uni_mannheim.informatik.dws.winter.datafusion.AttributeValueFuser;
 import de.uni_mannheim.informatik.dws.winter.datafusion.conflictresolution.string.LongestString;
 import de.uni_mannheim.informatik.dws.winter.model.Correspondence;
 import de.uni_mannheim.informatik.dws.winter.model.FusedValue;
+import de.uni_mannheim.informatik.dws.winter.model.FusibleDataSet;
+import de.uni_mannheim.informatik.dws.winter.model.FusibleValue;
 import de.uni_mannheim.informatik.dws.winter.model.Matchable;
 import de.uni_mannheim.informatik.dws.winter.model.RecordGroup;
 import de.uni_mannheim.informatik.dws.winter.model.defaultmodel.Attribute;
@@ -22,6 +27,8 @@ public class BookPriceFuserLongestString extends AttributeValueFuser<String, Boo
 		// TODO Auto-generated method stub
 		return  record.getPrice();
 	}
+	
+	
 
 	@Override
 	public void fuse(RecordGroup<Book, Attribute> group, Book fusedRecord,
@@ -29,10 +36,12 @@ public class BookPriceFuserLongestString extends AttributeValueFuser<String, Boo
 		// TODO Auto-generated method stub
 		
 		FusedValue<String, Book, Attribute> fused = getFusedValue(group, schemaCorrespondences, schemaElement);
+		 
 		if (fusedRecord != null ) {
 			fusedRecord.setPrice(fused.getValue());
 			fusedRecord.setAttributeProvenance(Book.PRICE, fused.getOriginalIds());
 		}
+		
 		
 	}
 

@@ -3,7 +3,7 @@ package com.team8.webdataintegration.winter.datafusion.fusers;
 import com.team8.webdataintegration.winter.model.Book;
 
 import de.uni_mannheim.informatik.dws.winter.datafusion.AttributeValueFuser;
-import com.team8.webdataintegration.winter.datafusion.fusers.conflictresolution.LogicalOr;
+import com.team8.webdataintegration.winter.datafusion.fusers.conflictResolution.LogicalOr;
 import de.uni_mannheim.informatik.dws.winter.model.Correspondence;
 import de.uni_mannheim.informatik.dws.winter.model.FusedValue;
 import de.uni_mannheim.informatik.dws.winter.model.Matchable;

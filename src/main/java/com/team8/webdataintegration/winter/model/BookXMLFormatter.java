@@ -1,5 +1,8 @@
 package com.team8.webdataintegration.winter.model;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 
@@ -32,9 +35,11 @@ public class BookXMLFormatter extends XMLFormatter<Book> {
 				record.getMergedAttributeProvenance(Book.TITLE), doc));
 		
 		if(record.hasValue(Book.RELEASE_DATE)) {
-		book.appendChild(createTextElementWithProvenance("release_date", 
-				record.getRelease_date().toString(), 
-				record.getMergedAttributeProvenance(Book.RELEASE_DATE), doc));
+			//DateFormat dateFormat = new SimpleDateFormat("yyyy-mm-dd");
+			//String sdate = dateFormat.format(record.getRelease_date()); 
+			book.appendChild(createTextElementWithProvenance("release_date", 
+					record.getRelease_date().toString(), 
+			record.getMergedAttributeProvenance(Book.RELEASE_DATE), doc));
 		}else {
 			book.appendChild(createTextElementWithProvenance("release_rate", 
 					"", 
@@ -117,7 +122,7 @@ public class BookXMLFormatter extends XMLFormatter<Book> {
 		
 		if(record.hasValue(Book.RATING)) {
 			book.appendChild(createTextElementWithProvenance("rating",
-				record.getRating(),
+				record.getRating().toString(),
 				record.getMergedAttributeProvenance(Book.RATING), doc));
 		}else {
 			book.appendChild(createTextElementWithProvenance("rating",
@@ -127,7 +132,7 @@ public class BookXMLFormatter extends XMLFormatter<Book> {
 		
 		if(record.hasValue(Book.PARTOFASERIES)) {
 			book.appendChild(createTextElementWithProvenance("part_of_a_series",
-				record.getRating(),
+				record.getPart_of_Series(),
 				record.getMergedAttributeProvenance(Book.PARTOFASERIES), doc));
 		}else {
 			book.appendChild(createTextElementWithProvenance("part_of_a_series",

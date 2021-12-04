@@ -1,5 +1,6 @@
 package com.team8.webdataintegration.winter.datafusion.fusers;
 
+import com.team8.webdataintegration.winter.datafusion.fusers.conflictResolution.UnionComaSepratedString;
 import com.team8.webdataintegration.winter.model.Book;
 
 import de.uni_mannheim.informatik.dws.winter.datafusion.AttributeValueFuser;
@@ -11,16 +12,18 @@ import de.uni_mannheim.informatik.dws.winter.model.RecordGroup;
 import de.uni_mannheim.informatik.dws.winter.model.defaultmodel.Attribute;
 import de.uni_mannheim.informatik.dws.winter.processing.Processable;
 
-public class BookLanguageFuserLongestString  extends AttributeValueFuser<String, Book, Attribute>  {
 
-	public BookLanguageFuserLongestString() {
-		super(new LongestString<Book, Attribute>());
+
+public class BookPubihserFuserUnionComaSeparated extends AttributeValueFuser<String, Book, Attribute>  {
+
+	public BookPubihserFuserUnionComaSeparated() {
+		super(new UnionComaSepratedString<Book, Attribute>());
 	}
 
 	@Override
 	public String getValue(Book record, Correspondence<Attribute, Matchable> correspondence) {
 		// TODO Auto-generated method stub
-		return  record.getLanguage();
+		return  record.getPublisher();
 	}
 
 	@Override
@@ -29,10 +32,9 @@ public class BookLanguageFuserLongestString  extends AttributeValueFuser<String,
 		// TODO Auto-generated method stub
 		
 		FusedValue<String, Book, Attribute> fused = getFusedValue(group, schemaCorrespondences, schemaElement);
-		
-		if(fusedRecord != null) {
-			fusedRecord.setLanguage(fused.getValue());
-			fusedRecord.setAttributeProvenance(Book.LANGUAGE,
+		if (fusedRecord != null) {
+			fusedRecord.setPublisher(fused.getValue());
+			fusedRecord.setAttributeProvenance(Book.PUBLISHER,
 					fused.getOriginalIds());
 		}
 		
@@ -41,8 +43,7 @@ public class BookLanguageFuserLongestString  extends AttributeValueFuser<String,
 	@Override
 	public boolean hasValue(Book record, Correspondence<Attribute, Matchable> correspondence) {
 		// TODO Auto-generated method stub
-		return record.hasValue(Book.LANGUAGE);
+		return record.hasValue(Book.PUBLISHER);
 	}
-
 
 }

@@ -1,5 +1,6 @@
 package com.team8.webdataintegration.winter.datafusion.fusers;
 
+import com.team8.webdataintegration.winter.datafusion.fusers.conflictResolution.UnionComaSepratedString;
 import com.team8.webdataintegration.winter.model.Book;
 
 import de.uni_mannheim.informatik.dws.winter.datafusion.AttributeValueFuser;
@@ -11,16 +12,16 @@ import de.uni_mannheim.informatik.dws.winter.model.RecordGroup;
 import de.uni_mannheim.informatik.dws.winter.model.defaultmodel.Attribute;
 import de.uni_mannheim.informatik.dws.winter.processing.Processable;
 
-public class BookGenreFuserLongestString extends AttributeValueFuser<String, Book, Attribute>  {
+public class BookLanguageUnionComaSeparate  extends AttributeValueFuser<String, Book, Attribute>  {
 
-	public BookGenreFuserLongestString() {
-		super(new LongestString<Book, Attribute>());
+	public BookLanguageUnionComaSeparate() {
+		super(new UnionComaSepratedString<Book, Attribute>());
 	}
 
 	@Override
 	public String getValue(Book record, Correspondence<Attribute, Matchable> correspondence) {
 		// TODO Auto-generated method stub
-		return  record.getGenre();
+		return  record.getLanguage();
 	}
 
 	@Override
@@ -29,9 +30,11 @@ public class BookGenreFuserLongestString extends AttributeValueFuser<String, Boo
 		// TODO Auto-generated method stub
 		
 		FusedValue<String, Book, Attribute> fused = getFusedValue(group, schemaCorrespondences, schemaElement);
-		if (fusedRecord != null) {
-			fusedRecord.setGenre(fused.getValue());
-			fusedRecord.setAttributeProvenance(Book.GENRE, fused.getOriginalIds());
+		
+		if(fusedRecord != null) {
+			fusedRecord.setLanguage(fused.getValue());
+			fusedRecord.setAttributeProvenance(Book.LANGUAGE,
+					fused.getOriginalIds());
 		}
 		
 	}
@@ -39,7 +42,8 @@ public class BookGenreFuserLongestString extends AttributeValueFuser<String, Boo
 	@Override
 	public boolean hasValue(Book record, Correspondence<Attribute, Matchable> correspondence) {
 		// TODO Auto-generated method stub
-		return record.hasValue(Book.GENRE);
+		return record.hasValue(Book.LANGUAGE);
 	}
+
 
 }

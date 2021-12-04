@@ -1,4 +1,4 @@
-package com.team8.webdataintegration.winter.datafusion.fusers.conflictresolution;
+package com.team8.webdataintegration.winter.datafusion.fusers.conflictResolution;
 
 import java.util.Collection;
 
