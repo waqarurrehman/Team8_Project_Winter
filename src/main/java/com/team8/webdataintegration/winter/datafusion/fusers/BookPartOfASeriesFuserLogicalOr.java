@@ -3,7 +3,7 @@ package com.team8.webdataintegration.winter.datafusion.fusers;
 import com.team8.webdataintegration.winter.model.Book;
 
 import de.uni_mannheim.informatik.dws.winter.datafusion.AttributeValueFuser;
-import de.uni_mannheim.informatik.dws.winter.datafusion.conflictresolution.string.LongestString;
+import com.team8.webdataintegration.winter.datafusion.fusers.conflictresolution.LogicalOr;
 import de.uni_mannheim.informatik.dws.winter.model.Correspondence;
 import de.uni_mannheim.informatik.dws.winter.model.FusedValue;
 import de.uni_mannheim.informatik.dws.winter.model.Matchable;
@@ -11,10 +11,9 @@ import de.uni_mannheim.informatik.dws.winter.model.RecordGroup;
 import de.uni_mannheim.informatik.dws.winter.model.defaultmodel.Attribute;
 import de.uni_mannheim.informatik.dws.winter.processing.Processable;
 
-public class BookPartOfASeriesFuserLongestString extends AttributeValueFuser<String, Book, Attribute>  {
-
-	public BookPartOfASeriesFuserLongestString() {
-		super(new LongestString<Book, Attribute>());
+public class BookPartOfASeriesFuserLogicalOr extends AttributeValueFuser<String, Book, Attribute>  {
+	public BookPartOfASeriesFuserLogicalOr() {
+		super(new LogicalOr<Book, Attribute>());
 	}
 
 	@Override
