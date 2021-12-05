@@ -203,6 +203,7 @@ public class BookUseCase {
 		wiki.setScore(3.0);
 		bbe.setScore(2.0);
 		fdb.setScore(1.0);
+		
 
 		// load correspondences
 		logger.info("Loading correspondences");
