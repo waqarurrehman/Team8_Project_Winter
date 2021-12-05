@@ -7,12 +7,13 @@ import de.uni_mannheim.informatik.dws.winter.model.Correspondence;
 import de.uni_mannheim.informatik.dws.winter.model.Matchable;
 import de.uni_mannheim.informatik.dws.winter.model.defaultmodel.Attribute;
 import de.uni_mannheim.informatik.dws.winter.similarity.string.LevenshteinSimilarity;
+import de.uni_mannheim.informatik.dws.winter.similarity.string.TokenizingJaccardSimilarity;
 
 public class BookPublisherEvaluationRule extends EvaluationRule<Book, Attribute> {
 
-	private static LevenshteinSimilarity levSim = new LevenshteinSimilarity();
-
 	private static String[] randomHouseSubsidiaries = {"Vintage", "Delacorte Press"};
+
+	private static LevenshteinSimilarity sim = new LevenshteinSimilarity();
 
 	@Override
 	public boolean isEqual(Book record1, Book record2, Attribute schemaElement) {
@@ -21,21 +22,22 @@ public class BookPublisherEvaluationRule extends EvaluationRule<Book, Attribute>
 		else if(record1.getPublisher()== null ^ record2.getPublisher()==null)
 			return false;
 		else
-			if(record1.getPublisher() == "Random House") {
+			if(record1.getPublisher().equals("Random House")) {
 				for(String s : randomHouseSubsidiaries) {
 					if(record2.getPublisher().equals(s)) {
 						return true;
 					}
 				}
 			}
-			if(record2.getPublisher() == "Random House") {
+			if(record2.getPublisher().equals("Random House")) {
 				for(String s : randomHouseSubsidiaries) {
 					if(record1.getPublisher().equals(s)) {
 						return true;
 					}
 				}
 			}
-			return levSim.calculate(record1.getPublisher(), record2.getPublisher()) > 0.5 ? true : false;
+			double d = sim.calculate(record1.getPublisher(), record2.getPublisher());
+			return d > 0.5 ? true : false;
 	}
 
 	@Override
