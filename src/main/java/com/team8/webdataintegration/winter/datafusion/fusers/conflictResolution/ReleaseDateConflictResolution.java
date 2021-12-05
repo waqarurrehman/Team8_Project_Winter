@@ -17,22 +17,20 @@ ConflictResolutionFunction<LocalDateTime, RecordType, SchemaElementType>  {
 			Collection<FusibleValue<LocalDateTime, RecordType, SchemaElementType>> values) {
 
 
-		LocalDateTime earliest = null;
+		LocalDateTime res = null;
 		FusibleValue<LocalDateTime, RecordType, SchemaElementType> provenance = null;
 		for(FusibleValue<LocalDateTime, RecordType, SchemaElementType> value : values) {
-			if(earliest == null) {
-				if(earliest == null) {
-					earliest = value.getValue();
-					provenance = value;
-				}
-				if(value.getValue().isBefore(earliest)) {
-					earliest = value.getValue();
-					provenance = value;
-				}
+			if(res == null) {
+				res = value.getValue();
+				provenance = value;
+			}
+			if(value.getDataSourceScore() > provenance.getDataSourceScore()) {
+				res = value.getValue();
+				provenance = value;
 			}
 		}
 
-		FusedValue<LocalDateTime, RecordType, SchemaElementType>  fval= new FusedValue<>(earliest);
+		FusedValue<LocalDateTime, RecordType, SchemaElementType>  fval= new FusedValue<>(res);
 
 		if(provenance != null) {
 			fval.addOriginalRecord(provenance);
