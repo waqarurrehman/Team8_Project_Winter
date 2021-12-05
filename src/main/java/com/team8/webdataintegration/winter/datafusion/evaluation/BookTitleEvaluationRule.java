@@ -15,13 +15,11 @@ public class BookTitleEvaluationRule extends EvaluationRule<Book, Attribute>{
 	SimilarityMeasure<String> sim = new TokenizingJaccardSimilarity();
 	@Override
 	public boolean isEqual(Book record1, Book record2, Attribute schemaElement) {
-		// TODO Auto-generated method stub
-		return sim.calculate(record1.getTitle(), record2.getTitle()) == 1.0;
+		return sim.calculate(record1.getTitle(), record2.getTitle()) > 0.7;
 	}
 
 	@Override
 	public boolean isEqual(Book record1, Book record2, Correspondence<Attribute, Matchable> schemaCorrespondence) {
-		// TODO Auto-generated method stub
 		return isEqual(record1, record2, (Attribute)null);
 	}
 

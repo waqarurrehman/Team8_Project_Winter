@@ -11,7 +11,6 @@ public class BookLanguageEvaluationRule extends EvaluationRule<Book, Attribute> 
 
 	@Override
 	public boolean isEqual(Book record1, Book record2, Attribute schemaElement) {
-		// TODO Auto-generated method stub
 		if(record1.getLanguage()== null && record2.getLanguage()==null)
 			return true;
 		else if(record1.getLanguage()== null ^ record2.getLanguage()==null)
@@ -22,7 +21,6 @@ public class BookLanguageEvaluationRule extends EvaluationRule<Book, Attribute> 
 
 	@Override
 	public boolean isEqual(Book record1, Book record2, Correspondence<Attribute, Matchable> schemaCorrespondence) {
-		// TODO Auto-generated method stub
 		return isEqual(record1, record2, (Attribute)null);
 	}
 

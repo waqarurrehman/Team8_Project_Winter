@@ -14,7 +14,6 @@ import de.uni_mannheim.informatik.dws.winter.processing.Processable;
 public class BookGenreFuserUnionComaSeparated extends AttributeValueFuser<String, Book, Attribute>  {
 
 	public BookGenreFuserUnionComaSeparated() {
-		//super(new LongestString<Book, Attribute>());
 		super(new UnionComaSepratedString<Book, Attribute>());
 	}
 

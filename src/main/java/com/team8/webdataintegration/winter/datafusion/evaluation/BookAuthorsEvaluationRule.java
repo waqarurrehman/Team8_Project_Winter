@@ -42,7 +42,6 @@ public class BookAuthorsEvaluationRule extends EvaluationRule<Book, Attribute> {
 
 	@Override
 	public boolean isEqual(Book record1, Book record2, Correspondence<Attribute, Matchable> schemaCorrespondence) {
-		// TODO Auto-generated method stub
 		return isEqual(record1, record2, (Attribute)null);
 	}
 

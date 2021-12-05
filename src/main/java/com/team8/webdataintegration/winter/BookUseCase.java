@@ -233,12 +233,15 @@ public class BookUseCase {
 		strategy.addAttributeFuser(Book.AUTHORS,new BookAuthorsFuserUnion(),new BookAuthorsEvaluationRule());
 		strategy.addAttributeFuser(Book.GENRE, new BookGenreFuserUnionComaSeparated(),new BookGenreEvaluationRule());
 		strategy.addAttributeFuser(Book.LANGUAGE, new BookLanguageUnionComaSeparate(),new BookLanguageEvaluationRule());
-		//strategy.addAttributeFuser(Book.PAGES, new BookPagesFuserLongestString(),new BookPageEvaluationRule());
-		//strategy.addAttributeFuser(Book.PRICE, new BookPriceFuserLongestString(),new BookPriceEvaluationRule());
-		//strategy.addAttributeFuser(Book.FORMATS, new BookFormatFuserLongestString(),new BookFormatEvaluationRule());
-		//strategy.addAttributeFuser(Book.ISBN, new BookISBNFuserLongestStirng(),new BookISBNEvaluationRule());
 		strategy.addAttributeFuser(Book.RATING, new BookRatingFuserAverage(),new BookRatingEvaluationRule());
 		strategy.addAttributeFuser(Book.PARTOFASERIES, new BookPartOfASeriesFuserLogicalOr(),new BookPartOfASeriesEvaluationRule());
+
+		/* uncomment to create fused dataset, leave commented to calculate accuracy
+		strategy.addAttributeFuser(Book.PAGES, new BookPagesFuserLongestString(),new BookPageEvaluationRule());
+		strategy.addAttributeFuser(Book.PRICE, new BookPriceFuserLongestString(),new BookPriceEvaluationRule());
+		strategy.addAttributeFuser(Book.FORMATS, new BookFormatFuserLongestString(),new BookFormatEvaluationRule());
+		strategy.addAttributeFuser(Book.ISBN, new BookISBNFuserLongestStirng(),new BookISBNEvaluationRule());
+		*/
 
 		// create the fusion engine
 		logger.info("Creating the fusion engine");
