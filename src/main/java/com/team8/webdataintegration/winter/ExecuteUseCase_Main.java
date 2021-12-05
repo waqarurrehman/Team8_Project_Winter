@@ -3,7 +3,7 @@ package com.team8.webdataintegration.winter;
 import de.uni_mannheim.informatik.dws.winter.utils.WinterLogManager;
 import org.slf4j.Logger;
 
-public class BooksIdentityResolution_Main {
+public class ExecuteUseCase_Main {
 
     private static final Logger logger = WinterLogManager.activateLogger("trace");
 
