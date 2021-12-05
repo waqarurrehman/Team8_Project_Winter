@@ -7,6 +7,7 @@
 		<genre>Fantasy</genre>
 		<part_of_a_series>Y</part_of_a_series>
 		<language>English</language>
+		<rating>4.6</rating>
 		<authors>
 			<author>J. K. Rowling</author>
 		</authors>
@@ -17,6 +18,7 @@
 		<publisher>Delacorte Press</publisher>
 		<genre>Vampire Novel</genre>
 		<language>English</language>
+		<rating>4</rating>
 		<part_of_a_series>Y</part_of_a_series>
 		<authors>
 			<author>Amelia Atwater-Rhodes</author>
@@ -28,6 +30,7 @@
 		<publisher>George Newnes</publisher>
 		<genre>Detective</genre>
 		<language>English</language>
+		<rating>4.5</rating>
 		<part_of_a_series>Y</part_of_a_series>
 		<formats>Paperback</formats>
         		<authors>
@@ -41,6 +44,7 @@
 		<genre>Fiction</genre>
 		<publisher>Penguin Books</publisher>
 		<language>English</language>
+		<rating>4</rating>
 		<authors>
 			<author>William Golding</author>
 		</authors>
@@ -52,6 +56,7 @@
 		<genre>Poetry</genre>
 		<publisher>Faber and Faber Limited</publisher>
 		<language>English</language>
+		<rating>4.1</rating>
 		<authors>
 			<author>Philip Larkin</author>
 		</authors>
@@ -63,6 +68,7 @@
 		<genre>Fiction</genre>
 		<publisher>Scholastic Corporation</publisher>
 		<language>English</language>
+		<rating>4.5</rating>
 		<authors>
 			<author>Suzanne Collins</author>
 		</authors>
@@ -74,6 +80,7 @@
 		<genre>Fantasy</genre>
 		<publisher>Little, Brown and Company</publisher>
 		<language>English</language>
+		<rating>4.1</rating>
 		<authors>
 			<author>Laini Taylor</author>
 		</authors>
@@ -85,6 +92,7 @@
 		<genre>Fantasy</genre>
 		<publisher>Del Rey</publisher>
 		<language>English</language>
+		<rating>4.2</rating>
 		<authors>
 			<author>David Gemmell</author>
 		</authors>
@@ -96,6 +104,7 @@
 		<genre>Fantasy</genre>
 		<publisher>Pantheon Books</publisher>
 		<language>English</language>
+		<rating>3.7</rating>
 		<authors>
 			<author>Kevin Brockmeier</author>
 		</authors>
@@ -107,6 +116,7 @@
 		<genre>'Science Fiction', 'Fiction', 'Audiobook', 'Adventure', 'Space', 'Adult', 'Science Fiction Fantasy', 'Thriller', 'Humor', 'Survival'</genre>
 		<publisher>Crown Publishing Group</publisher>
 		<language>English</language>
+		<rating>4.7</rating>
 		<authors>
 			<author>Andy Weir</author>
 		</authors>
@@ -118,6 +128,7 @@
 		<genre>Graphic Novel</genre>
 		<publisher>Scholastic Graphix</publisher>
 		<language>English</language>
+		<rating>4.6</rating>
 		<authors>
 			<author>Raina Telgemeier</author>
 		</authors>
@@ -129,6 +140,7 @@
 		<genre>Fantasy</genre>
 		<publisher>Penguin Books</publisher>
 		<language>English</language>
+		<rating>4</rating>
 		<authors>
 			<author>Alison Croggon</author>
 		</authors>
@@ -140,6 +152,7 @@
 		<genre>Science Fiction</genre>
 		<publisher>Orbit</publisher>
 		<language>English</language>
+		<rating>4.2</rating>
 		<authors>
 			<author>Charles Stross</author>
 		</authors>
@@ -150,6 +163,7 @@
 		<part_of_a_series>N</part_of_a_series>
 		<genre>Horror</genre>
 		<language>English</language>
+		<rating>4</rating>
 		<publisher>Charles Scribner</publisher>
 		<authors>
 			<author>Stephen King</author>
@@ -162,6 +176,7 @@
 		<genre>Science Fiction</genre>
 		<publisher>Little, Brown</publisher>
 		<language>English</language>
+		<rating>4.1</rating>
 		<authors>
 			<author>James Patterson</author>
 			<author>Michael Ledwidge</author>
@@ -174,6 +189,7 @@
 		<genre>Historical Fiction</genre>
 		<publisher>Riverhead Books</publisher>
 		<language>English</language>
+		<rating>4.25</rating>
 		<authors>
 			<author>Khaled Hosseini</author>
 		</authors>
@@ -185,6 +201,7 @@
 		<genre>Gothic</genre>
 		<publisher>Vintage</publisher>
 		<language>English</language>
+		<rating>3.8</rating>
 		<authors>
 			<author>Patrick McGrath</author>
 		</authors>
@@ -196,6 +213,7 @@
 		<genre>Fantasy</genre>
 		<publisher>Bantam Spectra</publisher>
 		<language>English</language>
+		<rating>4</rating>
 		<authors>
 			<author>Lynn Flewelling</author>
 		</authors>
@@ -207,6 +225,7 @@
 		<genre>Detective</genre>
 		<publisher>Alfred A. Knopf</publisher>
 		<language>English</language>
+		<rating>4.1</rating>
 		<authors>
 			<author>Dashiell Hammett</author>
 		</authors>
@@ -218,6 +237,7 @@
 		<genre>Fantasy</genre>
 		<publisher>Little, Brown</publisher>
 		<language>English</language>
+		<rating>4.6</rating>
 		<authors>
 			<author>Grace Lin</author>
 		</authors>

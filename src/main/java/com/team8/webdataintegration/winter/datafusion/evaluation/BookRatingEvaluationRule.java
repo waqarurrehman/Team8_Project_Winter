@@ -11,18 +11,18 @@ public class BookRatingEvaluationRule extends EvaluationRule<Book, Attribute> {
 
 	@Override
 	public boolean isEqual(Book record1, Book record2, Attribute schemaElement) {
-		// TODO Auto-generated method stub
 		if(record1.getRating()== null && record2.getRating()==null)
 			return true;
 		else if(record1.getRating()== null ^ record2.getRating()==null)
 			return false;
-		else 
-			return record1.getRating().equals(record2.getRating());
+		else {
+			double diff = Math.abs(record1.getRating() - record2.getRating()) / Math.max(record1.getRating(), record2.getRating());
+			return diff <= 0.3 ? true : false;
+		}
 	}
 
 	@Override
 	public boolean isEqual(Book record1, Book record2, Correspondence<Attribute, Matchable> schemaCorrespondence) {
-		// TODO Auto-generated method stub
 		return isEqual(record1, record2, (Attribute)null);
 	}
 

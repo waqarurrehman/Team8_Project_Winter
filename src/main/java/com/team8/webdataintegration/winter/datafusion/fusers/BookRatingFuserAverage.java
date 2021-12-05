@@ -1,5 +1,6 @@
 package com.team8.webdataintegration.winter.datafusion.fusers;
 
+import com.team8.webdataintegration.winter.datafusion.fusers.conflictResolution.RatingConflictResolution;
 import com.team8.webdataintegration.winter.model.Book;
 
 import de.uni_mannheim.informatik.dws.winter.datafusion.AttributeValueFuser;
@@ -15,7 +16,7 @@ import de.uni_mannheim.informatik.dws.winter.processing.Processable;
 public class BookRatingFuserAverage extends AttributeValueFuser<Double, Book, Attribute>  {
 
 	public BookRatingFuserAverage() {
-		super(new Average<Book, Attribute>());
+		super(new RatingConflictResolution<Book, Attribute>());
 	}
 
 	@Override
