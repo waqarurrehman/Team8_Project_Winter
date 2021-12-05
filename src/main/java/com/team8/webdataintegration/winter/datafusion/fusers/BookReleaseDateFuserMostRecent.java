@@ -3,6 +3,7 @@ package com.team8.webdataintegration.winter.datafusion.fusers;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 
+import com.team8.webdataintegration.winter.datafusion.fusers.conflictResolution.ReleaseDateConflictResolution;
 import com.team8.webdataintegration.winter.model.Book;
 
 import de.uni_mannheim.informatik.dws.winter.datafusion.AttributeValueFuser;
@@ -22,9 +23,9 @@ public class BookReleaseDateFuserMostRecent  extends AttributeValueFuser<LocalDa
 
 	
 	public BookReleaseDateFuserMostRecent() {
-		super(new MostRecent<LocalDateTime, Book, Attribute>());
+		super(new ReleaseDateConflictResolution<Book, Attribute>());
 	}
-	
+
 	
 	@Override
 	public LocalDateTime getValue(Book record, Correspondence<Attribute, Matchable> correspondence) {
