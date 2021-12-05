@@ -1,3 +1,3 @@
 # Team8_Project_Winter
-winter project for Uni
+Book Use Case for Web Data Integrations uses winter Framework to carryout both
 
