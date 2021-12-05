@@ -50,7 +50,7 @@
 		<release_date>29/10/1974</release_date>
 		<part_of_a_series>N</part_of_a_series>
 		<genre>Poetry</genre>
-		<publisher>Faber and Faber</publisher>
+		<publisher>Faber and Faber Limited</publisher>
 		<language>English</language>
 		<authors>
 			<author>Philip Larkin</author>
@@ -61,7 +61,7 @@
 		<release_date>14/9/2008</release_date>
 		<part_of_a_series>Y</part_of_a_series>
 		<genre>Fiction</genre>
-		<publisher>Scholastic Press</publisher>
+		<publisher>Scholastic Corporation</publisher>
 		<language>English</language>
 		<authors>
 			<author>Suzanne Collins</author>
@@ -72,7 +72,7 @@
 		<release_date>6/11/2012</release_date>
 		<part_of_a_series>Y</part_of_a_series>
 		<genre>Fantasy</genre>
-		<publisher>Little, Brown</publisher>
+		<publisher>Little, Brown and Company</publisher>
 		<language>English</language>
 		<authors>
 			<author>Laini Taylor</author>
@@ -105,7 +105,7 @@
 		<release_date>1/1/2011</release_date>
 		<part_of_a_series>Y</part_of_a_series>
 		<genre>'Science Fiction', 'Fiction', 'Audiobook', 'Adventure', 'Space', 'Adult', 'Science Fiction Fantasy', 'Thriller', 'Humor', 'Survival'</genre>
-		<publisher>Crown</publisher>
+		<publisher>Crown Publishing Group</publisher>
 		<language>English</language>
 		<authors>
 			<author>Andy Weir</author>
@@ -116,7 +116,7 @@
 		<release_date>1/2/2010</release_date>
 		<part_of_a_series>Y</part_of_a_series>
 		<genre>Graphic Novel</genre>
-		<publisher>Scholastic</publisher>
+		<publisher>Scholastic Graphix</publisher>
 		<language>English</language>
 		<authors>
 			<author>Raina Telgemeier</author>
@@ -150,7 +150,7 @@
 		<part_of_a_series>N</part_of_a_series>
 		<genre>Horror</genre>
 		<language>English</language>
-		<publisher>Scribner</publisher>
+		<publisher>Charles Scribner</publisher>
 		<authors>
 			<author>Stephen King</author>
 		</authors>
@@ -194,7 +194,7 @@
 		<release_date>25/5/2010</release_date>
 		<part_of_a_series>Y</part_of_a_series>
 		<genre>Fantasy</genre>
-		<publisher>Spectra</publisher>
+		<publisher>Bantam Spectra</publisher>
 		<language>English</language>
 		<authors>
 			<author>Lynn Flewelling</author>

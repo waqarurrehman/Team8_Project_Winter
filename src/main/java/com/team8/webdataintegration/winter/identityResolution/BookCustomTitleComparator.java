@@ -54,9 +54,16 @@ public class BookCustomTitleComparator implements Comparator<Book, Attribute> {
             }
         }
 
+        if(similarity == 0) {
+            if(lev.calculate(record1.getTitle(), record2.getTitle()) < Math.min(record1.getTitle().length(), record2.getTitle().length()) / 6) {
+                similarity = levSim.calculate(record1.getTitle(), record2.getTitle());
+            }
+        }
+
         if (this.comparisonLog != null) {
             this.comparisonLog.setSimilarity(Double.toString(similarity));
         }
+
         return similarity;
     }
 

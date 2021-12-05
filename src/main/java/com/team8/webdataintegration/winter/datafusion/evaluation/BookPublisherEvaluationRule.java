@@ -6,23 +6,40 @@ import de.uni_mannheim.informatik.dws.winter.datafusion.EvaluationRule;
 import de.uni_mannheim.informatik.dws.winter.model.Correspondence;
 import de.uni_mannheim.informatik.dws.winter.model.Matchable;
 import de.uni_mannheim.informatik.dws.winter.model.defaultmodel.Attribute;
+import de.uni_mannheim.informatik.dws.winter.similarity.string.LevenshteinSimilarity;
 
 public class BookPublisherEvaluationRule extends EvaluationRule<Book, Attribute> {
 
+	private static LevenshteinSimilarity levSim = new LevenshteinSimilarity();
+
+	private static String[] randomHouseSubsidiaries = {"Vintage", "Delacorte Press"};
+
 	@Override
 	public boolean isEqual(Book record1, Book record2, Attribute schemaElement) {
-		// TODO Auto-generated method stub
 		if(record1.getPublisher()== null && record2.getPublisher()==null)
 			return true;
 		else if(record1.getPublisher()== null ^ record2.getPublisher()==null)
 			return false;
-		else 
-			return record1.getPublisher().equals(record2.getPublisher());
+		else
+			if(record1.getPublisher() == "Random House") {
+				for(String s : randomHouseSubsidiaries) {
+					if(record2.getPublisher().equals(s)) {
+						return true;
+					}
+				}
+			}
+			if(record2.getPublisher() == "Random House") {
+				for(String s : randomHouseSubsidiaries) {
+					if(record1.getPublisher().equals(s)) {
+						return true;
+					}
+				}
+			}
+			return levSim.calculate(record1.getPublisher(), record2.getPublisher()) > 0.5 ? true : false;
 	}
 
 	@Override
 	public boolean isEqual(Book record1, Book record2, Correspondence<Attribute, Matchable> schemaCorrespondence) {
-		// TODO Auto-generated method stub
 		return isEqual(record1, record2, (Attribute)null);
 	}
 

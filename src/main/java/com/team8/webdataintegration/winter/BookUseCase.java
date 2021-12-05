@@ -199,7 +199,10 @@ public class BookUseCase {
 		bbe.setDate(LocalDateTime.parse("2010-01-01", formatter));
 		fdb.setDate(LocalDateTime.parse("2008-01-01", formatter));
 		
-		
+		wiki.setScore(3.0);
+		bbe.setScore(2.0);
+		fdb.setScore(1.0);
+
 		// load correspondences
 		logger.info("Loading correspondences");
 		CorrespondenceSet<Book, Attribute> correspondences = new CorrespondenceSet<>();
@@ -225,15 +228,15 @@ public class BookUseCase {
 				
 		// add attribute fusers
 		strategy.addAttributeFuser(Book.TITLE, new BookTileFuserShortestString(),new BookTitleEvaluationRule());
-		strategy.addAttributeFuser(Book.PUBLISHER,new BookPubihserFuserUnionComaSeparated(), new BookPublisherEvaluationRule());
+		strategy.addAttributeFuser(Book.PUBLISHER,new BookPublisherFuserUnionComaSeparated(), new BookPublisherEvaluationRule());
 		strategy.addAttributeFuser(Book.RELEASE_DATE, new BookReleaseDateFuserMostRecent(),new BookReleaseDateEvaluationRule());
 		strategy.addAttributeFuser(Book.AUTHORS,new BookAuthorsFuserUnion(),new BookAuthorsEvaluationRule());
 		strategy.addAttributeFuser(Book.GENRE, new BookGenreFuserUnionComaSeparated(),new BookGenreEvaluationRule());
 		strategy.addAttributeFuser(Book.LANGUAGE, new BookLanguageUnionComaSeparate(),new BookLanguageEvaluationRule());
-		strategy.addAttributeFuser(Book.PAGES, new BookPagesFuserLongestString(),new BookPageEvaluationRule());
-		strategy.addAttributeFuser(Book.PRICE, new BookPriceFuserLongestString(),new BookPriceEvaluationRule());
-		strategy.addAttributeFuser(Book.FORMATS, new BookFormatFuserLongestString(),new BookFormatEvaluationRule());
-		strategy.addAttributeFuser(Book.ISBN, new BookISBNFuserLongestStirng(),new BookISBNEvaluationRule());
+		//strategy.addAttributeFuser(Book.PAGES, new BookPagesFuserLongestString(),new BookPageEvaluationRule());
+		//strategy.addAttributeFuser(Book.PRICE, new BookPriceFuserLongestString(),new BookPriceEvaluationRule());
+		//strategy.addAttributeFuser(Book.FORMATS, new BookFormatFuserLongestString(),new BookFormatEvaluationRule());
+		//strategy.addAttributeFuser(Book.ISBN, new BookISBNFuserLongestStirng(),new BookISBNEvaluationRule());
 		strategy.addAttributeFuser(Book.RATING, new BookRatingFuserAverage(),new BookRatingEvaluationRule());
 		strategy.addAttributeFuser(Book.PARTOFASERIES, new BookPartOfASeriesFuserLogicalOr(),new BookPartOfASeriesEvaluationRule());
 
