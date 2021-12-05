@@ -36,7 +36,7 @@ public class BookXMLFormatter extends XMLFormatter<Book> {
 				record.getMergedAttributeProvenance(Book.TITLE), doc));
 		
 		if(record.hasValue(Book.RELEASE_DATE)) {
-			DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
+			DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
 			book.appendChild(createTextElementWithProvenance("release_date", 
 					record.getRelease_date().format(formatter), 
 			record.getMergedAttributeProvenance(Book.RELEASE_DATE), doc));

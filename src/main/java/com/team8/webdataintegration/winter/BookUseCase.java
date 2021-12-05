@@ -194,10 +194,11 @@ public class BookUseCase {
 				        .parseDefaulting(ChronoField.MINUTE_OF_HOUR, 0)
 				        .parseDefaulting(ChronoField.SECOND_OF_MINUTE, 0)
 				        .toFormatter(Locale.ENGLISH);
-				
+		/*		
 		wiki.setDate(LocalDateTime.parse("2012-01-01", formatter));
 		bbe.setDate(LocalDateTime.parse("2010-01-01", formatter));
 		fdb.setDate(LocalDateTime.parse("2008-01-01", formatter));
+		*/
 		
 		wiki.setScore(3.0);
 		bbe.setScore(2.0);
